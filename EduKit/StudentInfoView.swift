@@ -13,7 +13,8 @@ struct StudentInfoView: View {
     @State private var classid: String = ""
     @State private var age: String = ""
     @State private var selectedGender: String = "M"
-    
+    @State private var showAlert = false
+    @State private var alertMessage = ""
     @State private var students: [Student] = []
     
     let genders = ["M", "F"]
@@ -98,13 +99,8 @@ struct StudentInfoView: View {
                            
                             if let ageInt = Int(age), let classIdInt = Int(classid) {
                             let newStudent = Student(firstName: firstname, lastName: lastname, age: ageInt, classId: classIdInt, gender: selectedGender, username: username, password: password)
-                                                           
-                                                           
+                
                             students.append(newStudent)
-                                                           
-                           
-                                
-                                
                                 resetForm()
                             }
                         }) {
@@ -133,9 +129,11 @@ struct StudentInfoView: View {
                                 ParentRegistrationService.shared.registerParent(parentInfo: parentInfo) { result in
                                     switch result {
                                     case .success(let message):
-                                        print(message)
+                                        alertMessage = message
+                                        showAlert = true
                                     case .failure(let error):
-                                        print("Registration failed with error: \(error.localizedDescription)")
+                                        alertMessage = error.localizedDescription
+                                        showAlert = true
                                     }
                                 }
                         }) {
@@ -145,6 +143,9 @@ struct StudentInfoView: View {
                                 .frame(minWidth: 150, maxWidth: 260)
                                 .background(Color(red: 33/255, green: 151/255, blue: 189/255))
                                 .cornerRadius(8)
+                        }
+                        .alert(isPresented: $showAlert) {
+                        Alert(title: Text("Registration Status"),message: Text(alertMessage),dismissButton: .default(Text("OK")))
                         }
                     }
                     .padding()

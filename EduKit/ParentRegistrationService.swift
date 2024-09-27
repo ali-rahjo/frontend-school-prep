@@ -85,7 +85,7 @@ class ParentRegistrationService {
             }
             
             if let response = response as? HTTPURLResponse, response.statusCode == 201 {
-                completion(.success("Parent registered successfully"))
+                completion(.success("Parent and Student registered successfully"))
             } else {
                 completion(.failure(NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: "Registration failed"])))
             }
