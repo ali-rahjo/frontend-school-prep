@@ -38,7 +38,7 @@ struct LoginSelection: View {
                         // Handle parent login action here
                     }) {
                         ZStack(alignment: .bottomTrailing) {
-                            NavigationLink(destination: Signup()) {
+                            NavigationLink(destination: ParentOptions()) {
                                 Text("Parent")
                                     .font(.headline)
                                     .frame(width: 100, height: 100)

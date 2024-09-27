@@ -22,7 +22,7 @@ struct Signup: View {
     var body: some View {
         NavigationView {
             ZStack {
-                Image("slide7")
+                Image("slide3")
                     .resizable()
                     .scaledToFill()
                     .frame(width: UIScreen.main.bounds.width)
@@ -48,11 +48,13 @@ struct Signup: View {
                         .cornerRadius(8)
                         .autocapitalization(.none)
                         .disableAutocorrection(true)
+                        .frame(width: 280)
                     
                     SecureField("Password", text: $password)
                         .padding()
                         .background(Color.white.opacity(0.8))
                         .cornerRadius(8)
+                        .frame(width: 280)
                     
                     TextField("First Name", text: $firstname)
                         .padding()
@@ -60,6 +62,7 @@ struct Signup: View {
                         .cornerRadius(8)
                         .autocapitalization(.none)
                         .disableAutocorrection(true)
+                        .frame(width: 280)
                     
                     TextField("Last Name", text: $lastname)
                         .padding()
@@ -67,6 +70,7 @@ struct Signup: View {
                         .cornerRadius(8)
                         .autocapitalization(.none)
                         .disableAutocorrection(true)
+                        .frame(width: 280)
                     
                     TextField("Address", text: $address)
                         .padding()
@@ -74,6 +78,7 @@ struct Signup: View {
                         .cornerRadius(8)
                         .autocapitalization(.none)
                         .disableAutocorrection(true)
+                        .frame(width: 280)
                     
                     TextField("Email", text: $email)
                         .padding()
@@ -82,6 +87,7 @@ struct Signup: View {
                         .keyboardType(.emailAddress)
                         .autocapitalization(.none)
                         .disableAutocorrection(true)
+                        .frame(width: 280)
                     
                     TextField("Phone Number", text: $phonenumber)
                         .padding()
@@ -90,6 +96,7 @@ struct Signup: View {
                         .keyboardType(.phonePad)
                         .autocapitalization(.none)
                         .disableAutocorrection(true)
+                        .frame(width: 280)
                     
                     HStack {
                         Picker("Gender", selection: $selectedGender) {
@@ -98,6 +105,7 @@ struct Signup: View {
                             }
                         }
                         .padding()
+                        .frame(width: 280)
                         .background(Color.white.opacity(0.6))
                         .cornerRadius(8)
                         .pickerStyle(SegmentedPickerStyle())
@@ -113,8 +121,8 @@ struct Signup: View {
                                 .font(.headline)
                                 .foregroundColor(.white)
                                 .padding()
-                                .frame(maxWidth: 220)
-                                .background(Color(red: 33/255, green: 151/255, blue: 189/255))
+                                .frame(maxWidth: 260)
+                                .background(Color(red: 171/255, green: 83/255, blue: 69/255))
                                 .cornerRadius(8)
                         }
                     }
@@ -123,10 +131,12 @@ struct Signup: View {
                 }
                 .padding(.horizontal, 40)
                 .padding(.bottom, 120)
-                .background(Color.white.opacity(0.2))
+             //   .background(Color.white.opacity(0.2))
                 .cornerRadius(15)
-                .shadow(radius: 10)
+              //  .shadow(radius: 10)
+                .edgesIgnoringSafeArea(.all)
             }
+           
         }
     }
 }

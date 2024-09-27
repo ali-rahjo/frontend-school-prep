@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D21B60992CA738FF0010F587 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21B60982CA738FF0010F587 /* LoginView.swift */; };
+		D21B609B2CA754E30010F587 /* Parent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21B609A2CA754E30010F587 /* Parent.swift */; };
+		D21B609D2CA755690010F587 /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21B609C2CA755690010F587 /* ForgotPasswordView.swift */; };
+		D21B609F2CA757430010F587 /* ParentOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21B609E2CA757430010F587 /* ParentOptions.swift */; };
 		D24D36382C935F8C00A6F8CA /* LauchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D24D36372C935F8C00A6F8CA /* LauchScreen.storyboard */; };
 		D2A8C3B12C985AFA0076892A /* Signup.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A8C3B02C985AFA0076892A /* Signup.swift */; };
 		D2A8C3B32C985FA30076892A /* LoginSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A8C3B22C985FA30076892A /* LoginSelection.swift */; };
@@ -39,6 +43,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D21B60982CA738FF0010F587 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		D21B609A2CA754E30010F587 /* Parent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parent.swift; sourceTree = "<group>"; };
+		D21B609C2CA755690010F587 /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
+		D21B609E2CA757430010F587 /* ParentOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentOptions.swift; sourceTree = "<group>"; };
 		D24D36372C935F8C00A6F8CA /* LauchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LauchScreen.storyboard; sourceTree = "<group>"; };
 		D24D36392C9361F100A6F8CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D2A8C3B02C985AFA0076892A /* Signup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signup.swift; sourceTree = "<group>"; };
@@ -111,8 +119,12 @@
 				D2D970592C91EE540040DE4A /* ContentView.swift */,
 				D2A8C3B02C985AFA0076892A /* Signup.swift */,
 				D2D13FEE2CA5C0C8001BD1A1 /* StudentInfoView.swift */,
+				D21B60982CA738FF0010F587 /* LoginView.swift */,
+				D21B609C2CA755690010F587 /* ForgotPasswordView.swift */,
+				D21B609A2CA754E30010F587 /* Parent.swift */,
 				D2D13FF42CA6B832001BD1A1 /* ParentRegistrationService.swift */,
 				D2A8C3B22C985FA30076892A /* LoginSelection.swift */,
+				D21B609E2CA757430010F587 /* ParentOptions.swift */,
 				D2D9705B2C91EE570040DE4A /* Assets.xcassets */,
 				D2D9705D2C91EE570040DE4A /* Preview Content */,
 			);
@@ -276,10 +288,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2D13FEF2CA5C0C8001BD1A1 /* StudentInfoView.swift in Sources */,
+				D21B609B2CA754E30010F587 /* Parent.swift in Sources */,
+				D21B609F2CA757430010F587 /* ParentOptions.swift in Sources */,
+				D21B60992CA738FF0010F587 /* LoginView.swift in Sources */,
 				D2D9705A2C91EE540040DE4A /* ContentView.swift in Sources */,
 				D2A8C3B12C985AFA0076892A /* Signup.swift in Sources */,
 				D2A8C3B32C985FA30076892A /* LoginSelection.swift in Sources */,
 				D2D13FF52CA6B832001BD1A1 /* ParentRegistrationService.swift in Sources */,
+				D21B609D2CA755690010F587 /* ForgotPasswordView.swift in Sources */,
 				D2D970582C91EE540040DE4A /* EduKitApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
