@@ -136,6 +136,7 @@ struct StudentInfoView: View {
                             )
                             
                             ParentRegistrationService.shared.registerParent(parentInfo: parentInfo) { result in
+                                DispatchQueue.main.async {
                                 switch result {
                                 case .success(let message):
                                     alertMessage = message
@@ -144,6 +145,7 @@ struct StudentInfoView: View {
                                     alertMessage = error.localizedDescription
                                     showAlert = true
                                 }
+                             }
                             }
                         }) {
                             Text("Sign Up")
@@ -169,7 +171,7 @@ struct StudentInfoView: View {
                             destination: ParentOptions(),
                             isActive: $navigateToLogin) {
                             EmptyView()
-                        }
+                            }
                     }
                     .padding(.leading,20)
                 }

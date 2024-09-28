@@ -1,9 +1,3 @@
-//
-//  Parent.swift
-//  EduKit
-//
-//  Created by Jestin Joy on 2024-09-27.
-//
 
 import SwiftUI
 

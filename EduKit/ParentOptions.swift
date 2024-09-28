@@ -6,7 +6,7 @@ struct ParentOptions: View {
 
     var body: some View {
         ZStack {
-            // Background image with dark overlay
+          
             Image("slide8")
                 .resizable()
                 .scaledToFill()
@@ -19,25 +19,25 @@ struct ParentOptions: View {
                 .edgesIgnoringSafeArea(.all)
 
             VStack {
-                Spacer(minLength: 30) // Reduced top spacing
+                Spacer(minLength: 30)
                 
                 
-                Image(systemName: "sparkles") // Replace with custom Genie icon if available
+                Image(systemName: "sparkles")
                                        .resizable()
                                        .frame(width: 40, height: 40)
                                        .foregroundColor(Color(red: 255/255, green: 232/255, blue: 177/255))
                
                 
                 Text("SchoolPrep Genie")
-                                   .font(.custom("MarkerFelt-Wide", size: 48))  // Custom playful font
+                                   .font(.custom("MarkerFelt-Wide", size: 48))
                                    .foregroundColor(Color(red: 255/255, green: 232/255, blue: 177/255))
-                                   .shadow(color: .black, radius: 3, x: 1, y: 1)  // Text shadow for effect
-                                   .padding(.top, 40)  // Top padding for positioning
+                                   .shadow(color: .black, radius: 3, x: 1, y: 1)
+                                   .padding(.top, 40)
                                
                                
                 
                 
-                // Signup Button
+                
                 Button(action: {
                     // Handle signup action here
                 }) {
@@ -53,12 +53,12 @@ struct ParentOptions: View {
                         }
                     }
                 }
-                .offset(x: animateSignUp ? 0 : UIScreen.main.bounds.width) // Animate from right
+                .offset(x: animateSignUp ? 0 : UIScreen.main.bounds.width)
                 .animation(.easeOut(duration: 1.5), value: animateSignUp)
                 
-           //     Spacer(minLength: 5) // Reduced gap between buttons
+          
 
-                // Login Button
+              
                 Button(action: {
                     // Handle login action here
                 }) {
@@ -72,12 +72,12 @@ struct ParentOptions: View {
                                 .font(.headline)
                                 .foregroundColor(.white)
                         }
-                    }
+                    }.navigationBarHidden(true) 
                 }
-                .offset(x: animateLogin ? 0 : UIScreen.main.bounds.width) // Animate from right
+                .offset(x: animateLogin ? 0 : UIScreen.main.bounds.width)
                 .animation(.easeOut(duration: 1.8), value: animateLogin)
 
-                Spacer(minLength: 400) // Reduced space at the bottom
+                Spacer(minLength: 400)
             }
             .onAppear {
                 animateSignUp = true

@@ -8,7 +8,7 @@ struct LoginSelection: View {
 
     var body: some View {
         ZStack {
-            // Background image with dark overlay
+           
             Image("slide7")
                 .resizable()
                 .scaledToFill()
@@ -20,20 +20,20 @@ struct LoginSelection: View {
                 .opacity(0.5)
                 .edgesIgnoringSafeArea(.all)
 
-            // VStack for the text and buttons
+           
             VStack {
-                Spacer(minLength: 100) // Top space before the text
+                Spacer(minLength: 100)
 
-                // Title text
+               
                 Text("Select Role")
                     .font(.largeTitle)
                     .foregroundColor(.white)
                     .bold()
-                    .padding(.bottom, 20) // Reduced space below the text
+                    .padding(.bottom, 20)
 
-                // First row: Parent and Student
-                HStack(spacing: 20) { // Reduced spacing between buttons
-                    // Parent Button
+             
+                HStack(spacing: 20) {
+                  
                     Button(action: {
                         // Handle parent login action here
                     }) {
@@ -48,17 +48,17 @@ struct LoginSelection: View {
                              }
                             
 
-                            // Small icon on bottom-right corner
-                            Image(systemName: "person.2.fill") // Using system icon for parent
+                           
+                            Image(systemName: "person.2.fill")
                                 .resizable()
                                 .frame(width: 20, height: 20)
                                 .foregroundColor(.white)
-                                .offset(x: -5, y: -5) // Positioning the icon
+                                .offset(x: -5, y: -5)
                         }
                     }
                     .offset(y: animateParent ? 0 : UIScreen.main.bounds.height)
 
-                    // Student Button
+                   
                     Button(action: {
                         // Handle student login action here
                     }) {
@@ -70,8 +70,8 @@ struct LoginSelection: View {
                                 .foregroundColor(.white)
                                 .cornerRadius(5)
 
-                            // Small icon on bottom-right corner
-                            Image(systemName: "studentdesk") // Using custom icon for student
+                           
+                            Image(systemName: "studentdesk")
                                 .resizable()
                                 .frame(width: 20, height: 20)
                                 .foregroundColor(.white)
@@ -80,11 +80,11 @@ struct LoginSelection: View {
                     }
                     .offset(y: animateStudent ? 0 : UIScreen.main.bounds.height)
                 }
-                .padding(.bottom, 20) // Reduced space between rows
+                .padding(.bottom, 20)
 
-                // Second row: Teacher and Admin
-                HStack(spacing: 20) { // Reduced spacing between buttons
-                    // Teacher Button
+               
+                HStack(spacing: 20) {
+                  
                     Button(action: {
                         // Handle teacher login action here
                     }) {
@@ -96,8 +96,8 @@ struct LoginSelection: View {
                                 .foregroundColor(.white)
                                 .cornerRadius(5)
 
-                            // Small icon on bottom-right corner
-                            Image(systemName: "person.crop.square.fill") // Using system icon for teacher
+                           
+                            Image(systemName: "person.crop.square.fill")
                                 .resizable()
                                 .frame(width: 20, height: 20)
                                 .foregroundColor(.white)
@@ -106,7 +106,7 @@ struct LoginSelection: View {
                     }
                     .offset(y: animateTeacher ? 0 : UIScreen.main.bounds.height)
 
-                    // Admin Button
+                   
                     Button(action: {
                         // Handle admin login action here
                     }) {
@@ -118,8 +118,8 @@ struct LoginSelection: View {
                                 .foregroundColor(.white)
                                 .cornerRadius(5)
 
-                            // Small icon on bottom-right corner
-                            Image(systemName: "person.badge.plus.fill") // Using system icon for admin
+                           
+                            Image(systemName: "person.badge.plus.fill")
                                 .resizable()
                                 .frame(width: 20, height: 20)
                                 .foregroundColor(.white)
@@ -129,7 +129,7 @@ struct LoginSelection: View {
                     .offset(y: animateAdmin ? 0 : UIScreen.main.bounds.height)
                 }
 
-                Spacer(minLength: 400) // Reduced space at the bottom
+                Spacer(minLength: 400) 
             }
             .onAppear {
                 withAnimation(.easeOut(duration: 1.5)) {
