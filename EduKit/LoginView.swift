@@ -49,26 +49,29 @@ struct LoginView: View {
 
                    Button(action: {
                        
-                       self.navigateToParent = true
+                      
                        
-                     //  login(username: username, password: password) { result in
-                      //         switch result {
-                      //         case .success(let message):
+                       login(username: username, password: password) { result in
+                               switch result {
+                               case .success(let message):
                                    // On success, show message and navigate to Parent()
-                       //            DispatchQueue.main.async {
-                        //               self.alertMessage = message
-                          //             self.showAlert = true
-                           //            resetFields()
-                           //            self.navigateToParent = true
-                           //        }
-                          //     case .failure(let error):
+                                   DispatchQueue.main.async {
+                                       self.alertMessage = message
+                                       self.showAlert = true
+                                       resetFields()
+                                       
+                                       
+                                       
+                                       self.navigateToParent = true
+                                   }
+                               case .failure(let error):
                                    // On failure, show error message
-                          //         DispatchQueue.main.async {
-                           //            self.alertMessage = error.localizedDescription
-                          //             self.showAlert = true
-                          //         }
-                         //      }
-                        //   }
+                                   DispatchQueue.main.async {
+                                       self.alertMessage = error.localizedDescription
+                                       self.showAlert = true
+                                   }
+                               }
+                           }
                    }) {
                        Text("Login")
                            .padding()
