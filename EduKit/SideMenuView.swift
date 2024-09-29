@@ -22,6 +22,13 @@ struct SideMenuView: View {
             NavigationLink(destination: AnnouncementsView()) {
                 Label("Announcements", systemImage: "megaphone")
             }
+            
+            NavigationLink(destination: ChildrenView()) {
+                Label("Children Info", systemImage: "person.2")
+            }
+           
+            Label("Logout", systemImage: "arrow.right.square")
+           
         }
             }
 }
@@ -63,6 +70,15 @@ struct AnnouncementsView: View {
             .navigationTitle("Announcements")
     }
 }
+
+
+struct ChildrenView: View {
+    var body: some View {
+        Text("Children View")
+            .navigationTitle("Children Info")
+    }
+}
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

@@ -4,14 +4,16 @@ struct Parent: View {
     @State private var isMenuOpen = false
     @State private var isLoading = true
     @State private var parentProfile: [String: Any] = [:]
+    @State private var showAlert = false 
+    @State private var alertMessage = ""
 
     var body: some View {
         ZStack {
            
             if isLoading {
-                            // Show a loading spinner while data is being fetched
+                           
                             VStack {
-                                ProgressView("Loading...") // Loading indicator
+                                ProgressView("Loading...")
                                     .progressViewStyle(CircularProgressViewStyle(tint: .purple))
                                     .scaleEffect(1.5)
                             }
@@ -22,7 +24,7 @@ struct Parent: View {
             
             
                 VStack {
-                    // Top section with background gradient and user details
+                   
                     ZStack {
                         LinearGradient(gradient: Gradient(colors: [Color.purple, Color.blue]),
                                        startPoint: .topLeading,
@@ -31,7 +33,7 @@ struct Parent: View {
                             .frame(height: 250)
 
                         VStack(spacing: 16) {
-                            Image(systemName: "person.circle.fill") // Placeholder for profile picture
+                            Image(systemName: "person.circle.fill")
                                 .resizable()
                                 .frame(width: 100, height: 100)
                                 .foregroundColor(.white)
@@ -62,7 +64,7 @@ struct Parent: View {
                                 let username = user["username"] as? String {
                                 Text(username)
                             } else {
-                                Text("Anna Avetisyan") // Fallback if no data yet
+                                Text("Anna Avetisyan")
                             }
                             Spacer()
                         }
@@ -98,7 +100,7 @@ struct Parent: View {
                             if let address = parentProfile["address"] as? String {
                                 Text(address)
                             } else {
-                                Text("Address not available") // Fallback
+                                Text("Address not available")
                             }
                             
                             Spacer()
@@ -110,7 +112,7 @@ struct Parent: View {
                             if let phoneNumber = parentProfile["phone_number"] as? String {
                                 Text(phoneNumber)
                             } else {
-                                Text("Phone number not available") // Fallback
+                                Text("Phone number not available")
                             }
                             
                             Spacer()
@@ -136,7 +138,7 @@ struct Parent: View {
                             Spacer()
                         }
 
-                        // Edit Profile Button
+                      
                         Button(action: {
                             // Handle edit profile action
                         }) {
@@ -154,11 +156,11 @@ struct Parent: View {
                 }
                 
                 .navigationBarBackButtonHidden(true)
-                .offset(x: isMenuOpen ? 250 : 0) // Move content when menu is open
+                .offset(x: isMenuOpen ? 250 : 0)
                 .animation(.easeInOut, value: isMenuOpen)
             }
 
-            // Semi-transparent background when menu is open
+           
             if isMenuOpen {
                 Color.black.opacity(0.4)
                     .ignoresSafeArea()
@@ -168,12 +170,12 @@ struct Parent: View {
                         }
                     }
 
-                // Side menu
+              
                 SideMenuView()
                     .frame(width: 270)
                     .background(Color.gray.opacity(0.9))
                    
-                    .offset(x: isMenuOpen ? -80 : -100) // Ensure it moves in from the left
+                    .offset(x: isMenuOpen ? -80 : -100)
                     .animation(.easeInOut, value: isMenuOpen)
 
             }
@@ -192,7 +194,7 @@ struct Parent: View {
             }
         }
         .onAppear {
-                    // Call the ParentProfileService when the view appears
+                   
                     ParentProfileService.shared.getParentProfile { result in
                         switch result {
                         case .success(let profile):
@@ -203,9 +205,14 @@ struct Parent: View {
                         case .failure(let error):
                             print("Error: \(error.localizedDescription)")
                             self.isLoading = false
+                            alertMessage = error.localizedDescription
+                            showAlert = true
                         }
                     }
         }
+        .alert(isPresented: $showAlert) {
+                    Alert(title: Text("Error"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
+                }
     }
     
     func formatDate(dateString: String) -> String {
@@ -213,10 +220,10 @@ struct Parent: View {
             inputFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
             if let date = inputFormatter.date(from: dateString) {
                 let outputFormatter = DateFormatter()
-                outputFormatter.dateFormat = "dd-yyyy-MM" // Output format with only the date
+                outputFormatter.dateFormat = "dd-yyyy-MM"
                 return outputFormatter.string(from: date)
             }
-            return "Invalid date" // Return a fallback if parsing fails
+            return "Invalid date" 
         }
 }
 
