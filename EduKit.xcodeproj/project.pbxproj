@@ -20,6 +20,7 @@
 		D24D36382C935F8C00A6F8CA /* LauchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D24D36372C935F8C00A6F8CA /* LauchScreen.storyboard */; };
 		D2A88C182CAAB7C700FDE8BD /* HolidayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A88C172CAAB7C700FDE8BD /* HolidayViewModel.swift */; };
 		D2A88C1A2CAAC11800FDE8BD /* Holiday.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A88C192CAAC11800FDE8BD /* Holiday.swift */; };
+		D2A88C1C2CAAD6BE00FDE8BD /* StudentLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A88C1B2CAAD6BE00FDE8BD /* StudentLogin.swift */; };
 		D2A8C3B12C985AFA0076892A /* Signup.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A8C3B02C985AFA0076892A /* Signup.swift */; };
 		D2A8C3B32C985FA30076892A /* LoginSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A8C3B22C985FA30076892A /* LoginSelection.swift */; };
 		D2D13FEF2CA5C0C8001BD1A1 /* StudentInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D13FEE2CA5C0C8001BD1A1 /* StudentInfoView.swift */; };
@@ -65,6 +66,7 @@
 		D24D36392C9361F100A6F8CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D2A88C172CAAB7C700FDE8BD /* HolidayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidayViewModel.swift; sourceTree = "<group>"; };
 		D2A88C192CAAC11800FDE8BD /* Holiday.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Holiday.swift; sourceTree = "<group>"; };
+		D2A88C1B2CAAD6BE00FDE8BD /* StudentLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentLogin.swift; sourceTree = "<group>"; };
 		D2A8C3B02C985AFA0076892A /* Signup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signup.swift; sourceTree = "<group>"; };
 		D2A8C3B22C985FA30076892A /* LoginSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSelection.swift; sourceTree = "<group>"; };
 		D2D13FEE2CA5C0C8001BD1A1 /* StudentInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentInfoView.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 				D2D13FF42CA6B832001BD1A1 /* ParentRegistrationService.swift */,
 				D2A8C3B22C985FA30076892A /* LoginSelection.swift */,
 				D21B609E2CA757430010F587 /* ParentOptions.swift */,
+				D2A88C1B2CAAD6BE00FDE8BD /* StudentLogin.swift */,
 				D2D9705B2C91EE570040DE4A /* Assets.xcassets */,
 				D2D9705D2C91EE570040DE4A /* Preview Content */,
 			);
@@ -329,6 +332,7 @@
 				D2239C962CA9C54A00BACFDC /* ChildrenProfileServiceCall.swift in Sources */,
 				D2A88C182CAAB7C700FDE8BD /* HolidayViewModel.swift in Sources */,
 				D2D970582C91EE540040DE4A /* EduKitApp.swift in Sources */,
+				D2A88C1C2CAAD6BE00FDE8BD /* StudentLogin.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

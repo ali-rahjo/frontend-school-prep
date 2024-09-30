@@ -63,14 +63,15 @@ struct LoginSelection: View {
                         // Handle student login action here
                     }) {
                         ZStack(alignment: .bottomTrailing) {
-                            Text("Student")
-                                .font(.headline)
-                                .frame(width: 100, height: 100)
-                                .background(Color.green)
-                                .foregroundColor(.white)
-                                .cornerRadius(5)
+                            NavigationLink(destination: StudentLogin()) {
+                                Text("Student")
+                                    .font(.headline)
+                                    .frame(width: 100, height: 100)
+                                    .background(Color.green)
+                                    .foregroundColor(.white)
+                                    .cornerRadius(5)
 
-                           
+                            }
                             Image(systemName: "studentdesk")
                                 .resizable()
                                 .frame(width: 20, height: 20)
