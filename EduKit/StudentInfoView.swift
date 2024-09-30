@@ -103,11 +103,11 @@ struct StudentInfoView: View {
                     HStack(spacing: 20) {
                         
                         Button(action: {
-                            // Add student logic
+                           
                             if let ageInt = Int(age), let classIdInt = Int(classid) {
                                 let newStudent = Student(firstName: firstname, lastName: lastname, age: ageInt, classId: classIdInt, gender: selectedGender, username: username, password: password)
                                 students.append(newStudent)
-                                resetForm() // Clear input fields after adding a student
+                                resetForm()
                             }
                         }) {
                             Text("Add")
@@ -161,7 +161,7 @@ struct StudentInfoView: View {
                                   message: Text(alertMessage),
                                   dismissButton: .default(Text("OK"), action: {
                                       if alertMessage.contains("Invitation") {
-                                          navigateToLogin = true // Trigger navigation
+                                          navigateToLogin = true
                                       }
                                   }))
                         }
@@ -171,7 +171,7 @@ struct StudentInfoView: View {
                             destination: ParentOptions(),
                             isActive: $navigateToLogin) {
                             EmptyView()
-                            }
+                            }.navigationBarHidden(true)
                     }
                     .padding(.leading,20)
                 }
@@ -186,7 +186,7 @@ struct StudentInfoView: View {
         .navigationBarHidden(true)
     }
     
-    // Function to reset the form fields
+   
     func resetForm() {
         firstname = ""
         lastname = ""

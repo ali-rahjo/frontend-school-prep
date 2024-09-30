@@ -88,7 +88,7 @@ class ParentRegistrationService {
                        if httpResponse.statusCode == 201 {
                            // On success, check for response body
                            if let data = data, let responseString = String(data: data, encoding: .utf8) {
-                               print("Success response: \(responseString)")
+                             //  print("Success response: \(responseString)")
                                completion(.success("An Invitation link has been sent to your registered email. Please accept the invitation."))
                            } else {
                                print("No response body received.")

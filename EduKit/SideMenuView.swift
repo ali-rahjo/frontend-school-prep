@@ -6,6 +6,9 @@ struct SideMenuView: View {
             NavigationLink(destination: TimeTableView()) {
                 Label("Time Table", systemImage: "calendar")
             }
+            NavigationLink(destination: LunchMenu()) {
+                Label("Luch Menu", systemImage: "calendar")
+            }
             
             NavigationLink(destination: ApplyLeaveView()) {
                 Label("Apply Leave", systemImage: "paperplane")
@@ -27,6 +30,10 @@ struct SideMenuView: View {
                 Label("Children Info", systemImage: "person.2")
             }
            
+            NavigationLink(destination: Holiday()) {
+                Label("Holiday Calendar", systemImage: "calendar")
+            }
+            
             Label("Logout", systemImage: "arrow.right.square")
            
         }
@@ -35,7 +42,6 @@ struct SideMenuView: View {
 
 
 
-// Example destination views (you can modify these based on your app's needs)
 struct TimeTableView: View {
     var body: some View {
         Text("Time Table View")
@@ -71,13 +77,15 @@ struct AnnouncementsView: View {
     }
 }
 
-
-struct ChildrenView: View {
+struct LunchMenu: View {
     var body: some View {
-        Text("Children View")
-            .navigationTitle("Children Info")
+        Text("Lunch Menu")
+            .navigationTitle("Lunch Menu")
     }
 }
+
+
+
 
 
 struct ContentView_Previews: PreviewProvider {

@@ -54,7 +54,7 @@ struct LoginView: View {
                        login(username: username, password: password) { result in
                                switch result {
                                case .success(let message):
-                                   // On success, show message and navigate to Parent()
+                                  
                                    DispatchQueue.main.async {
                                        self.alertMessage = message
                                        self.showAlert = true
@@ -65,7 +65,7 @@ struct LoginView: View {
                                        self.navigateToParent = true
                                    }
                                case .failure(let error):
-                                   // On failure, show error message
+                                  
                                    DispatchQueue.main.async {
                                        self.alertMessage = error.localizedDescription
                                        self.showAlert = true
@@ -92,7 +92,7 @@ struct LoginView: View {
                    }
                    .padding(.top)
 
-                   // Navigation to ForgotPasswordView
+               
                    NavigationLink(destination: ForgotPasswordView(), isActive: $navigateToForgotPassword) {
                        EmptyView()
                    }
@@ -139,19 +139,19 @@ struct LoginView: View {
             }
 
             if let httpResponse = response as? HTTPURLResponse {
-                        print("Response status code: \(httpResponse.statusCode)")
+                      //  print("Response status code: \(httpResponse.statusCode)")
 
                         if httpResponse.statusCode == 200 {
-                            // On success, check for response body
+                         
                             if let data = data, let responseString = String(data: data, encoding: .utf8) {
-                                print("Success response: \(responseString)")  // Success response: {"key":"14186845819be86a4ae39430cfe063644e5d1278"}
+                            //    print("Success response: \(responseString)")  // Success response: {"key":"14186845819be86a4ae39430cfe063644e5d1278"}
                                 completion(.success("Login successful"))
                             } else {
                                 print("No response body received.")
                                 completion(.success(""))
                             }
                         } else {
-                            // On failure, print response data
+                           
                             if let data = data, let errorResponse = String(data: data, encoding: .utf8) {
                                 print("Failure response: \(errorResponse)")
                                 completion(.failure(NSError(domain: "", code: httpResponse.statusCode, userInfo: [NSLocalizedDescriptionKey: errorResponse])))
@@ -162,7 +162,7 @@ struct LoginView: View {
                         }
                     }
 
-            // Success
+           
             completion(.success("Login successful"))
 
         }.resume()

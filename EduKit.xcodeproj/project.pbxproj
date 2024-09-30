@@ -13,7 +13,13 @@
 		D21B609F2CA757430010F587 /* ParentOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21B609E2CA757430010F587 /* ParentOptions.swift */; };
 		D2239C902CA96E5400BACFDC /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2239C8F2CA96E5400BACFDC /* SideMenuView.swift */; };
 		D2239C922CA9AC9900BACFDC /* ParentProfileServiceCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2239C912CA9AC9900BACFDC /* ParentProfileServiceCall.swift */; };
+		D2239C962CA9C54A00BACFDC /* ChildrenProfileServiceCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2239C952CA9C54A00BACFDC /* ChildrenProfileServiceCall.swift */; };
+		D2239C982CA9D21400BACFDC /* ChildrenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2239C972CA9D21400BACFDC /* ChildrenViewModel.swift */; };
+		D2239C9A2CA9D29D00BACFDC /* ChildrenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2239C992CA9D29D00BACFDC /* ChildrenView.swift */; };
+		D2239C9C2CA9D4B500BACFDC /* child.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2239C9B2CA9D4B500BACFDC /* child.swift */; };
 		D24D36382C935F8C00A6F8CA /* LauchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D24D36372C935F8C00A6F8CA /* LauchScreen.storyboard */; };
+		D2A88C182CAAB7C700FDE8BD /* HolidayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A88C172CAAB7C700FDE8BD /* HolidayViewModel.swift */; };
+		D2A88C1A2CAAC11800FDE8BD /* Holiday.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A88C192CAAC11800FDE8BD /* Holiday.swift */; };
 		D2A8C3B12C985AFA0076892A /* Signup.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A8C3B02C985AFA0076892A /* Signup.swift */; };
 		D2A8C3B32C985FA30076892A /* LoginSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A8C3B22C985FA30076892A /* LoginSelection.swift */; };
 		D2D13FEF2CA5C0C8001BD1A1 /* StudentInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D13FEE2CA5C0C8001BD1A1 /* StudentInfoView.swift */; };
@@ -51,8 +57,14 @@
 		D21B609E2CA757430010F587 /* ParentOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentOptions.swift; sourceTree = "<group>"; };
 		D2239C8F2CA96E5400BACFDC /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
 		D2239C912CA9AC9900BACFDC /* ParentProfileServiceCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentProfileServiceCall.swift; sourceTree = "<group>"; };
+		D2239C952CA9C54A00BACFDC /* ChildrenProfileServiceCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildrenProfileServiceCall.swift; sourceTree = "<group>"; };
+		D2239C972CA9D21400BACFDC /* ChildrenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildrenViewModel.swift; sourceTree = "<group>"; };
+		D2239C992CA9D29D00BACFDC /* ChildrenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildrenView.swift; sourceTree = "<group>"; };
+		D2239C9B2CA9D4B500BACFDC /* child.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = child.swift; sourceTree = "<group>"; };
 		D24D36372C935F8C00A6F8CA /* LauchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LauchScreen.storyboard; sourceTree = "<group>"; };
 		D24D36392C9361F100A6F8CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		D2A88C172CAAB7C700FDE8BD /* HolidayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidayViewModel.swift; sourceTree = "<group>"; };
+		D2A88C192CAAC11800FDE8BD /* Holiday.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Holiday.swift; sourceTree = "<group>"; };
 		D2A8C3B02C985AFA0076892A /* Signup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signup.swift; sourceTree = "<group>"; };
 		D2A8C3B22C985FA30076892A /* LoginSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSelection.swift; sourceTree = "<group>"; };
 		D2D13FEE2CA5C0C8001BD1A1 /* StudentInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentInfoView.swift; sourceTree = "<group>"; };
@@ -125,9 +137,15 @@
 				D2D13FEE2CA5C0C8001BD1A1 /* StudentInfoView.swift */,
 				D21B60982CA738FF0010F587 /* LoginView.swift */,
 				D2239C912CA9AC9900BACFDC /* ParentProfileServiceCall.swift */,
+				D2239C952CA9C54A00BACFDC /* ChildrenProfileServiceCall.swift */,
+				D2239C972CA9D21400BACFDC /* ChildrenViewModel.swift */,
+				D2A88C172CAAB7C700FDE8BD /* HolidayViewModel.swift */,
+				D2239C9B2CA9D4B500BACFDC /* child.swift */,
+				D2239C992CA9D29D00BACFDC /* ChildrenView.swift */,
 				D21B609C2CA755690010F587 /* ForgotPasswordView.swift */,
 				D21B609A2CA754E30010F587 /* Parent.swift */,
 				D2239C8F2CA96E5400BACFDC /* SideMenuView.swift */,
+				D2A88C192CAAC11800FDE8BD /* Holiday.swift */,
 				D2D13FF42CA6B832001BD1A1 /* ParentRegistrationService.swift */,
 				D2A8C3B22C985FA30076892A /* LoginSelection.swift */,
 				D21B609E2CA757430010F587 /* ParentOptions.swift */,
@@ -297,13 +315,19 @@
 				D21B609B2CA754E30010F587 /* Parent.swift in Sources */,
 				D21B609F2CA757430010F587 /* ParentOptions.swift in Sources */,
 				D21B60992CA738FF0010F587 /* LoginView.swift in Sources */,
+				D2239C982CA9D21400BACFDC /* ChildrenViewModel.swift in Sources */,
 				D2239C902CA96E5400BACFDC /* SideMenuView.swift in Sources */,
 				D2239C922CA9AC9900BACFDC /* ParentProfileServiceCall.swift in Sources */,
 				D2D9705A2C91EE540040DE4A /* ContentView.swift in Sources */,
 				D2A8C3B12C985AFA0076892A /* Signup.swift in Sources */,
 				D2A8C3B32C985FA30076892A /* LoginSelection.swift in Sources */,
+				D2239C9C2CA9D4B500BACFDC /* child.swift in Sources */,
 				D2D13FF52CA6B832001BD1A1 /* ParentRegistrationService.swift in Sources */,
+				D2A88C1A2CAAC11800FDE8BD /* Holiday.swift in Sources */,
 				D21B609D2CA755690010F587 /* ForgotPasswordView.swift in Sources */,
+				D2239C9A2CA9D29D00BACFDC /* ChildrenView.swift in Sources */,
+				D2239C962CA9C54A00BACFDC /* ChildrenProfileServiceCall.swift in Sources */,
+				D2A88C182CAAB7C700FDE8BD /* HolidayViewModel.swift in Sources */,
 				D2D970582C91EE540040DE4A /* EduKitApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

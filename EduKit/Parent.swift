@@ -155,13 +155,14 @@ struct Parent: View {
                     .padding(.top, -20)
                 }
                 
-                .navigationBarBackButtonHidden(true)
+               
                 .offset(x: isMenuOpen ? 250 : 0)
                 .animation(.easeInOut, value: isMenuOpen)
             }
 
            
             if isMenuOpen {
+                
                 Color.black.opacity(0.4)
                     .ignoresSafeArea()
                     .onTapGesture {
@@ -177,9 +178,11 @@ struct Parent: View {
                    
                     .offset(x: isMenuOpen ? -80 : -100)
                     .animation(.easeInOut, value: isMenuOpen)
+                    
 
             }
         }
+        
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading) {
                 Button(action: {
@@ -193,6 +196,7 @@ struct Parent: View {
                 }
             }
         }
+        .navigationBarBackButtonHidden(isMenuOpen)
         .onAppear {
                    
                     ParentProfileService.shared.getParentProfile { result in
@@ -209,7 +213,7 @@ struct Parent: View {
                             showAlert = true
                         }
                     }
-        }
+        }.navigationBarBackButtonHidden(true)
         .alert(isPresented: $showAlert) {
                     Alert(title: Text("Error"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
                 }

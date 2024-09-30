@@ -72,7 +72,7 @@ struct ParentOptions: View {
                                 .font(.headline)
                                 .foregroundColor(.white)
                         }
-                    }.navigationBarHidden(true)
+                    }
                 }
                 .offset(x: animateLogin ? 0 : UIScreen.main.bounds.width)
                 .animation(.easeOut(duration: 1.8), value: animateLogin)
