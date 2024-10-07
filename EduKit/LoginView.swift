@@ -26,11 +26,26 @@ struct LoginView: View {
                 
                 VStack(spacing: 20) {
                    
-                    Text("Login")
-                        .font(.largeTitle)
-                        .fontWeight(.bold)
+                    Text("Welcome to")
+                         .font(.custom("Noteworthy-Bold", size: 25))
                         .foregroundColor(Color.white)
-                        .padding(.top, 60)
+                        .padding(.bottom, 10)
+
+                   
+                    Text("SchoolPrep")
+                        .font(.custom("Noteworthy-Bold", size: 40))
+                        .foregroundColor(Color.white)
+                        .padding(.bottom, -20)
+     
+                    
+                  
+                    Image("logo")
+                        .resizable()
+                        .scaledToFill()
+                      
+                        .frame(width: 80, height: 75)
+                        .clipShape(Circle())
+                        .padding(.bottom,20)
                     
                     
                     TextField("Username", text: $username)
@@ -40,12 +55,15 @@ struct LoginView: View {
                        .frame(width: 300)
                        .autocapitalization(.none)
                        .disableAutocorrection(true)
+                       .padding(.bottom,40)
 
                    SecureField("Password", text: $password)
                        .padding()
                        .background(Color.white.opacity(0.8))
                        .cornerRadius(8)
                        .frame(width: 300)
+                       .padding(.top,-40)
+                       
 
                    Button(action: {
                        
@@ -79,6 +97,7 @@ struct LoginView: View {
                            .frame(width: 150)
                            .background(Color.blue)
                            .cornerRadius(8)
+                          
                    }
                   
 
@@ -100,7 +119,7 @@ struct LoginView: View {
                     NavigationLink(destination: Parent(), isActive: $navigateToParent) {
                         EmptyView()
                     }.navigationBarHidden(true)
-                }
+                }.padding(.bottom,85)
             }
         }
         

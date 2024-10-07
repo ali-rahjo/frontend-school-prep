@@ -11,53 +11,42 @@ struct StudentLogin: View {
            
             ZStack {
 
-                Color(red: 253 / 255.0, green: 213 / 255.0, blue: 1 / 255.0)
+                Image("slide8")
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: UIScreen.main.bounds.width)
+                    .clipped()
+                    .ignoresSafeArea()
+                
                 VStack {
                                // Welcome label
                                Text("Welcome to")
-                                   .font(.title)
-                                   .foregroundColor(Color(red: 216 / 255.0, green: 132 / 255.0, blue: 0 / 255.0))
-                                   .padding(.top, 50)
+                                    .font(.custom("Noteworthy-Bold", size: 25))
+                                   .foregroundColor(Color.white)
+                                   .padding(.bottom, 10)
 
                               
                                Text("SchoolPrep")
-                                   .font(.custom("ComicSansMS", size: 40))
-                                   .foregroundColor(Color(red: 224 / 255.0, green: 153 / 255.0, blue: 1 / 255.0))
-                                   .padding(.top, 10)
-                    
-                     
-                               Spacer()
+                                   .font(.custom("Noteworthy-Bold", size: 40))
+                                   .foregroundColor(Color.white)
+                                   .padding(.bottom, 10)
+                
                                
                              
                                Image("logo")
                                    .resizable()
                                    .scaledToFill()
                                  
-                                   .frame(width: 90, height: 90)
+                                   .frame(width: 80, height: 75)
                                    .clipShape(Circle())
-                                   .padding(.bottom, 50)
-                }.padding(.top,50)
-              
-             
-            }.background(Color(red: 253 / 255.0, green: 213 / 255.0, blue: 1 / 255.0))
-            .frame(height: 350)
-            .clipped()
-            .padding(.top,0)
-            .edgesIgnoringSafeArea(.all)
-                
-                
-                
-          
-               
-            
-            
-                // Main Content Area
-                VStack(spacing: 16) {
+                                   .padding(.bottom,30)
+                                  
+                                   
                     TextField("Username", text: $username)
                         .padding()
                         .background(Color.white.opacity(0.8))
                         .cornerRadius(8)
-                        .frame(width: 340)
+                        .frame(width: 320)
                         //.padding(.horizontal)
                         .shadow(color: Color.black.opacity(0.2), radius: 1, x: 0, y: 2)
 
@@ -65,30 +54,44 @@ struct StudentLogin: View {
                         .padding()
                         .background(Color.white.opacity(0.8))
                         .cornerRadius(8)
-                        .frame(width: 340)
+                        .frame(width: 320)
                         //.padding(.horizontal)
                         .shadow(color: Color.black.opacity(0.2), radius: 1, x: 0, y: 2)
+                        .padding(.top,20)
 
                     // Add a login button or other UI elements below
                     Button(action: {
                         // Handle login action
                     }) {
                         Text("Login")
-                            .frame(maxWidth: 280) // Make button take full width
+                            .frame(maxWidth: 180) // Make button take full width
                             .padding()
-                            .background(Color(red: 255 / 255.0, green: 198 / 255.0, blue: 1 / 255.0))
-                      
+                            .background(Color.blue)
+                            .font(.system(size: 20)) 
                             .foregroundColor(.white)
                             .cornerRadius(8)
+                            .padding(.top,30)
+                        
+                        
                     }
                     .padding(.horizontal)
-                    .padding(.top, 20)
+                    .padding(.bottom, 200)
                 }
-                .cornerRadius(15)
-                .padding(.top, -16)
+                .padding(.bottom, 50)
+             
+            }
+           
+                
+       
+                
+          
+               
+            
+            
+                
                
                 
-                Spacer()
+                
             }
        
     
