@@ -121,7 +121,7 @@ struct LoginView: View {
                     }.navigationBarHidden(true)
                 }.padding(.bottom,85)
             }
-        }
+        }.navigationBarHidden(true)
         
     }
     

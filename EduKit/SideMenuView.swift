@@ -116,12 +116,6 @@ struct TimeTableView: View {
     }
 }
 
-struct ApplyLeaveView: View {
-    var body: some View {
-        Text("Apply Leave View")
-            .navigationTitle("Apply Leave")
-    }
-}
 
 struct AttendanceView: View {
     var body: some View {
