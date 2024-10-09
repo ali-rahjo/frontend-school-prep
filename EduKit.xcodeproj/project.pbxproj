@@ -17,6 +17,8 @@
 		D2239C982CA9D21400BACFDC /* ChildrenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2239C972CA9D21400BACFDC /* ChildrenViewModel.swift */; };
 		D2239C9A2CA9D29D00BACFDC /* ChildrenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2239C992CA9D29D00BACFDC /* ChildrenView.swift */; };
 		D2239C9C2CA9D4B500BACFDC /* child.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2239C9B2CA9D4B500BACFDC /* child.swift */; };
+		D23C5E252CB6E9DB007F2017 /* LeaveStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23C5E242CB6E9DB007F2017 /* LeaveStatusView.swift */; };
+		D23C5E272CB6EAFD007F2017 /* LeaveStatusServiceCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23C5E262CB6EAFD007F2017 /* LeaveStatusServiceCall.swift */; };
 		D24D36382C935F8C00A6F8CA /* LauchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D24D36372C935F8C00A6F8CA /* LauchScreen.storyboard */; };
 		D2803F532CB68CCA0022C6B8 /* Goodbye.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2803F522CB68CCA0022C6B8 /* Goodbye.swift */; };
 		D2803F552CB6A4FD0022C6B8 /* ApplyLeaveServiceCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2803F542CB6A4FD0022C6B8 /* ApplyLeaveServiceCall.swift */; };
@@ -67,6 +69,8 @@
 		D2239C972CA9D21400BACFDC /* ChildrenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildrenViewModel.swift; sourceTree = "<group>"; };
 		D2239C992CA9D29D00BACFDC /* ChildrenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildrenView.swift; sourceTree = "<group>"; };
 		D2239C9B2CA9D4B500BACFDC /* child.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = child.swift; sourceTree = "<group>"; };
+		D23C5E242CB6E9DB007F2017 /* LeaveStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaveStatusView.swift; sourceTree = "<group>"; };
+		D23C5E262CB6EAFD007F2017 /* LeaveStatusServiceCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaveStatusServiceCall.swift; sourceTree = "<group>"; };
 		D24D36372C935F8C00A6F8CA /* LauchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LauchScreen.storyboard; sourceTree = "<group>"; };
 		D24D36392C9361F100A6F8CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D2803F522CB68CCA0022C6B8 /* Goodbye.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goodbye.swift; sourceTree = "<group>"; };
@@ -151,6 +155,7 @@
 				D2239C912CA9AC9900BACFDC /* ParentProfileServiceCall.swift */,
 				D2239C952CA9C54A00BACFDC /* ChildrenProfileServiceCall.swift */,
 				D2803F542CB6A4FD0022C6B8 /* ApplyLeaveServiceCall.swift */,
+				D23C5E262CB6EAFD007F2017 /* LeaveStatusServiceCall.swift */,
 				D2239C972CA9D21400BACFDC /* ChildrenViewModel.swift */,
 				D2A88C172CAAB7C700FDE8BD /* HolidayViewModel.swift */,
 				D2239C9B2CA9D4B500BACFDC /* child.swift */,
@@ -158,6 +163,7 @@
 				D21B609C2CA755690010F587 /* ForgotPasswordView.swift */,
 				D21B609A2CA754E30010F587 /* Parent.swift */,
 				D2239C8F2CA96E5400BACFDC /* SideMenuView.swift */,
+				D23C5E242CB6E9DB007F2017 /* LeaveStatusView.swift */,
 				D2803F562CB6A6EE0022C6B8 /* ApplyLeaveView.swift */,
 				D2A9C2BF2CB5B24D00137781 /* Logout.swift */,
 				D2803F522CB68CCA0022C6B8 /* Goodbye.swift */,
@@ -336,7 +342,9 @@
 				D21B60992CA738FF0010F587 /* LoginView.swift in Sources */,
 				D2803F572CB6A6EE0022C6B8 /* ApplyLeaveView.swift in Sources */,
 				D2239C982CA9D21400BACFDC /* ChildrenViewModel.swift in Sources */,
+				D23C5E252CB6E9DB007F2017 /* LeaveStatusView.swift in Sources */,
 				D2239C902CA96E5400BACFDC /* SideMenuView.swift in Sources */,
+				D23C5E272CB6EAFD007F2017 /* LeaveStatusServiceCall.swift in Sources */,
 				D2239C922CA9AC9900BACFDC /* ParentProfileServiceCall.swift in Sources */,
 				D2D9705A2C91EE540040DE4A /* ContentView.swift in Sources */,
 				D2A8C3B12C985AFA0076892A /* Signup.swift in Sources */,

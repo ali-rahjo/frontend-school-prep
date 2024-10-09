@@ -22,6 +22,10 @@ struct SideMenuView: View {
                 Label("Apply Leave", systemImage: "paperplane")
             }
             
+            NavigationLink(destination: LeaveStatusView()) {
+                Label("Leave Status", systemImage: "doc.text")
+            }
+            
             NavigationLink(destination: AttendanceView()) {
                 Label("Attendance", systemImage: "person.crop.circle")
             }

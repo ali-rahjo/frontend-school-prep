@@ -39,62 +39,80 @@ struct ChildrenView: View {
                             
                                 HStack {
                                     Text("Student ID")
-                                    Spacer()
+                                        .font(.headline)
+                                        .frame(width: 150, alignment: .leading)
                                     Text("\(child.id)")
-                                }
+                                        .frame(maxWidth: .infinity, alignment: .leading)
+                                }.padding(.top,5)
                             
                                 HStack {
                                     Text("Username")
-                                    Spacer()
+                                        .font(.headline)
+                                        .frame(width: 150, alignment: .leading)
                                     Text("\(child.username)")
+                                        .frame(maxWidth: .infinity, alignment: .leading)
                                 }
 
                                 HStack {
                                     Text("Age")
-                                    Spacer()
+                                        .font(.headline)
+                                        .frame(width: 150, alignment: .leading)
                                     Text("\(child.age)")
+                                        .frame(maxWidth: .infinity, alignment: .leading)
                                 }
                             
                                 HStack {
                                     Text("Gender")
-                                    Spacer()
+                                        .font(.headline)
+                                        .frame(width: 150, alignment: .leading)
                                     Text("\(child.gender)")
+                                        .frame(maxWidth: .infinity, alignment: .leading)
                                 }
                             
                                
                             
                                 HStack {
                                     Text("Class ID")
-                                    Spacer()
+                                        .font(.headline)
+                                        .frame(width: 150, alignment: .leading)
                                     Text("\(child.classInfo.id)")
+                                        .frame(maxWidth: .infinity, alignment: .leading)
                                 }
 
                                 HStack {
                                     Text("Class")
-                                    Spacer()
+                                        .frame(width: 150, alignment: .leading)
+                                        .font(.headline)
                                     Text("\(child.classInfo.className)")
+                                        .frame(maxWidth: .infinity, alignment: .leading)
                                 }
 
                                
 
                                 HStack {
                                     Text("Academic Year")
-                                    Spacer()
+                                        .font(.headline)
+                                        .frame(width: 150, alignment: .leading)
                                     Text("\(child.classInfo.academicYearStart) - \(child.classInfo.academicYearEnd)")
+                                        .frame(maxWidth: .infinity, alignment: .leading)
                                 }
 
                                 HStack {
                                     Text("Grade")
-                                    Spacer()
+                                        .font(.headline)
+                                        .frame(width: 150, alignment: .leading)
                                     Text("\(child.classInfo.grade)")
+                                        .frame(maxWidth: .infinity, alignment: .leading)
                                 }
                             
                             
                                 if let teacher = child.teacher {
                                  HStack {
                                         Text("Teacher")
-                                        Spacer()
-                                        Text(teacher.fullName)
+                                         .font(.headline)
+                                         .frame(width: 150, alignment: .leading)
+                                     Text(teacher.fullName.capitalized)
+                                         .frame(maxWidth: .infinity, alignment: .leading)
                                         }
                                 }
                             
