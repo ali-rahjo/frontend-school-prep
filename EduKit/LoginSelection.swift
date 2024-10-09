@@ -90,14 +90,15 @@ struct LoginSelection: View {
                         // Handle teacher login action here
                     }) {
                         ZStack(alignment: .bottomTrailing) {
-                            Text("Teacher")
-                                .font(.headline)
-                                .frame(width: 100, height: 100)
-                                .background(Color.orange)
-                                .foregroundColor(.white)
-                                .cornerRadius(5)
+                            NavigationLink(destination:TeacherOptions()) {
+                                Text("Teacher")
+                                    .font(.headline)
+                                    .frame(width: 100, height: 100)
+                                    .background(Color.orange)
+                                    .foregroundColor(.white)
+                                    .cornerRadius(5)
 
-                           
+                            }
                             Image(systemName: "person.crop.square.fill")
                                 .resizable()
                                 .frame(width: 20, height: 20)

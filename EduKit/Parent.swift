@@ -4,7 +4,7 @@ struct Parent: View {
     @State private var isMenuOpen = false
     @State private var isLoading = true
     @State private var parentProfile: [String: Any] = [:]
-    @State private var showAlert = false 
+    @State private var showAlert = false
     @State private var alertMessage = ""
 
     var body: some View {
@@ -227,7 +227,6 @@ struct Parent: View {
                 outputFormatter.dateFormat = "dd-yyyy-MM"
                 return outputFormatter.string(from: date)
             }
-            return "Invalid date" 
+            return "Invalid date"
         }
 }
-

@@ -10,7 +10,7 @@ class ParentProfileService {
     
     func getParentProfile(completion: @escaping (Result<[String: Any], Error>) -> Void) {
         
-        guard let url = URL(string: "http://192.168.0.219:8000/api/v1/parent/profile/") else {
+        guard let url = URL(string: "http://192.168.0.219:8000/api/v1/parent/view/profile/") else {
             print("Invalid URL")
             return
         }

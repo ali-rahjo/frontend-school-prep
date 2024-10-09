@@ -15,6 +15,8 @@ struct StudentInfoView: View {
     @State private var alertMessage = ""
     @State private var students: [Student] = []
     @State private var navigateToLogin = false
+    @State private var isLoading = false
+   
     
     let genders = ["M", "F"]
     
@@ -121,7 +123,7 @@ struct StudentInfoView: View {
 
                         Button(action: {
                            
-                            
+                            isLoading = true
                             
                             let parentInfo = ParentInfo(
                                 username: studentInfo.username,
@@ -137,6 +139,7 @@ struct StudentInfoView: View {
                             
                             ParentRegistrationService.shared.registerParent(parentInfo: parentInfo) { result in
                                 DispatchQueue.main.async {
+                                    isLoading = false
                                 switch result {
                                 case .success(let message):
                                     alertMessage = message
@@ -168,7 +171,7 @@ struct StudentInfoView: View {
                         
                         
                         NavigationLink(
-                            destination: ParentOptions(),
+                            destination: LoginView(),
                             isActive: $navigateToLogin) {
                             EmptyView()
                             }.navigationBarHidden(true)
@@ -180,6 +183,16 @@ struct StudentInfoView: View {
                 .background(Color.white.opacity(0.2))
                 .cornerRadius(15)
                 .shadow(radius: 10)
+                
+                if isLoading {
+                            Color.black.opacity(0.3)
+                            .edgesIgnoringSafeArea(.all)
+                                    
+                            ProgressView("Loading...")
+                            .progressViewStyle(CircularProgressViewStyle())
+                            .foregroundColor(.white)
+                            .scaleEffect(1.5)
+                    }
             }
             .edgesIgnoringSafeArea(.all)
         }

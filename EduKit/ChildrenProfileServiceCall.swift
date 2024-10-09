@@ -6,7 +6,7 @@ class ChildrenProfileService {
     private init() {}
 
     func getChildrenProfile(completion: @escaping (Result<[Child], Error>) -> Void) {
-        guard let url = URL(string: "http://192.168.0.219:8000/api/v1/parent/student/info/") else {
+        guard let url = URL(string: "http://192.168.0.219:8000/api/v1/parent/view/profile/children/") else {
             print("Invalid URL")
             return
         }
