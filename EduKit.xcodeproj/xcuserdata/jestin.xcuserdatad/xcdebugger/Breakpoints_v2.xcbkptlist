@@ -36,5 +36,98 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8BA2B4F6-4064-41EF-B0A2-D0654BD3BDD2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EduKit/ChildrenProfileServiceCall.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "getChildrenProfile(completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "8BA2B4F6-4064-41EF-B0A2-D0654BD3BDD2 - e2b7718801392746"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in EduKit.ChildrenProfileService.getChildrenProfile(completion: (Swift.Result&lt;Swift.Array&lt;EduKit.Child&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "EduKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jestin/Desktop/EduKit/EduKit/ChildrenProfileServiceCall.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "1258">
+               </Location>
+               <Location
+                  uuid = "8BA2B4F6-4064-41EF-B0A2-D0654BD3BDD2 - e2b7718801392738"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in EduKit.ChildrenProfileService.getChildrenProfile(completion: (Swift.Result&lt;Swift.Array&lt;EduKit.Child&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "EduKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jestin/Desktop/EduKit/EduKit/ChildrenProfileServiceCall.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "1237">
+               </Location>
+               <Location
+                  uuid = "8BA2B4F6-4064-41EF-B0A2-D0654BD3BDD2 - e2b7718801392738"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in EduKit.ChildrenProfileService.getChildrenProfile(completion: (Swift.Result&lt;Swift.Array&lt;EduKit.Child&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "EduKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jestin/Desktop/EduKit/EduKit/ChildrenProfileServiceCall.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "1393">
+               </Location>
+               <Location
+                  uuid = "8BA2B4F6-4064-41EF-B0A2-D0654BD3BDD2 - e2b7718801392738"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in EduKit.ChildrenProfileService.getChildrenProfile(completion: (Swift.Result&lt;Swift.Array&lt;EduKit.Child&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "EduKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jestin/Desktop/EduKit/EduKit/ChildrenProfileServiceCall.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "1230">
+               </Location>
+               <Location
+                  uuid = "8BA2B4F6-4064-41EF-B0A2-D0654BD3BDD2 - e2b7718801392738"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in EduKit.ChildrenProfileService.getChildrenProfile(completion: (Swift.Result&lt;Swift.Array&lt;EduKit.Child&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "EduKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jestin/Desktop/EduKit/EduKit/ChildrenProfileServiceCall.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "1379">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

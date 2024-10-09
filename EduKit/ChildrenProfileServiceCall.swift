@@ -24,6 +24,7 @@ class ChildrenProfileService {
             if let httpResponse = response as? HTTPURLResponse {
                 print("Response status code: \(httpResponse.statusCode)")
                 
+                
                 if httpResponse.statusCode == 200, let data = data {
                     do {
                         // Ensure JSON response is of type [[String: Any]]
@@ -41,7 +42,11 @@ class ChildrenProfileService {
                                       let className = classInfo["class_name"] as? String,
                                       let academicYearStart = classInfo["academic_year_start"] as? Int,
                                       let academicYearEnd = classInfo["academic_year_end"] as? Int,
-                                      let grade = classInfo["grade"] as? Int
+                                      let grade = classInfo["grade"] as? Int,
+                                      let teacherInfo = dict["teacher_info"] as? [String: Any],
+                                      let teacherUser = teacherInfo["user"] as? [String: Any],
+                                      let teacherFirstName = teacherUser["first_name"] as? String,
+                                      let teacherLastName = teacherUser["last_name"] as? String
                                 else {
                                     return nil
                                 }
@@ -49,8 +54,10 @@ class ChildrenProfileService {
                                
                                 let classDetail = ClassInfo(id: classID, className: className, academicYearStart: academicYearStart, academicYearEnd: academicYearEnd, grade: grade)
                                 
+                                let teacher = Teacher(id: 0, username: "", firstName: teacherFirstName,lastName: teacherLastName,
+                                    email: "", dateJoined: "", gender: "" )
                               
-                                return Child(id: id, firstName: firstName, lastName: lastName, age: age, classInfo: classDetail, gender: gender, username: username)
+                                return Child(id: id, firstName: firstName, lastName: lastName, age: age, classInfo: classDetail, gender: gender, username: username, teacher: teacher)
                             }
                             completion(.success(children))
                         } else {

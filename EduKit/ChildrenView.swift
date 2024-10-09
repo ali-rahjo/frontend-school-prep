@@ -38,46 +38,58 @@ struct ChildrenView: View {
                                 }
 
                                 HStack {
-                                    Text("Age:")
+                                    Text("Age")
                                     Spacer()
                                     Text("\(child.age)")
                                 }
-
+                            
                                 HStack {
-                                    Text("Class:")
+                                    Text("Gender")
                                     Spacer()
-                                    Text("\(child.classInfo.className)")
+                                    Text("\(child.gender)")
                                 }
-
+                            
                                 HStack {
-                                    Text("Class ID:")
+                                    Text("Username")
+                                    Spacer()
+                                    Text("\(child.username)")
+                                }
+                            
+                                HStack {
+                                    Text("Class ID")
                                     Spacer()
                                     Text("\(child.classInfo.id)")
                                 }
 
                                 HStack {
-                                    Text("Academic Year:")
+                                    Text("Class")
+                                    Spacer()
+                                    Text("\(child.classInfo.className)")
+                                }
+
+                               
+
+                                HStack {
+                                    Text("Academic Year")
                                     Spacer()
                                     Text("\(child.classInfo.academicYearStart) - \(child.classInfo.academicYearEnd)")
                                 }
 
                                 HStack {
-                                    Text("Grade:")
+                                    Text("Grade")
                                     Spacer()
                                     Text("\(child.classInfo.grade)")
                                 }
-
-                                HStack {
-                                    Text("Gender:")
-                                    Spacer()
-                                    Text("\(child.gender)")
+                            
+                            
+                                if let teacher = child.teacher {
+                                 HStack {
+                                        Text("Teacher")
+                                        Spacer()
+                                        Text(teacher.fullName)
+                                        }
                                 }
-
-                                HStack {
-                                    Text("Username:")
-                                    Spacer()
-                                    Text("\(child.username)")
-                                }
+                            
                         }  .padding(.vertical, 20)
                       
                             
