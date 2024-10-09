@@ -15,7 +15,7 @@ struct SideMenuView: View {
                 Label("Time Table", systemImage: "calendar")
             }
             NavigationLink(destination: LunchMenu()) {
-                Label("Luch Menu", systemImage: "calendar")
+                Label("Luch Menu", systemImage: "fork.knife")
             }
             
             NavigationLink(destination: ApplyLeaveView()) {

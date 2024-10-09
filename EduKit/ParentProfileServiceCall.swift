@@ -36,7 +36,7 @@ class ParentProfileService {
                     do {
                       
                         if let jsonResponse = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
-                           // print("Success response: \(jsonResponse)")
+                            print("Success response: \(jsonResponse)")
                             completion(.success(jsonResponse))
                         }
                     } catch let parseError {

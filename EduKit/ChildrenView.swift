@@ -25,16 +25,28 @@ struct ChildrenView: View {
                         VStack(alignment: .leading) {
                                 HStack {
                                    
-                                    Text("\(child.firstName) \(child.lastName)")
+                                    Text("\(child.firstName.capitalized) \(child.lastName.capitalized)")
                                         .font(.title)
                                         .foregroundColor(.clear)
                                                                         .overlay(
                                                                             LinearGradient(gradient: Gradient(colors: [Color.purple, Color.blue]),
                                                                                            startPoint: .topLeading,
                                                                                            endPoint: .bottomTrailing)
-                                                                                .mask(Text("\(child.firstName) \(child.lastName)")
+                                                                                .mask(Text("\(child.firstName.capitalized) \(child.lastName.capitalized)")
                                                                                         .font(.title))
                                                                         )
+                                }
+                            
+                                HStack {
+                                    Text("Student ID")
+                                    Spacer()
+                                    Text("\(child.id)")
+                                }
+                            
+                                HStack {
+                                    Text("Username")
+                                    Spacer()
+                                    Text("\(child.username)")
                                 }
 
                                 HStack {
@@ -49,11 +61,7 @@ struct ChildrenView: View {
                                     Text("\(child.gender)")
                                 }
                             
-                                HStack {
-                                    Text("Username")
-                                    Spacer()
-                                    Text("\(child.username)")
-                                }
+                               
                             
                                 HStack {
                                     Text("Class ID")

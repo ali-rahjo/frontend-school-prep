@@ -57,6 +57,21 @@ struct Parent: View {
                     }
 
                     Form {
+                        
+                        HStack {
+                            Image(systemName: "tag")
+                                .foregroundColor(.purple)
+                            if let id = parentProfile["id"] as? Int {
+                                   Text("\(id)")
+                               } else {
+                                   Text("0")
+                               }
+                            Spacer()
+                        }
+
+                        
+                        
+                        
                         HStack {
                             Image(systemName: "person")
                                 .foregroundColor(.purple)
