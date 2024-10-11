@@ -1,0 +1,46 @@
+# Xcode
+.DS_Store
+build/
+*.xcworkspace
+*.xcuserstate
+*.xcodeproj/project.xcworkspace/xcuserdata/
+*.xcodeproj/project.xcworkspace/xcshareddata/xcschemes/
+*.swp
+*.swo
+
+# Derived data and archives
+DerivedData/
+*.hmap
+*.ipa
+*.app.dSYM
+*.xcuserdatad
+
+# Logs
+*.log
+
+# Personal settings
+*.mode1v3
+*.pbxuser
+
+# CocoaPods (if applicable)
+Pods/
+
+# Carthage (if applicable)
+Carthage/Build/
+
+# Fastlane (if applicable)
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+
+# Swift Package Manager
+Packages
+Package.pins
+Package.resolved
+
+# Other ignored files
+.idea/
+*.moved-aside
+*.swp
+*.swo
+
