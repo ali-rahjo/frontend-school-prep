@@ -24,18 +24,23 @@ struct LoginView: View {
                 
               
                 
-                VStack(spacing: 20) {
+                VStack(spacing: 10) {
                    
                     Text("Welcome to")
                          .font(.custom("Noteworthy-Bold", size: 25))
                         .foregroundColor(Color.white)
-                        .padding(.bottom, 5)
+                        .padding(.top, 70)
 
                    
                     Text("SchoolPrep")
                         .font(.custom("Noteworthy-Bold", size: 40))
                         .foregroundColor(Color.white)
-                        .padding(.bottom, -20)
+                        .padding(.bottom, -10)
+                    
+                    Text("Genie")
+                        .font(.custom("Bradley Hand", size: 26))
+                        .foregroundColor(Color.white)
+                        .padding(.leading, 100)
      
                     
                   
@@ -55,7 +60,7 @@ struct LoginView: View {
                        .frame(width: 300)
                        .autocapitalization(.none)
                        .disableAutocorrection(true)
-                       .padding(.bottom,40)
+                       .padding(.bottom,50)
 
                    SecureField("Password", text: $password)
                        .padding()
@@ -66,9 +71,7 @@ struct LoginView: View {
                        
 
                    Button(action: {
-                       
-                       playSound(sound: "sound-tap", type: "mp3")
-                       feedback.notificationOccurred(.success)
+                    
                        
                        login(username: username, password: password) { result in
                                switch result {
@@ -98,6 +101,7 @@ struct LoginView: View {
                            .frame(width: 150)
                            .background(Color.blue)
                            .cornerRadius(8)
+                           .padding(.top,20)
                           
                    }
                   
@@ -120,7 +124,7 @@ struct LoginView: View {
                     NavigationLink(destination: Parent(), isActive: $navigateToParent) {
                         EmptyView()
                     }.navigationBarHidden(true)
-                }.padding(.bottom,85)
+                }.padding(.bottom,200)
             }
         }.navigationBarHidden(true)
         

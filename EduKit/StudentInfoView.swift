@@ -144,11 +144,11 @@ struct StudentInfoView: View {
                                 case .success(let message):
                                     alertMessage = message
                                     showAlert = true
-                                    playSound(sound: "sound-ding", type: "mp3")
+                                    playSound(sound: "sound-rise", type: "mp3")
                                     feedback.notificationOccurred(.success)
                                 case .failure(let error):
                                     alertMessage = error.localizedDescription
-                                    playSound(sound: "sound-ding", type: "mp3")
+                                    playSound(sound: "sound-rise", type: "mp3")
                                     feedback.notificationOccurred(.success)
                                     showAlert = true
                                 }

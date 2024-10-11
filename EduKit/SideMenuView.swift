@@ -11,9 +11,7 @@ struct SideMenuView: View {
     
     var body: some View {
         List {
-            NavigationLink(destination: TimeTableView()) {
-                Label("Time Table", systemImage: "calendar")
-            }
+           
             NavigationLink(destination: LunchMenu()) {
                 Label("Luch Menu", systemImage: "fork.knife")
             }

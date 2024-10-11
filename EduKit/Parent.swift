@@ -30,7 +30,7 @@ struct Parent: View {
                                        startPoint: .topLeading,
                                        endPoint: .bottomTrailing)
                             .edgesIgnoringSafeArea(.top)
-                            .frame(height: 250)
+                            .frame(height: 200)
 
                         VStack(spacing: 16) {
                             Image(systemName: "person.circle.fill")
@@ -53,8 +53,8 @@ struct Parent: View {
                                     .foregroundColor(.white)
                             }
                         }
-                        .padding(.top, 60)
-                    }
+                        .padding(.top, 10)
+                    } .padding(.top, 0)
 
                     Form {
                         
@@ -168,7 +168,7 @@ struct Parent: View {
                         }
                         .padding(.top)
                     }
-                    .padding(.top, -20)
+                    .padding(.top, -10)
                 }
                 
                

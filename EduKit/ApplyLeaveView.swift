@@ -17,7 +17,7 @@ struct ApplyLeaveView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                Image("slide12")
+                Image("slide11")
                     .resizable()
                     .scaledToFill()
                     .frame(width: UIScreen.main.bounds.width)
@@ -25,15 +25,17 @@ struct ApplyLeaveView: View {
                     .ignoresSafeArea()
                 
                 
-                Color.black
-                    .opacity(0.4)
-                    .edgesIgnoringSafeArea(.all)
+              //  Color.black
+              //      .opacity(0.4)
+               //     .edgesIgnoringSafeArea(.all)
                 
                 VStack(spacing: 20) {
                                 Text("Apply Leave")
                                     .font(.largeTitle)
                                     .padding()
-                                    .foregroundColor(Color.white)
+                                    .foregroundColor(Color(red: 255/255, green: 198/255, blue: 1/255))
+                   
+                       
 
                                 TextField("Parent ID", value: $parentId, format: .number)
                                 .padding()
@@ -116,8 +118,9 @@ struct ApplyLeaveView: View {
                                         Text(isSubmitting ? "Submitting..." : "Submit")
                                             .padding()
                                             .frame(width: 200)
-                                            .background(Color(red: 30/255, green: 129/255, blue: 176/255))
-                                            .font(.system(size: 18))
+                                            .background(Color(red: 243/255, green: 194/255, blue: 3/255))
+                                            .font(.system(size: 20))
+                                            .bold()
                                             .foregroundColor(.white)
                                             .cornerRadius(8)
                                             .padding(.top,40)

@@ -75,6 +75,8 @@ struct Logout: View {
 
                 alertMessage = "Successfully logged out."
                 showAlert = true
+                playSound(sound: "sound-rise", type: "mp3")
+                feedback.notificationOccurred(.success)
             }
         }.resume()
     }
