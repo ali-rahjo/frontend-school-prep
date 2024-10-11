@@ -30,6 +30,10 @@
 		D2A8C3B32C985FA30076892A /* LoginSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A8C3B22C985FA30076892A /* LoginSelection.swift */; };
 		D2A9C2BE2CB46DB700137781 /* TeacherOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A9C2BD2CB46DB700137781 /* TeacherOptions.swift */; };
 		D2A9C2C02CB5B24D00137781 /* Logout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A9C2BF2CB5B24D00137781 /* Logout.swift */; };
+		D2AECD3C2CB98E25009C3F2A /* TimetableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AECD3B2CB98E25009C3F2A /* TimetableView.swift */; };
+		D2AECD3E2CB98E63009C3F2A /* TimetableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AECD3D2CB98E63009C3F2A /* TimetableViewModel.swift */; };
+		D2AECD402CB98E93009C3F2A /* TimetableService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AECD3F2CB98E93009C3F2A /* TimetableService.swift */; };
+		D2AECD422CB98EBE009C3F2A /* timetable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AECD412CB98EBE009C3F2A /* timetable.swift */; };
 		D2D13FEF2CA5C0C8001BD1A1 /* StudentInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D13FEE2CA5C0C8001BD1A1 /* StudentInfoView.swift */; };
 		D2D13FF52CA6B832001BD1A1 /* ParentRegistrationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D13FF42CA6B832001BD1A1 /* ParentRegistrationService.swift */; };
 		D2D970582C91EE540040DE4A /* EduKitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D970572C91EE540040DE4A /* EduKitApp.swift */; };
@@ -83,6 +87,10 @@
 		D2A8C3B22C985FA30076892A /* LoginSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSelection.swift; sourceTree = "<group>"; };
 		D2A9C2BD2CB46DB700137781 /* TeacherOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherOptions.swift; sourceTree = "<group>"; };
 		D2A9C2BF2CB5B24D00137781 /* Logout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logout.swift; sourceTree = "<group>"; };
+		D2AECD3B2CB98E25009C3F2A /* TimetableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TimetableView.swift; path = ../../../../Documents/TimetableView.swift; sourceTree = "<group>"; };
+		D2AECD3D2CB98E63009C3F2A /* TimetableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableViewModel.swift; sourceTree = "<group>"; };
+		D2AECD3F2CB98E93009C3F2A /* TimetableService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableService.swift; sourceTree = "<group>"; };
+		D2AECD412CB98EBE009C3F2A /* timetable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = timetable.swift; sourceTree = "<group>"; };
 		D2D13FEE2CA5C0C8001BD1A1 /* StudentInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentInfoView.swift; sourceTree = "<group>"; };
 		D2D13FF42CA6B832001BD1A1 /* ParentRegistrationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentRegistrationService.swift; sourceTree = "<group>"; };
 		D2D970542C91EE540040DE4A /* EduKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EduKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -160,6 +168,10 @@
 				D2A88C172CAAB7C700FDE8BD /* HolidayViewModel.swift */,
 				D2239C9B2CA9D4B500BACFDC /* child.swift */,
 				D2239C992CA9D29D00BACFDC /* ChildrenView.swift */,
+				D2AECD3B2CB98E25009C3F2A /* TimetableView.swift */,
+				D2AECD3D2CB98E63009C3F2A /* TimetableViewModel.swift */,
+				D2AECD3F2CB98E93009C3F2A /* TimetableService.swift */,
+				D2AECD412CB98EBE009C3F2A /* timetable.swift */,
 				D21B609C2CA755690010F587 /* ForgotPasswordView.swift */,
 				D21B609A2CA754E30010F587 /* Parent.swift */,
 				D2239C8F2CA96E5400BACFDC /* SideMenuView.swift */,
@@ -348,10 +360,13 @@
 				D2239C922CA9AC9900BACFDC /* ParentProfileServiceCall.swift in Sources */,
 				D2D9705A2C91EE540040DE4A /* ContentView.swift in Sources */,
 				D2A8C3B12C985AFA0076892A /* Signup.swift in Sources */,
+				D2AECD3C2CB98E25009C3F2A /* TimetableView.swift in Sources */,
 				D2A8C3B32C985FA30076892A /* LoginSelection.swift in Sources */,
 				D2239C9C2CA9D4B500BACFDC /* child.swift in Sources */,
+				D2AECD402CB98E93009C3F2A /* TimetableService.swift in Sources */,
 				D2D13FF52CA6B832001BD1A1 /* ParentRegistrationService.swift in Sources */,
 				D2A88C1A2CAAC11800FDE8BD /* Holiday.swift in Sources */,
+				D2AECD3E2CB98E63009C3F2A /* TimetableViewModel.swift in Sources */,
 				D2A9C2C02CB5B24D00137781 /* Logout.swift in Sources */,
 				D21B609D2CA755690010F587 /* ForgotPasswordView.swift in Sources */,
 				D2239C9A2CA9D29D00BACFDC /* ChildrenView.swift in Sources */,
@@ -361,6 +376,7 @@
 				D2A88C1C2CAAD6BE00FDE8BD /* StudentLogin.swift in Sources */,
 				D2803F552CB6A4FD0022C6B8 /* ApplyLeaveServiceCall.swift in Sources */,
 				D2A9C2BE2CB46DB700137781 /* TeacherOptions.swift in Sources */,
+				D2AECD422CB98EBE009C3F2A /* timetable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
