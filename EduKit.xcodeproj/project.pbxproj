@@ -33,6 +33,7 @@
 		D2AECD3E2CB98E63009C3F2A /* TimetableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AECD3D2CB98E63009C3F2A /* TimetableViewModel.swift */; };
 		D2AECD402CB98E93009C3F2A /* TimetableService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AECD3F2CB98E93009C3F2A /* TimetableService.swift */; };
 		D2AECD422CB98EBE009C3F2A /* timetable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AECD412CB98EBE009C3F2A /* timetable.swift */; };
+		D2AECD442CB993C5009C3F2A /* TimetableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AECD432CB993C5009C3F2A /* TimetableView.swift */; };
 		D2D13FEF2CA5C0C8001BD1A1 /* StudentInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D13FEE2CA5C0C8001BD1A1 /* StudentInfoView.swift */; };
 		D2D13FF52CA6B832001BD1A1 /* ParentRegistrationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D13FF42CA6B832001BD1A1 /* ParentRegistrationService.swift */; };
 		D2D970582C91EE540040DE4A /* EduKitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D970572C91EE540040DE4A /* EduKitApp.swift */; };
@@ -89,6 +90,7 @@
 		D2AECD3D2CB98E63009C3F2A /* TimetableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableViewModel.swift; sourceTree = "<group>"; };
 		D2AECD3F2CB98E93009C3F2A /* TimetableService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableService.swift; sourceTree = "<group>"; };
 		D2AECD412CB98EBE009C3F2A /* timetable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = timetable.swift; sourceTree = "<group>"; };
+		D2AECD432CB993C5009C3F2A /* TimetableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableView.swift; sourceTree = "<group>"; };
 		D2D13FEE2CA5C0C8001BD1A1 /* StudentInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentInfoView.swift; sourceTree = "<group>"; };
 		D2D13FF42CA6B832001BD1A1 /* ParentRegistrationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentRegistrationService.swift; sourceTree = "<group>"; };
 		D2D970542C91EE540040DE4A /* EduKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EduKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -167,6 +169,7 @@
 				D2239C9B2CA9D4B500BACFDC /* child.swift */,
 				D2239C992CA9D29D00BACFDC /* ChildrenView.swift */,
 				D2AECD3D2CB98E63009C3F2A /* TimetableViewModel.swift */,
+				D2AECD432CB993C5009C3F2A /* TimetableView.swift */,
 				D2AECD3F2CB98E93009C3F2A /* TimetableService.swift */,
 				D2AECD412CB98EBE009C3F2A /* timetable.swift */,
 				D21B609C2CA755690010F587 /* ForgotPasswordView.swift */,
@@ -354,6 +357,7 @@
 				D23C5E252CB6E9DB007F2017 /* LeaveStatusView.swift in Sources */,
 				D2239C902CA96E5400BACFDC /* SideMenuView.swift in Sources */,
 				D23C5E272CB6EAFD007F2017 /* LeaveStatusServiceCall.swift in Sources */,
+				D2AECD442CB993C5009C3F2A /* TimetableView.swift in Sources */,
 				D2239C922CA9AC9900BACFDC /* ParentProfileServiceCall.swift in Sources */,
 				D2D9705A2C91EE540040DE4A /* ContentView.swift in Sources */,
 				D2A8C3B12C985AFA0076892A /* Signup.swift in Sources */,
