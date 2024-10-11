@@ -33,27 +33,27 @@ struct TimetableView: View {
                                   }
                     
                     
-                                if let tuesday = timetable.timetableContent["Wednesday"] {
+                                if let wednesday = timetable.timetableContent["Wednesday"] {
                                     Section(header: Text("Wednesday")) {
-                                        ForEach(tuesday, id: \.period) { period in
+                                        ForEach(wednesday, id: \.period) { period in
                                             Text("Period \(period.period): \(period.subject)")
                                         }
                                     }
                                 }
         
         
-                                if let tuesday = timetable.timetableContent["Thursday"] {
+                                if let thursday = timetable.timetableContent["Thursday"] {
                                     Section(header: Text("Thursday")) {
-                                        ForEach(tuesday, id: \.period) { period in
+                                        ForEach(thursday, id: \.period) { period in
                                             Text("Period \(period.period): \(period.subject)")
                                         }
                                     }
                                 }
         
                     
-                                if let tuesday = timetable.timetableContent["Friday"] {
+                                if let friday = timetable.timetableContent["Friday"] {
                                     Section(header: Text("Friday")) {
-                                        ForEach(tuesday, id: \.period) { period in
+                                        ForEach(friday, id: \.period) { period in
                                             Text("Period \(period.period): \(period.subject)")
                                         }
                                     }
