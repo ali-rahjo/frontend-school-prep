@@ -1,5 +1,7 @@
 import SwiftUI
 
+// time table view
+
 struct TimetableView: View {
     
     var classID: Int
