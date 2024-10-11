@@ -52,6 +52,7 @@ struct ContentView: View {
                     Spacer()
                     
                     NavigationLink(destination: LoginSelection()) {
+                        
                          Text("Home")
                              .foregroundColor(.white)
                              .padding()

@@ -23,6 +23,11 @@
 		D2803F532CB68CCA0022C6B8 /* Goodbye.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2803F522CB68CCA0022C6B8 /* Goodbye.swift */; };
 		D2803F552CB6A4FD0022C6B8 /* ApplyLeaveServiceCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2803F542CB6A4FD0022C6B8 /* ApplyLeaveServiceCall.swift */; };
 		D2803F572CB6A6EE0022C6B8 /* ApplyLeaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2803F562CB6A6EE0022C6B8 /* ApplyLeaveView.swift */; };
+		D2A53BDB2CB9B5DD0019CE12 /* sound-ding.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D2A53BD82CB9B5DD0019CE12 /* sound-ding.mp3 */; };
+		D2A53BDC2CB9B5DD0019CE12 /* sound-tap.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D2A53BD92CB9B5DD0019CE12 /* sound-tap.mp3 */; };
+		D2A53BDD2CB9B5DD0019CE12 /* sound-rise.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D2A53BDA2CB9B5DD0019CE12 /* sound-rise.mp3 */; };
+		D2A53BE02CB9B5FE0019CE12 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A53BDF2CB9B5FE0019CE12 /* Constant.swift */; };
+		D2A53BE22CB9B6050019CE12 /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A53BE12CB9B6050019CE12 /* SoundPlayer.swift */; };
 		D2A88C1A2CAAC11800FDE8BD /* Holiday.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A88C192CAAC11800FDE8BD /* Holiday.swift */; };
 		D2A88C1C2CAAD6BE00FDE8BD /* StudentLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A88C1B2CAAD6BE00FDE8BD /* StudentLogin.swift */; };
 		D2A8C3B12C985AFA0076892A /* Signup.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A8C3B02C985AFA0076892A /* Signup.swift */; };
@@ -79,6 +84,11 @@
 		D2803F522CB68CCA0022C6B8 /* Goodbye.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goodbye.swift; sourceTree = "<group>"; };
 		D2803F542CB6A4FD0022C6B8 /* ApplyLeaveServiceCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplyLeaveServiceCall.swift; sourceTree = "<group>"; };
 		D2803F562CB6A6EE0022C6B8 /* ApplyLeaveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplyLeaveView.swift; sourceTree = "<group>"; };
+		D2A53BD82CB9B5DD0019CE12 /* sound-ding.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sound-ding.mp3"; sourceTree = "<group>"; };
+		D2A53BD92CB9B5DD0019CE12 /* sound-tap.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sound-tap.mp3"; sourceTree = "<group>"; };
+		D2A53BDA2CB9B5DD0019CE12 /* sound-rise.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sound-rise.mp3"; sourceTree = "<group>"; };
+		D2A53BDF2CB9B5FE0019CE12 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		D2A53BE12CB9B6050019CE12 /* SoundPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
 		D2A88C192CAAC11800FDE8BD /* Holiday.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Holiday.swift; sourceTree = "<group>"; };
 		D2A88C1B2CAAD6BE00FDE8BD /* StudentLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentLogin.swift; sourceTree = "<group>"; };
 		D2A8C3B02C985AFA0076892A /* Signup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signup.swift; sourceTree = "<group>"; };
@@ -128,6 +138,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D2A53BD72CB9B5C20019CE12 /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				D2A53BD82CB9B5DD0019CE12 /* sound-ding.mp3 */,
+				D2A53BDA2CB9B5DD0019CE12 /* sound-rise.mp3 */,
+				D2A53BD92CB9B5DD0019CE12 /* sound-tap.mp3 */,
+			);
+			path = Sound;
+			sourceTree = "<group>";
+		};
+		D2A53BDE2CB9B5EA0019CE12 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				D2A53BDF2CB9B5FE0019CE12 /* Constant.swift */,
+				D2A53BE12CB9B6050019CE12 /* SoundPlayer.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
 		D2D9704B2C91EE540040DE4A = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +181,8 @@
 		D2D970562C91EE540040DE4A /* EduKit */ = {
 			isa = PBXGroup;
 			children = (
+				D2A53BDE2CB9B5EA0019CE12 /* Utility */,
+				D2A53BD72CB9B5C20019CE12 /* Sound */,
 				D24D36392C9361F100A6F8CA /* Info.plist */,
 				D2D970572C91EE540040DE4A /* EduKitApp.swift */,
 				D2D970592C91EE540040DE4A /* ContentView.swift */,
@@ -317,8 +348,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2A53BDB2CB9B5DD0019CE12 /* sound-ding.mp3 in Resources */,
 				D24D36382C935F8C00A6F8CA /* LauchScreen.storyboard in Resources */,
 				D2D9705F2C91EE570040DE4A /* Preview Assets.xcassets in Resources */,
+				D2A53BDD2CB9B5DD0019CE12 /* sound-rise.mp3 in Resources */,
+				D2A53BDC2CB9B5DD0019CE12 /* sound-tap.mp3 in Resources */,
 				D2D9705C2C91EE570040DE4A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -344,6 +378,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2A53BE22CB9B6050019CE12 /* SoundPlayer.swift in Sources */,
 				D2D13FEF2CA5C0C8001BD1A1 /* StudentInfoView.swift in Sources */,
 				D21B609B2CA754E30010F587 /* Parent.swift in Sources */,
 				D21B609F2CA757430010F587 /* ParentOptions.swift in Sources */,
@@ -361,6 +396,7 @@
 				D2A8C3B32C985FA30076892A /* LoginSelection.swift in Sources */,
 				D2239C9C2CA9D4B500BACFDC /* child.swift in Sources */,
 				D2AECD402CB98E93009C3F2A /* TimetableService.swift in Sources */,
+				D2A53BE02CB9B5FE0019CE12 /* Constant.swift in Sources */,
 				D2D13FF52CA6B832001BD1A1 /* ParentRegistrationService.swift in Sources */,
 				D2A88C1A2CAAC11800FDE8BD /* Holiday.swift in Sources */,
 				D2AECD3E2CB98E63009C3F2A /* TimetableViewModel.swift in Sources */,

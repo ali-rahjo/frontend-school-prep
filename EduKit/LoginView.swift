@@ -8,7 +8,7 @@ struct LoginView: View {
     @State private var password: String = ""
     @State private var errorMessage: String? = nil
     @State private var navigateToParent = false
-    @State private var showAlert = false
+   
     @State private var alertMessage = ""
     
     
@@ -29,7 +29,7 @@ struct LoginView: View {
                     Text("Welcome to")
                          .font(.custom("Noteworthy-Bold", size: 25))
                         .foregroundColor(Color.white)
-                        .padding(.bottom, 10)
+                        .padding(.bottom, 5)
 
                    
                     Text("SchoolPrep")
@@ -67,7 +67,8 @@ struct LoginView: View {
 
                    Button(action: {
                        
-                      
+                       playSound(sound: "sound-tap", type: "mp3")
+                       feedback.notificationOccurred(.success)
                        
                        login(username: username, password: password) { result in
                                switch result {
@@ -75,7 +76,6 @@ struct LoginView: View {
                                   
                                    DispatchQueue.main.async {
                                        self.alertMessage = message
-                                       self.showAlert = true
                                        resetFields()
                                        
                                        
@@ -86,7 +86,8 @@ struct LoginView: View {
                                   
                                    DispatchQueue.main.async {
                                        self.alertMessage = error.localizedDescription
-                                       self.showAlert = true
+                                      
+                                       
                                    }
                                }
                            }

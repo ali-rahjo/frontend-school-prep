@@ -113,9 +113,9 @@ struct Signup: View {
                     
                     NavigationLink(destination: StudentInfoView(studentInfo: studentInfo ?? StudentInfo(username: "",password:"", email: "", firstname: "", lastname: "", address: "", phonenumber: "", selectedGender: "")), isActive: $showStudentInfo) {
                         Button(action: {
-                            // Prepare student info before navigating
+                            
                             studentInfo = StudentInfo(username: username, password:password,email: email, firstname: firstname, lastname: lastname, address: address, phonenumber: phonenumber, selectedGender: selectedGender)
-                            showStudentInfo = true // Trigger navigation
+                            showStudentInfo = true 
                         }) {
                             Text("Submit")
                                 .font(.headline)

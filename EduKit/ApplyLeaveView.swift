@@ -84,6 +84,8 @@ struct ApplyLeaveView: View {
                     
                            
                                 Button(action: {
+                                    playSound(sound: "sound-tap", type: "mp3")
+                                    feedback.notificationOccurred(.success)
                                     guard let parentId = parentId, let studentId = studentId else {
                                                             errorMessage = "Parent ID and Student ID are required and must be numbers."
                                                             return

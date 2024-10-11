@@ -6,9 +6,6 @@ struct StudentLogin: View {
 
     var body: some View {
   
-           
-            
-           
             ZStack {
 
                 Image("slide8")
@@ -19,7 +16,7 @@ struct StudentLogin: View {
                     .ignoresSafeArea()
                 
                 VStack {
-                               // Welcome label
+                              
                                Text("Welcome to")
                                     .font(.custom("Noteworthy-Bold", size: 25))
                                    .foregroundColor(Color.white)
@@ -59,12 +56,13 @@ struct StudentLogin: View {
                         .shadow(color: Color.black.opacity(0.2), radius: 1, x: 0, y: 2)
                         .padding(.top,20)
 
-                    // Add a login button or other UI elements below
+                  
                     Button(action: {
-                        // Handle login action
+                        playSound(sound: "sound-tap", type: "mp3")
+                        feedback.notificationOccurred(.success)
                     }) {
                         Text("Login")
-                            .frame(maxWidth: 180) // Make button take full width
+                            .frame(maxWidth: 180)
                             .padding()
                             .background(Color.blue)
                             .font(.system(size: 20)) 
@@ -82,19 +80,8 @@ struct StudentLogin: View {
             }
            
                 
-       
-                
-          
-               
-            
-            
-                
-               
-                
-                
             }
        
-    
 }
 
 struct StudentLogin_Previews: PreviewProvider {

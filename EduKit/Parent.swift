@@ -155,7 +155,8 @@ struct Parent: View {
 
                       
                         Button(action: {
-                            // Handle edit profile action
+                            playSound(sound: "sound-tap", type: "mp3")
+                            feedback.notificationOccurred(.success)
                         }) {
                             Text("Edit Profile")
                                 .font(.headline)

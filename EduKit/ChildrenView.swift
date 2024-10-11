@@ -38,7 +38,7 @@ struct ChildrenView: View {
                                     )
                             }
                             
-                            // Displaying Child Information
+                           
                             InfoRow(label: "Student ID", value: "\(child.id)")
                             InfoRow(label: "Username", value: "\(child.username)")
                             InfoRow(label: "Age", value: "\(child.age)")
@@ -52,7 +52,7 @@ struct ChildrenView: View {
                                 InfoRow(label: "Teacher", value: teacher.fullName.capitalized)
                             }
                             
-                            // NavigationLink to TimetableView
+                           
                             NavigationLink(destination: TimetableView(classID: child.classInfo.id, viewModel: TimetableViewModel())) {
                                 Text("View Timetable")
                                     .foregroundColor(.white)

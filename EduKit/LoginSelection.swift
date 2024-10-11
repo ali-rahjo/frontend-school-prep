@@ -35,7 +35,8 @@ struct LoginSelection: View {
                 HStack(spacing: 20) {
                   
                     Button(action: {
-                        // Handle parent login action here
+                        playSound(sound: "sound-tap", type: "mp3")
+                        feedback.notificationOccurred(.success)
                     }) {
                         ZStack(alignment: .bottomTrailing) {
                             NavigationLink(destination: ParentOptions()) {
@@ -60,7 +61,8 @@ struct LoginSelection: View {
 
                    
                     Button(action: {
-                        // Handle student login action here
+                        playSound(sound: "sound-tap", type: "mp3")
+                        feedback.notificationOccurred(.success)
                     }) {
                         ZStack(alignment: .bottomTrailing) {
                             NavigationLink(destination: StudentLogin()) {
