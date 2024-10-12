@@ -7,32 +7,45 @@ struct ParentOptions: View {
     var body: some View {
         ZStack {
           
-            Image("slide8")
+            Image("slide11")
                 .resizable()
                 .scaledToFill()
-                .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+                .frame(width: UIScreen.main.bounds.width)
                 .clipped()
                 .ignoresSafeArea()
+       
 
-            Color.black
-                .opacity(0.5)
-                .edgesIgnoringSafeArea(.all)
+           
 
             VStack {
                 Spacer(minLength: 30)
                 
                 
-                Image(systemName: "sparkles")
-                                       .resizable()
-                                       .frame(width: 40, height: 40)
-                                       .foregroundColor(Color(red: 255/255, green: 232/255, blue: 177/255))
+                Text("Welcome to")
+                     .font(.custom("Noteworthy-Bold", size: 25))
+                    .foregroundColor(Color.white)
+                    .padding(.top, 70)
+
                
+                Text("SchoolPrep")
+                    .font(.custom("Noteworthy-Bold", size: 40))
+                    .foregroundColor(Color.white)
+                    .padding(.bottom, -10)
                 
-                Text("SchoolPrep Genie")
-                                   .font(.custom("MarkerFelt-Wide", size: 48))
-                                   .foregroundColor(Color(red: 255/255, green: 232/255, blue: 177/255))
-                                   .shadow(color: .black, radius: 3, x: 1, y: 1)
-                                   .padding(.top, 40)
+                Text("Genie")
+                    .font(.custom("Bradley Hand", size: 26))
+                    .foregroundColor(Color.white)
+                    .padding(.leading, 100)
+ 
+                
+              
+                Image("logo2")
+                    .resizable()
+                    .scaledToFill()
+                  
+                    .frame(width: 80, height: 75)
+                    .clipShape(Circle())
+                    .padding(.bottom,20)
                                
                                
                 
@@ -44,7 +57,7 @@ struct ParentOptions: View {
                     NavigationLink(destination: Signup()) {
                         ZStack {
                             RoundedRectangle(cornerRadius: 25, style: .continuous)
-                                .fill(Color.blue)
+                                .fill(Color(red: 202/255, green: 32/255, blue: 104/255))
                                 .frame(width: 300, height: 60)
 
                             Text("Sign Up")
@@ -65,7 +78,7 @@ struct ParentOptions: View {
                     NavigationLink(destination: LoginView()) {
                         ZStack {
                             RoundedRectangle(cornerRadius: 25, style: .continuous)
-                                .fill(Color.blue)
+                                .fill(Color(red: 202/255, green: 32/255, blue: 104/255))
                                 .frame(width: 300, height: 60)
 
                             Text("Login")
@@ -79,6 +92,7 @@ struct ParentOptions: View {
 
                 Spacer(minLength: 400)
             }
+            .padding(.top,250)
             .onAppear {
                 animateSignUp = true
                 animateLogin = true

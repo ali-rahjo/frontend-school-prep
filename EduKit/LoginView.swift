@@ -15,14 +15,13 @@ struct LoginView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                Image("slide12")
+                Image("slide11")
                     .resizable()
                     .scaledToFill()
                     .frame(width: UIScreen.main.bounds.width)
                     .clipped()
                     .ignoresSafeArea()
-                
-              
+           
                 
                 VStack(spacing: 10) {
                    
@@ -99,7 +98,7 @@ struct LoginView: View {
                            .padding()
                            .foregroundColor(.white)
                            .frame(width: 250)
-                           .background(Color.black)
+                           .background(Color(red: 202/255, green: 32/255, blue: 104/255))
                            .cornerRadius(8)
                            .padding(.top,20)
                            .shadow(radius: 5)

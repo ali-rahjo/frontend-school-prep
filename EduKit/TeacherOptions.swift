@@ -8,7 +8,7 @@ struct TeacherOptions: View {
     var body: some View {
         ZStack{
             
-            Image("slide13")
+            Image("slide12")
                 .resizable()
                 .scaledToFill()
                 .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
@@ -20,20 +20,31 @@ struct TeacherOptions: View {
             VStack {
                 Spacer(minLength: 30)
                 
-                
-                Image(systemName: "sparkles")
-                                       .resizable()
-                                       .frame(width: 40, height: 40)
-                                       .foregroundColor(Color(red: 255/255, green: 232/255, blue: 177/255))
+                Text("Welcome to")
+                     .font(.custom("Noteworthy-Bold", size: 25))
+                    .foregroundColor(Color.white)
+                    .padding(.top, 40)
+
                
+                Text("SchoolPrep")
+                    .font(.custom("Noteworthy-Bold", size: 40))
+                    .foregroundColor(Color.white)
+                    .padding(.bottom, -10)
                 
-                Text("SchoolPrep Genie")
-                                   .font(.custom("MarkerFelt-Wide", size: 48))
-                                   .foregroundColor(Color(red: 255/255, green: 232/255, blue: 177/255))
-                                   .shadow(color: .black, radius: 3, x: 1, y: 1)
-                                   .padding(.top, 40)
-                               
-                               
+                Text("Genie")
+                    .font(.custom("Bradley Hand", size: 26))
+                    .foregroundColor(Color.white)
+                    .padding(.leading, 100)
+                
+                Image("logo2")
+                    .resizable()
+                    .scaledToFill()
+                  
+                    .frame(width: 80, height: 75)
+                    .clipShape(Circle())
+                    .padding(.bottom,20)
+               
+
                 
                 
                 
@@ -43,12 +54,13 @@ struct TeacherOptions: View {
                     NavigationLink(destination: Signup()) {
                         ZStack {
                             RoundedRectangle(cornerRadius: 25, style: .continuous)
-                                .fill(Color.blue)
+                                .fill(Color.black)
                                 .frame(width: 300, height: 60)
 
                             Text("Sign Up")
                                 .font(.headline)
                                 .foregroundColor(.white)
+                               
                         }
                     }
                 }
@@ -64,7 +76,7 @@ struct TeacherOptions: View {
                     NavigationLink(destination: TeacherLoginView()) {
                         ZStack {
                             RoundedRectangle(cornerRadius: 25, style: .continuous)
-                                .fill(Color.blue)
+                                .fill(Color.black)
                                 .frame(width: 300, height: 60)
 
                             Text("Login")
@@ -78,6 +90,7 @@ struct TeacherOptions: View {
 
                 Spacer(minLength: 400)
             }
+            .padding(.top,200)
             .onAppear {
                 animateSignUp = true
                 animateLogin = true
