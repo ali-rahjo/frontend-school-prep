@@ -15,7 +15,7 @@ struct LoginView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                Image("slide8")
+                Image("slide12")
                     .resizable()
                     .scaledToFill()
                     .frame(width: UIScreen.main.bounds.width)
@@ -44,7 +44,7 @@ struct LoginView: View {
      
                     
                   
-                    Image("logo")
+                    Image("logo2")
                         .resizable()
                         .scaledToFill()
                       
@@ -98,10 +98,13 @@ struct LoginView: View {
                        Text("Login")
                            .padding()
                            .foregroundColor(.white)
-                           .frame(width: 150)
-                           .background(Color.blue)
+                           .frame(width: 250)
+                           .background(Color.black)
                            .cornerRadius(8)
                            .padding(.top,20)
+                           .shadow(radius: 5)
+                           .font(.headline)
+                           .fontWeight(.bold)
                           
                    }
                   
@@ -124,7 +127,7 @@ struct LoginView: View {
                     NavigationLink(destination: Parent(), isActive: $navigateToParent) {
                         EmptyView()
                     }.navigationBarHidden(true)
-                }.padding(.bottom,200)
+                }.padding(.bottom,150)
             }
         }.navigationBarHidden(true)
         

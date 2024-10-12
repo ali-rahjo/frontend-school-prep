@@ -144,13 +144,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D2691F522CBA799F0056B2FA /* Parent */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Parent;
-			sourceTree = "<group>";
-		};
 		D2A53BD72CB9B5C20019CE12 /* Sound */ = {
 			isa = PBXGroup;
 			children = (
@@ -194,7 +187,6 @@
 		D2D970562C91EE540040DE4A /* EduKit */ = {
 			isa = PBXGroup;
 			children = (
-				D2691F522CBA799F0056B2FA /* Parent */,
 				D2A53BDE2CB9B5EA0019CE12 /* Utility */,
 				D2A53BD72CB9B5C20019CE12 /* Sound */,
 				D24D36392C9361F100A6F8CA /* Info.plist */,

@@ -10,22 +10,44 @@ struct TeacherLoginView: View {
 
     var body: some View {
         ZStack {
-            // Background gradient
-            LinearGradient(gradient: Gradient(colors: [Color.green.opacity(0.8), Color.yellow.opacity(0.8)]), startPoint: .top, endPoint: .bottom)
-              
-
-                .edgesIgnoringSafeArea(.all)
+          
+            Image("slide12")
+                .resizable()
+            .scaledToFill()
+                .frame(width: UIScreen.main.bounds.width)
+                .clipped()
+                .ignoresSafeArea()
+            
             
             VStack {
                 Spacer()
 
-                // Title
-                Text("Teacher Portal")
-                    .font(.system(size: 36, weight: .bold, design: .rounded))
-                    .foregroundColor(.white)
-                    .padding(.bottom, 50)
+              
+                Text("Welcome to")
+                     .font(.custom("Noteworthy-Bold", size: 25))
+                    .foregroundColor(Color.white)
+                    .padding(.top, 40)
 
-                // Username Field
+               
+                Text("SchoolPrep")
+                    .font(.custom("Noteworthy-Bold", size: 40))
+                    .foregroundColor(Color.white)
+                    .padding(.bottom, -10)
+                
+                Text("Genie")
+                    .font(.custom("Bradley Hand", size: 26))
+                    .foregroundColor(Color.white)
+                    .padding(.leading, 100)
+                
+                Image("logo2")
+                    .resizable()
+                    .scaledToFill()
+                  
+                    .frame(width: 80, height: 75)
+                    .clipShape(Circle())
+                    .padding(.bottom,20)
+
+               
                 HStack {
                     Image(systemName: "person.fill")
                         .foregroundColor(.gray)
@@ -41,7 +63,7 @@ struct TeacherLoginView: View {
                 .padding(.horizontal, 40)
                 .padding(.bottom, 20)
 
-                // Password Field
+               
                 HStack {
                     Image(systemName: "lock.fill")
                         .foregroundColor(.gray)
@@ -81,8 +103,8 @@ struct TeacherLoginView: View {
                     }
                     .frame(maxWidth: .infinity)
                     .padding()
-                    .background(Color.white)
-                    .foregroundColor(Color.purple)
+                    .background(Color.black)
+                    .foregroundColor(Color.white)
                     .cornerRadius(10)
                     .shadow(radius: 5)
                     .padding(.horizontal, 40)
