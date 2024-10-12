@@ -20,7 +20,7 @@ struct StudentLogin: View {
                                Text("Welcome to")
                                     .font(.custom("Noteworthy-Bold", size: 25))
                                    .foregroundColor(Color.white)
-                                   .padding(.bottom, 10)
+                                   .padding(.top, 50)
 
                               
                                Text("SchoolPrep")
@@ -75,7 +75,7 @@ struct StudentLogin: View {
                     .padding(.horizontal)
                     .padding(.bottom, 200)
                 }
-                .padding(.bottom, 50)
+                .padding(.bottom, 20)
              
             }
            

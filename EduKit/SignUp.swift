@@ -22,7 +22,7 @@ struct Signup: View {
     var body: some View {
         NavigationView {
             ZStack {
-                Image("slide3")
+                Image("slide13")
                     .resizable()
                     .scaledToFill()
                     .frame(width: UIScreen.main.bounds.width)
