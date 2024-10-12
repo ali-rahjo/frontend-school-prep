@@ -20,6 +20,7 @@
 		D22EE4D02CBA7FD600D121D3 /* LunchMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22EE4CF2CBA7FD600D121D3 /* LunchMenu.swift */; };
 		D22EE4D22CBA8B8E00D121D3 /* WriteMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22EE4D12CBA8B8D00D121D3 /* WriteMessage.swift */; };
 		D22EE4D42CBA990800D121D3 /* TeacherLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22EE4D32CBA990800D121D3 /* TeacherLoginView.swift */; };
+		D233C39F2CBAC71D000B47C7 /* TeacherProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = D233C39E2CBAC71D000B47C7 /* TeacherProfile.swift */; };
 		D23C5E252CB6E9DB007F2017 /* LeaveStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23C5E242CB6E9DB007F2017 /* LeaveStatusView.swift */; };
 		D23C5E272CB6EAFD007F2017 /* LeaveStatusServiceCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23C5E262CB6EAFD007F2017 /* LeaveStatusServiceCall.swift */; };
 		D24D36382C935F8C00A6F8CA /* LauchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D24D36372C935F8C00A6F8CA /* LauchScreen.storyboard */; };
@@ -83,6 +84,7 @@
 		D22EE4CF2CBA7FD600D121D3 /* LunchMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchMenu.swift; sourceTree = "<group>"; };
 		D22EE4D12CBA8B8D00D121D3 /* WriteMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteMessage.swift; sourceTree = "<group>"; };
 		D22EE4D32CBA990800D121D3 /* TeacherLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherLoginView.swift; sourceTree = "<group>"; };
+		D233C39E2CBAC71D000B47C7 /* TeacherProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherProfile.swift; sourceTree = "<group>"; };
 		D23C5E242CB6E9DB007F2017 /* LeaveStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaveStatusView.swift; sourceTree = "<group>"; };
 		D23C5E262CB6EAFD007F2017 /* LeaveStatusServiceCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaveStatusServiceCall.swift; sourceTree = "<group>"; };
 		D24D36372C935F8C00A6F8CA /* LauchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LauchScreen.storyboard; sourceTree = "<group>"; };
@@ -220,6 +222,7 @@
 				D2A8C3B22C985FA30076892A /* LoginSelection.swift */,
 				D2A9C2BD2CB46DB700137781 /* TeacherOptions.swift */,
 				D22EE4D32CBA990800D121D3 /* TeacherLoginView.swift */,
+				D233C39E2CBAC71D000B47C7 /* TeacherProfile.swift */,
 				D21B609E2CA757430010F587 /* ParentOptions.swift */,
 				D2A88C1B2CAAD6BE00FDE8BD /* StudentLogin.swift */,
 				D2D9705B2C91EE570040DE4A /* Assets.xcassets */,
@@ -413,6 +416,7 @@
 				D2A9C2C02CB5B24D00137781 /* Logout.swift in Sources */,
 				D21B609D2CA755690010F587 /* ForgotPasswordView.swift in Sources */,
 				D2239C9A2CA9D29D00BACFDC /* ChildrenView.swift in Sources */,
+				D233C39F2CBAC71D000B47C7 /* TeacherProfile.swift in Sources */,
 				D22EE4D02CBA7FD600D121D3 /* LunchMenu.swift in Sources */,
 				D22EE4D22CBA8B8E00D121D3 /* WriteMessage.swift in Sources */,
 				D2239C962CA9C54A00BACFDC /* ChildrenProfileServiceCall.swift in Sources */,

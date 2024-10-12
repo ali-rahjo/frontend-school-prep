@@ -8,8 +8,8 @@ struct LoginView: View {
     @State private var password: String = ""
     @State private var errorMessage: String? = nil
     @State private var navigateToParent = false
-   
-    @State private var alertMessage = ""
+    @State private var showAlert: Bool = false
+    @State private var alertMessage: String = ""
     
     
     var body: some View {
@@ -138,6 +138,15 @@ struct LoginView: View {
         }
     
     func login(username: String, password: String, completion: @escaping (Result<String, Error>) -> Void) {
+        
+        guard !username.isEmpty && !password.isEmpty else {
+            alertMessage = "Please enter both username and password."
+            showAlert = true
+            return
+        }
+        
+        
+        
         guard let url = URL(string: "http://192.168.0.219:8000/api/v1/auth/login/") else {
             completion(.failure(NSError(domain: "", code: -1, userInfo: [NSLocalizedDescriptionKey: "Invalid URL"])))
             return
