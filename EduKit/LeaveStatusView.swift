@@ -93,7 +93,7 @@ struct LeaveStatusView: View {
                                                            .foregroundColor(Color(red: 235/255, green: 168/255, blue: 0/255))
                                                            .font(.headline)
                                                            .frame(width: 180, alignment: .leading)
-                                                       Text(leave.status)
+                                                       Text(leave.status.capitalized)
                                                            .foregroundColor(leave.status == "Approved" ? .green : .red)
                                                            .frame(maxWidth: .infinity, alignment: .leading)
                                                            

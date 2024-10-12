@@ -12,7 +12,7 @@ struct SideMenuView: View {
     var body: some View {
         List {
            
-            NavigationLink(destination: LunchMenu()) {
+            NavigationLink(destination: LunchMenuView()) {
                 Label("Luch Menu", systemImage: "fork.knife")
             }
             
@@ -140,12 +140,7 @@ struct AnnouncementsView: View {
     }
 }
 
-struct LunchMenu: View {
-    var body: some View {
-        Text("Lunch Menu")
-            .navigationTitle("Lunch Menu")
-    }
-}
+
 
 
 

@@ -17,6 +17,7 @@
 		D2239C982CA9D21400BACFDC /* ChildrenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2239C972CA9D21400BACFDC /* ChildrenViewModel.swift */; };
 		D2239C9A2CA9D29D00BACFDC /* ChildrenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2239C992CA9D29D00BACFDC /* ChildrenView.swift */; };
 		D2239C9C2CA9D4B500BACFDC /* child.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2239C9B2CA9D4B500BACFDC /* child.swift */; };
+		D22EE4D02CBA7FD600D121D3 /* LunchMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22EE4CF2CBA7FD600D121D3 /* LunchMenu.swift */; };
 		D23C5E252CB6E9DB007F2017 /* LeaveStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23C5E242CB6E9DB007F2017 /* LeaveStatusView.swift */; };
 		D23C5E272CB6EAFD007F2017 /* LeaveStatusServiceCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23C5E262CB6EAFD007F2017 /* LeaveStatusServiceCall.swift */; };
 		D24D36382C935F8C00A6F8CA /* LauchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D24D36372C935F8C00A6F8CA /* LauchScreen.storyboard */; };
@@ -77,6 +78,7 @@
 		D2239C972CA9D21400BACFDC /* ChildrenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildrenViewModel.swift; sourceTree = "<group>"; };
 		D2239C992CA9D29D00BACFDC /* ChildrenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildrenView.swift; sourceTree = "<group>"; };
 		D2239C9B2CA9D4B500BACFDC /* child.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = child.swift; sourceTree = "<group>"; };
+		D22EE4CF2CBA7FD600D121D3 /* LunchMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchMenu.swift; sourceTree = "<group>"; };
 		D23C5E242CB6E9DB007F2017 /* LeaveStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaveStatusView.swift; sourceTree = "<group>"; };
 		D23C5E262CB6EAFD007F2017 /* LeaveStatusServiceCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaveStatusServiceCall.swift; sourceTree = "<group>"; };
 		D24D36372C935F8C00A6F8CA /* LauchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LauchScreen.storyboard; sourceTree = "<group>"; };
@@ -138,6 +140,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D2691F522CBA799F0056B2FA /* Parent */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Parent;
+			sourceTree = "<group>";
+		};
 		D2A53BD72CB9B5C20019CE12 /* Sound */ = {
 			isa = PBXGroup;
 			children = (
@@ -181,6 +190,7 @@
 		D2D970562C91EE540040DE4A /* EduKit */ = {
 			isa = PBXGroup;
 			children = (
+				D2691F522CBA799F0056B2FA /* Parent */,
 				D2A53BDE2CB9B5EA0019CE12 /* Utility */,
 				D2A53BD72CB9B5C20019CE12 /* Sound */,
 				D24D36392C9361F100A6F8CA /* Info.plist */,
@@ -203,6 +213,7 @@
 				D21B609C2CA755690010F587 /* ForgotPasswordView.swift */,
 				D21B609A2CA754E30010F587 /* Parent.swift */,
 				D2239C8F2CA96E5400BACFDC /* SideMenuView.swift */,
+				D22EE4CF2CBA7FD600D121D3 /* LunchMenu.swift */,
 				D23C5E242CB6E9DB007F2017 /* LeaveStatusView.swift */,
 				D2803F562CB6A6EE0022C6B8 /* ApplyLeaveView.swift */,
 				D2A9C2BF2CB5B24D00137781 /* Logout.swift */,
@@ -403,6 +414,7 @@
 				D2A9C2C02CB5B24D00137781 /* Logout.swift in Sources */,
 				D21B609D2CA755690010F587 /* ForgotPasswordView.swift in Sources */,
 				D2239C9A2CA9D29D00BACFDC /* ChildrenView.swift in Sources */,
+				D22EE4D02CBA7FD600D121D3 /* LunchMenu.swift in Sources */,
 				D2239C962CA9C54A00BACFDC /* ChildrenProfileServiceCall.swift in Sources */,
 				D2D970582C91EE540040DE4A /* EduKitApp.swift in Sources */,
 				D2A88C1C2CAAD6BE00FDE8BD /* StudentLogin.swift in Sources */,

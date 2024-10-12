@@ -94,14 +94,17 @@ struct PeriodCardView: View {
     }
     
     private func periodColor(for subject: String) -> Color {
-        // Colors based on subject
+        
         switch subject {
-        case "Deu": return Color.red
+        case "Deu": return Color.teal
         case "Ma": return Color.green
         case "Mittagessen": return Color.orange
         case "Mu": return Color.purple
         case "LBK/Eföb": return Color.pink
         case "Sa": return Color.yellow
+        case "SozL Musik und Tanz": return Color.red
+        case "Grisu Deu": return Color.mint
+        case "Sp": return Color.indigo
         default: return Color.gray
         }
     }
