@@ -28,7 +28,7 @@ struct SideMenuView: View {
                 Label("Attendance", systemImage: "person.crop.circle")
             }
             
-            NavigationLink(destination: MessagesView()) {
+            NavigationLink(destination: WriteMessage()) {
                 Label("Messages", systemImage: "message")
             }
             
@@ -48,7 +48,7 @@ struct SideMenuView: View {
                 showConfirmationDialog = true
             }) {
                 Label("Logout", systemImage: "arrow.right.square")
-                    .foregroundColor(.red) // Changed color to red to indicate a destructive action
+                    .foregroundColor(.red)
             }
            
         }.confirmationDialog("Are you sure you want to log out?", isPresented: $showConfirmationDialog, titleVisibility: .visible) {
@@ -60,7 +60,7 @@ struct SideMenuView: View {
             NavigationLink(destination: Logout(), isActive: $isNavigatingToLogoutView) {
                 EmptyView()
             }
-            .hidden() // Hide the navigation link
+            .hidden()
         )
         
 
@@ -101,9 +101,11 @@ struct SideMenuView: View {
                        return
                    }
 
-                   // Handle successful logout
+                  
                    alertMessage = "Successfully logged out."
                    showAlert = true
+                   playSound(sound: "sound-rise", type: "mp3")
+                   feedback.notificationOccurred(.success)
                }
            }.resume()
        }
@@ -126,12 +128,7 @@ struct AttendanceView: View {
     }
 }
 
-struct MessagesView: View {
-    var body: some View {
-        Text("Messages View")
-            .navigationTitle("Messages")
-    }
-}
+
 
 struct AnnouncementsView: View {
     var body: some View {

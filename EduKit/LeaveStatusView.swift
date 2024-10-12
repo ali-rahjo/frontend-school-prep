@@ -14,7 +14,7 @@ struct LeaveStatusView: View {
                 
                 
                 ZStack {
-                    Image("slide12")
+                    Image("slide11")
                         .resizable()
                         .scaledToFill()
                         .frame(width: UIScreen.main.bounds.width)
@@ -90,7 +90,7 @@ struct LeaveStatusView: View {
                                                    
                                                    HStack {
                                                        Text("Status")
-                                                           .foregroundColor(Color(red: 235/255, green: 168/255, blue: 0/255))
+                                                           .foregroundColor(Color(red: 202/255, green: 32/255, blue: 104/255))
                                                            .font(.headline)
                                                            .frame(width: 180, alignment: .leading)
                                                        Text(leave.status.capitalized)

@@ -61,7 +61,7 @@ struct TeacherOptions: View {
                 Button(action: {
                     // Handle login action here
                 }) {
-                    NavigationLink(destination: LoginView()) {
+                    NavigationLink(destination: TeacherLoginView()) {
                         ZStack {
                             RoundedRectangle(cornerRadius: 25, style: .continuous)
                                 .fill(Color.blue)

@@ -17,23 +17,25 @@ struct ApplyLeaveView: View {
     var body: some View {
         NavigationView {
             ZStack {
+              
+
+
                 Image("slide11")
                     .resizable()
-                    .scaledToFill()
+                .scaledToFill()
                     .frame(width: UIScreen.main.bounds.width)
                     .clipped()
                     .ignoresSafeArea()
                 
-                
-              //  Color.black
-              //      .opacity(0.4)
-               //     .edgesIgnoringSafeArea(.all)
+                Color.black
+                    .opacity(0.3)
+                    .edgesIgnoringSafeArea(.all)
                 
                 VStack(spacing: 20) {
                                 Text("Apply Leave")
                                     .font(.largeTitle)
                                     .padding()
-                                    .foregroundColor(Color(red: 255/255, green: 198/255, blue: 1/255))
+                                    .foregroundColor(Color.white)
                    
                        
 
@@ -115,12 +117,13 @@ struct ApplyLeaveView: View {
                                             }
                                         }
                                     }) {
-                                        Text(isSubmitting ? "Submitting..." : "Submit")
+                                        Text(isSubmitting ? "Submitting..." : "SUBMIT")
                                             .padding()
                                             .frame(width: 200)
-                                            .background(Color(red: 243/255, green: 194/255, blue: 3/255))
-                                            .font(.system(size: 20))
-                                            .bold()
+                                            .background(Color(red: 202/255, green: 32/255, blue: 104/255))
+                                       
+                                            .font(.system(size: 22))
+                                           
                                             .foregroundColor(.white)
                                             .cornerRadius(8)
                                             .padding(.top,40)
@@ -135,7 +138,7 @@ struct ApplyLeaveView: View {
 
                                   
                                 
-                }.padding(.bottom,100)
+                }.padding(.top,50)
                 .alert(isPresented: $showAlert) {
                                             Alert(
                                             title: Text("Success"),
@@ -146,7 +149,7 @@ struct ApplyLeaveView: View {
                                         )
                                     }
                
-            }
+            }  .edgesIgnoringSafeArea(.all)
         }
     }
                                               
