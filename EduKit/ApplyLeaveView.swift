@@ -120,12 +120,7 @@ struct ApplyLeaveView: View {
                                         Text(isSubmitting ? "Submitting..." : "SUBMIT")
                                             .padding()
                                             .frame(width: 200)
-                                            .background(  LinearGradient(
-                                                gradient: Gradient(colors: [Color(red: 0/255, green: 0/255, blue: 50/255),
-                                                                            Color(red: 0/255, green: 0/255, blue: 150/255)]),
-                                                startPoint: .top,
-                                                endPoint: .bottom
-                                     ))
+                                            .background(Color.black)
                                        
                                             .font(.system(size: 16))
                                            
