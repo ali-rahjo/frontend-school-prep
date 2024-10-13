@@ -107,7 +107,7 @@ struct KidDayMenuView: View {
             Text(day)
                 .font(.title)
                 .fontWeight(.bold)
-                .foregroundColor(.white)
+                .foregroundColor(.gray)
                 .padding()
                 .background(Color.yellow)
                 .cornerRadius(15)

@@ -11,33 +11,43 @@ struct ContentView: View {
             
             VStack(spacing: 0) {
                 
-                  HStack {
-                  
                  
-                }
-                .background(Color(red: 33/255, green: 151/255, blue: 189/255))
-                .frame(height: 50)
-                .edgesIgnoringSafeArea(.horizontal)
-                .padding(.top)
                 
                 ZStack {
-                    Image("slide7")
+                    Image("slide12")
                         .resizable()
                         .scaledToFill()
                         .frame(width: UIScreen.main.bounds.width)
                         .clipped()
                     
-                    Color.black
-                        .opacity(0.3)
-                        .edgesIgnoringSafeArea(.all)
+                    Text("SchoolPrep")
+                        .font(.custom("Noteworthy-Bold", size: 60))
+                        .foregroundColor(Color.white)
+                        .padding(.bottom,200)
                     
-                    Image("genie1")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: UIScreen.main.bounds.width)
-                        .clipped()
+                       
+                    
+                    Text("Genie")
+                        .font(.custom("Bradley Hand", size: 46))
+                        .foregroundColor(Color.white)
+                        .padding(.leading, 100)
+                        .padding(.bottom,100)
+     
+                    
+                    
+                      Image("logo2")
+                          .resizable()
+                          .scaledToFill()
+                        
+                          .frame(width: 90, height: 85)
+                          .clipShape(Circle())
+                          .padding(.top,60)
+                      
+                   
+                    
+                 
                 }
-                .padding(.bottom, 20)
+               
                 .background(Color(red: 164/255, green: 223/255, blue: 239/255))
                 
                
@@ -67,12 +77,12 @@ struct ContentView: View {
                             .padding()
                     }
                 }
-                .background(Color(red: 33/255, green: 151/255, blue: 189/255))
+                .background(Color.black)
                 .edgesIgnoringSafeArea(.horizontal)
                 
                
             }
-            .background(Color(red: 164/255, green: 223/255, blue: 239/255))
+           
             .edgesIgnoringSafeArea(.top)
            
            

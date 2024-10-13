@@ -13,7 +13,7 @@ struct TeacherLoginView: View {
         NavigationView {
         ZStack {
           
-            Image("slide12")
+            Image("slide11")
                 .resizable()
             .scaledToFill()
                 .frame(width: UIScreen.main.bounds.width)
@@ -60,7 +60,7 @@ struct TeacherLoginView: View {
                         .padding()
                 }
                 .padding()
-                .background(Color.white.opacity(0.15))
+                .background(Color.white.opacity(0.5))
                 .cornerRadius(10)
                 .padding(.horizontal, 40)
                 .padding(.bottom, 20)
@@ -84,7 +84,7 @@ struct TeacherLoginView: View {
                     }
                 }
                 .padding()
-                .background(Color.white.opacity(0.15))
+                .background(Color.white.opacity(0.5))
                 .cornerRadius(10)
                 .padding(.horizontal, 40)
                 .padding(.bottom, 30)
@@ -125,7 +125,7 @@ struct TeacherLoginView: View {
                     }
                     .frame(maxWidth: .infinity)
                     .padding()
-                    .background(Color.black)
+                    .background(Color(red: 202/255, green: 32/255, blue: 104/255))
                     .foregroundColor(Color.white)
                     .cornerRadius(10)
                     .shadow(radius: 5)

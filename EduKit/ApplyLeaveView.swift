@@ -122,7 +122,7 @@ struct ApplyLeaveView: View {
                                             .frame(width: 200)
                                             .background(Color(red: 202/255, green: 32/255, blue: 104/255))
                                        
-                                            .font(.system(size: 20))
+                                            .font(.system(size: 16))
                                            
                                             .foregroundColor(.white)
                                             .cornerRadius(8)

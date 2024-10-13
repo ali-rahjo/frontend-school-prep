@@ -22,16 +22,18 @@ struct Signup: View {
     var body: some View {
         NavigationView {
             ZStack {
-                Image("slide13")
+                
+                
+                Image("slide16")
                     .resizable()
                     .scaledToFill()
                     .frame(width: UIScreen.main.bounds.width)
                     .clipped()
                     .ignoresSafeArea()
                 
-                Color.black
-                    .opacity(0.4)
-                    .edgesIgnoringSafeArea(.all)
+             //   Color.black
+             //       .opacity(0.4)
+               //     .edgesIgnoringSafeArea(.all)
                 
                 VStack(spacing: 20) {
                     Spacer()
@@ -122,7 +124,7 @@ struct Signup: View {
                                 .foregroundColor(.white)
                                 .padding()
                                 .frame(maxWidth: 260)
-                                .background(Color(red: 171/255, green: 83/255, blue: 69/255))
+                                .background(Color(red: 121/255, green: 93/255, blue: 207/255))
                                 .cornerRadius(8)
                         }
                     }

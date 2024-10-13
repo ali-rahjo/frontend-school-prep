@@ -24,16 +24,22 @@ struct StudentInfoView: View {
         
         NavigationView {
             ZStack {
-                Image("slide9")
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: UIScreen.main.bounds.width)
-                    .clipped()
-                    .ignoresSafeArea()
                 
-                Color.black
-                    .opacity(0.4)
-                    .edgesIgnoringSafeArea(.all)
+                LinearGradient(gradient: Gradient(colors: [Color.blue.opacity(0.8), Color.cyan]),
+                                          startPoint: .top,
+                                          endPoint: .bottom)
+                
+                
+             //   Image("slide9")
+               //     .resizable()
+                //    .scaledToFill()
+                //    .frame(width: UIScreen.main.bounds.width)
+               //     .clipped()
+               //     .ignoresSafeArea()
+                
+             //   Color.black
+               //     .opacity(0.4)
+               //     .edgesIgnoringSafeArea(.all)
                 
                 VStack(spacing: 20) {
                     Spacer()

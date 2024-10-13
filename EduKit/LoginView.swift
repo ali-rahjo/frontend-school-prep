@@ -15,7 +15,7 @@ struct LoginView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                Image("slide11")
+                Image("slide12")
                     .resizable()
                     .scaledToFill()
                     .frame(width: UIScreen.main.bounds.width)
@@ -54,16 +54,17 @@ struct LoginView: View {
                     
                     TextField("Username", text: $username)
                        .padding()
-                       .background(Color.white.opacity(0.8))
+                       .background(Color.white.opacity(0.95))
                        .cornerRadius(8)
                        .frame(width: 300)
                        .autocapitalization(.none)
                        .disableAutocorrection(true)
                        .padding(.bottom,50)
+                       .foregroundColor(Color.white)
 
                    SecureField("Password", text: $password)
                        .padding()
-                       .background(Color.white.opacity(0.8))
+                       .background(Color.white.opacity(0.9))
                        .cornerRadius(8)
                        .frame(width: 300)
                        .padding(.top,-40)
@@ -98,7 +99,7 @@ struct LoginView: View {
                            .padding()
                            .foregroundColor(.white)
                            .frame(width: 250)
-                           .background(Color(red: 202/255, green: 32/255, blue: 104/255))
+                           .background(Color.black)
                            .cornerRadius(8)
                            .padding(.top,20)
                            .shadow(radius: 5)

@@ -8,7 +8,7 @@ struct TeacherOptions: View {
     var body: some View {
         ZStack{
             
-            Image("slide12")
+            Image("slide11")
                 .resizable()
                 .scaledToFill()
                 .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
@@ -54,7 +54,7 @@ struct TeacherOptions: View {
                     NavigationLink(destination: Signup()) {
                         ZStack {
                             RoundedRectangle(cornerRadius: 25, style: .continuous)
-                                .fill(Color.black)
+                                .fill(Color(red: 202/255, green: 32/255, blue: 104/255))
                                 .frame(width: 300, height: 60)
 
                             Text("Sign Up")
@@ -76,7 +76,7 @@ struct TeacherOptions: View {
                     NavigationLink(destination: TeacherLoginView()) {
                         ZStack {
                             RoundedRectangle(cornerRadius: 25, style: .continuous)
-                                .fill(Color.black)
+                                .fill(Color(red: 202/255, green: 32/255, blue: 104/255))
                                 .frame(width: 300, height: 60)
 
                             Text("Login")
