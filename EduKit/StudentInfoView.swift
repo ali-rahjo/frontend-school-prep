@@ -25,26 +25,22 @@ struct StudentInfoView: View {
         NavigationView {
             ZStack {
                 
-                LinearGradient(gradient: Gradient(colors: [Color.blue.opacity(0.8), Color.cyan]),
-                                          startPoint: .top,
-                                          endPoint: .bottom)
                 
                 
-             //   Image("slide9")
-               //     .resizable()
-                //    .scaledToFill()
-                //    .frame(width: UIScreen.main.bounds.width)
-               //     .clipped()
-               //     .ignoresSafeArea()
                 
-             //   Color.black
-               //     .opacity(0.4)
-               //     .edgesIgnoringSafeArea(.all)
+                Image("slide12")
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: UIScreen.main.bounds.width)
+                    .clipped()
+                    .ignoresSafeArea()
+                
+            
                 
                 VStack(spacing: 20) {
                     Spacer()
                     Text("Student Info")
-                        .font(.largeTitle)
+                        .font(.title)
                         .fontWeight(.bold)
                         .foregroundColor(Color.white)
                         .padding(.top, 80)
@@ -122,7 +118,7 @@ struct StudentInfoView: View {
                                 .padding()
                                 .foregroundColor(.white)
                                 .frame(width: 140)
-                                .background(Color(red: 33/255, green: 151/255, blue: 189/255))
+                                .background(Color.black)
                                 .cornerRadius(8)
                                 .font(.headline)
                         }
@@ -165,7 +161,7 @@ struct StudentInfoView: View {
                                 .padding()
                                 .foregroundColor(.white)
                                 .frame(width: 130)
-                                .background(Color(red: 33/255, green: 151/255, blue: 189/255))
+                                .background(Color.black)
                                 .cornerRadius(8)
                                 .font(.headline)
                         }
@@ -190,7 +186,7 @@ struct StudentInfoView: View {
                 }
                 .padding(.horizontal, 40)
                 .padding(.bottom, 120)
-                .background(Color.white.opacity(0.2))
+               // .background(Color.white.opacity(0.2))
                 .cornerRadius(15)
                 .shadow(radius: 10)
                 

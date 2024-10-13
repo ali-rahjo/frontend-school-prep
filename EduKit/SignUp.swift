@@ -24,21 +24,19 @@ struct Signup: View {
             ZStack {
                 
                 
-                Image("slide16")
+                Image("slide12")
                     .resizable()
                     .scaledToFill()
                     .frame(width: UIScreen.main.bounds.width)
                     .clipped()
                     .ignoresSafeArea()
                 
-             //   Color.black
-             //       .opacity(0.4)
-               //     .edgesIgnoringSafeArea(.all)
+            
                 
                 VStack(spacing: 20) {
                     Spacer()
                     Text("Create an Account")
-                        .font(.largeTitle)
+                        .font(.title)
                         .fontWeight(.bold)
                         .foregroundColor(Color.white)
     
@@ -124,7 +122,7 @@ struct Signup: View {
                                 .foregroundColor(.white)
                                 .padding()
                                 .frame(maxWidth: 260)
-                                .background(Color(red: 121/255, green: 93/255, blue: 207/255))
+                                .background(Color.black)
                                 .cornerRadius(8)
                         }
                     }

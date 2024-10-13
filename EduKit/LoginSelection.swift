@@ -9,16 +9,14 @@ struct LoginSelection: View {
     var body: some View {
         ZStack {
            
-            Image("slide7")
+            Image("slide12")
                 .resizable()
                 .scaledToFill()
                 .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
                 .clipped()
                 .ignoresSafeArea()
 
-            Color.black
-                .opacity(0.5)
-                .edgesIgnoringSafeArea(.all)
+           
 
            
             VStack {
@@ -43,7 +41,7 @@ struct LoginSelection: View {
                                 Text("Parent")
                                     .font(.headline)
                                     .frame(width: 100, height: 100)
-                                    .background(Color.blue)
+                                    .background(Color.black)
                                     .foregroundColor(.white)
                                     .cornerRadius(5)
                              }
@@ -69,7 +67,7 @@ struct LoginSelection: View {
                                 Text("Student")
                                     .font(.headline)
                                     .frame(width: 100, height: 100)
-                                    .background(Color.green)
+                                    .background(Color.black)
                                     .foregroundColor(.white)
                                     .cornerRadius(5)
 
@@ -96,7 +94,7 @@ struct LoginSelection: View {
                                 Text("Teacher")
                                     .font(.headline)
                                     .frame(width: 100, height: 100)
-                                    .background(Color.orange)
+                                    .background(Color.black)
                                     .foregroundColor(.white)
                                     .cornerRadius(5)
 
@@ -118,7 +116,7 @@ struct LoginSelection: View {
                             Text("Admin")
                                 .font(.headline)
                                 .frame(width: 100, height: 100)
-                                .background(Color.red)
+                                .background(Color.black)
                                 .foregroundColor(.white)
                                 .cornerRadius(5)
 
