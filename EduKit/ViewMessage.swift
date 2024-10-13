@@ -7,7 +7,7 @@ struct ViewMessage: View {
     var body: some View {
         NavigationView {
             ZStack {
-                // Background image with gradient overlay
+               
                 Image("slide12")
                     .resizable()
                     .scaledToFill()
@@ -43,7 +43,7 @@ struct ViewMessage: View {
                                 
                                 ForEach(viewModel.message) { message in
                                     VStack(alignment: .leading, spacing: 10) {
-                                        // Message in a stylish card
+                                       
                                         VStack(alignment: .leading, spacing: 8) {
                                         
                                            
@@ -100,7 +100,7 @@ struct StylishRowItem: View {
             Spacer()
             
             Text(value.isEmpty ? "No reply yet" : value.capitalized)
-                           .foregroundColor(value.isEmpty ? Color.gray : Color.white) // Default color for empty response
+                           .foregroundColor(value.isEmpty ? Color.gray : Color.white)
                            .fontWeight(.semibold)
                            .frame(maxWidth: .infinity, alignment: .leading)
 
