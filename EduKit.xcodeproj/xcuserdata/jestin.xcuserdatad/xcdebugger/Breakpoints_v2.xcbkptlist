@@ -126,6 +126,36 @@
                   endingLineNumber = "28"
                   offsetFromSymbolStart = "1379">
                </Location>
+               <Location
+                  uuid = "8BA2B4F6-4064-41EF-B0A2-D0654BD3BDD2 - e7c4152d1610c697"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in EduKit.ChildrenProfileService.getChildrenProfile(completion: (Swift.Result&lt;Swift.Array&lt;EduKit.Child&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "EduKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jestin/Desktop/EduKit/Frontend-SchoolPrep/EduKit/ChildrenProfileServiceCall.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "1230">
+               </Location>
+               <Location
+                  uuid = "8BA2B4F6-4064-41EF-B0A2-D0654BD3BDD2 - e7c4152d1610c697"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in EduKit.ChildrenProfileService.getChildrenProfile(completion: (Swift.Result&lt;Swift.Array&lt;EduKit.Child&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "EduKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jestin/Desktop/EduKit/Frontend-SchoolPrep/EduKit/ChildrenProfileServiceCall.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "1379">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -143,6 +173,84 @@
             endingLineNumber = "39"
             landmarkName = "getParentProfile(completion:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4E0169F6-FB1B-4196-88B6-DE8E81827635"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EduKit/LeaveStatusServiceCall.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "LeaveStatusViewModel"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "4E0169F6-FB1B-4196-88B6-DE8E81827635 - a607b5a81996f69c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EduKit.LeaveStatusViewModel.deinit"
+                  moduleName = "EduKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jestin/Desktop/EduKit/Frontend-SchoolPrep/EduKit/LeaveStatusServiceCall.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "22">
+               </Location>
+               <Location
+                  uuid = "4E0169F6-FB1B-4196-88B6-DE8E81827635 - b26510176db03fb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EduKit.LeaveStatusViewModel.__deallocating_deinit"
+                  moduleName = "EduKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jestin/Desktop/EduKit/Frontend-SchoolPrep/EduKit/LeaveStatusServiceCall.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "4E0169F6-FB1B-4196-88B6-DE8E81827635 - e45fdfe297312be3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EduKit.LeaveStatusViewModel.__allocating_init() -&gt; EduKit.LeaveStatusViewModel"
+                  moduleName = "EduKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jestin/Desktop/EduKit/Frontend-SchoolPrep/EduKit/LeaveStatusServiceCall.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "10">
+               </Location>
+               <Location
+                  uuid = "4E0169F6-FB1B-4196-88B6-DE8E81827635 - 8627510425d09d77"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EduKit.LeaveStatusViewModel.init() -&gt; EduKit.LeaveStatusViewModel"
+                  moduleName = "EduKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jestin/Desktop/EduKit/Frontend-SchoolPrep/EduKit/LeaveStatusServiceCall.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "414">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

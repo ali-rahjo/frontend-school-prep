@@ -1,28 +1,23 @@
 
-
 import Foundation
 
-struct Leave: Identifiable, Codable {
+struct MessageStatus: Identifiable, Codable {
     let id: Int
     let parent_name: String
     let student_name: String
     let class_name: String
-    let leave_type: String
-    let status: String
-    let leave_description: String
-    let start_date: String
-    let end_date: String
     let teacher_name: String
+    let text_msg: String
+    let response: String
 }
 
-class LeaveStatusViewModel: ObservableObject {
-    @Published var leaves: [Leave] = []
+class MessageStatusViewModel: ObservableObject {
+    @Published var message: [MessageStatus] = []
     @Published var isLoading = false
     @Published var errorMessage: String? = nil
     
-   
-    func fetchLeaveStatus() {
-        guard let url = URL(string: "http://192.168.0.219:8000/api/v1/parent/apply/leave/") else {
+    func fetchMessageStatus() {
+        guard let url = URL(string: "http://192.168.0.219:8000/api/v1/parent/write/message/") else {
             errorMessage = "Invalid URL"
             return
         }
@@ -44,13 +39,12 @@ class LeaveStatusViewModel: ObservableObject {
                 }
                 
                 do {
-                    let decodedLeaves = try JSONDecoder().decode([Leave].self, from: data)
-                    self.leaves = decodedLeaves
+                    let decodedLeaves = try JSONDecoder().decode([MessageStatus].self, from: data)
+                    self.message = decodedLeaves
                 } catch {
                     self.errorMessage = "Failed to decode JSON: \(error.localizedDescription)"
                 }
             }
         }.resume()
     }
-}
-
+    }

@@ -35,6 +35,10 @@ struct SideMenuView: View {
                 Label("Messages", systemImage: "message")
             }
             
+            NavigationLink(destination: ViewMessage()) {
+                Label("Message Status", systemImage: "envelope.open.fill")
+            }
+            
             NavigationLink(destination: AnnouncementsView()) {
                 Label("Announcements", systemImage: "megaphone")
             }
