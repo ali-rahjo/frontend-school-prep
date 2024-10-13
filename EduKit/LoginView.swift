@@ -60,7 +60,7 @@ struct LoginView: View {
                        .autocapitalization(.none)
                        .disableAutocorrection(true)
                        .padding(.bottom,50)
-                       .foregroundColor(Color.white)
+                       .foregroundColor(Color.black)
 
                    SecureField("Password", text: $password)
                        .padding()

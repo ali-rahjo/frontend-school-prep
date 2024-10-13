@@ -10,7 +10,10 @@ struct SideMenuView: View {
     @State private var isNavigatingToLogoutView = false
     
     var body: some View {
+      
         List {
+            
+         
            
             NavigationLink(destination: LunchMenuView()) {
                 Label("Luch Menu", systemImage: "fork.knife")

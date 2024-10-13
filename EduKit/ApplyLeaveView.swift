@@ -20,7 +20,7 @@ struct ApplyLeaveView: View {
               
 
 
-                Image("slide11")
+                Image("slide12")
                     .resizable()
                 .scaledToFill()
                     .frame(width: UIScreen.main.bounds.width)
@@ -33,7 +33,7 @@ struct ApplyLeaveView: View {
                 
                 VStack(spacing: 20) {
                                 Text("Apply Leave")
-                                    .font(.largeTitle)
+                                    .font(.title)
                                     .padding()
                                     .foregroundColor(Color.white)
                    
@@ -120,7 +120,12 @@ struct ApplyLeaveView: View {
                                         Text(isSubmitting ? "Submitting..." : "SUBMIT")
                                             .padding()
                                             .frame(width: 200)
-                                            .background(Color(red: 202/255, green: 32/255, blue: 104/255))
+                                            .background(  LinearGradient(
+                                                gradient: Gradient(colors: [Color(red: 0/255, green: 0/255, blue: 50/255),
+                                                                            Color(red: 0/255, green: 0/255, blue: 150/255)]),
+                                                startPoint: .top,
+                                                endPoint: .bottom
+                                     ))
                                        
                                             .font(.system(size: 16))
                                            

@@ -8,10 +8,7 @@ struct ChildrenView: View {
         NavigationView {
             ZStack {
                 
-                LinearGradient(gradient: Gradient(colors: [Color.purple, Color.blue]),
-                               startPoint: .topLeading,
-                               endPoint: .bottomTrailing)
-                    .edgesIgnoringSafeArea(.top)
+           
                 
                 if viewModel.isLoading {
                     VStack {
@@ -30,9 +27,12 @@ struct ChildrenView: View {
                                     .font(.title)
                                     .foregroundColor(.clear)
                                     .overlay(
-                                        LinearGradient(gradient: Gradient(colors: [Color.purple, Color.blue]),
-                                                       startPoint: .topLeading,
-                                                       endPoint: .bottomTrailing)
+                                        LinearGradient(
+                                                   gradient: Gradient(colors: [Color(red: 0/255, green: 0/255, blue: 50/255),
+                                                                               Color(red: 0/255, green: 0/255, blue: 150/255)]),
+                                                   startPoint: .top,
+                                                   endPoint: .bottom
+                                        )
                                             .mask(Text("\(child.firstName.capitalized) \(child.lastName.capitalized)")
                                                     .font(.title))
                                     )
@@ -59,9 +59,12 @@ struct ChildrenView: View {
                                     .padding(.vertical, 4)  // Smaller vertical padding for a smaller height
                                             .padding(.horizontal, 8)
                                     .background(
-                                               LinearGradient(gradient: Gradient(colors: [Color.purple, Color.blue]),
-                                                              startPoint: .topLeading,
-                                                              endPoint: .bottomTrailing)
+                                        LinearGradient(
+                                                   gradient: Gradient(colors: [Color(red: 0/255, green: 0/255, blue: 50/255),
+                                                                               Color(red: 0/255, green: 0/255, blue: 150/255)]),
+                                                   startPoint: .top,
+                                                   endPoint: .bottom
+                                        )
                                            )
                                     .cornerRadius(8)
                             }
@@ -73,6 +76,13 @@ struct ChildrenView: View {
                     .shadow(radius: 5)
                 }
             }
+            .edgesIgnoringSafeArea(.bottom)
+            .background(     LinearGradient(
+                gradient: Gradient(colors: [Color(red: 0/255, green: 0/255, blue: 50/255),
+                                            Color(red: 0/255, green: 0/255, blue: 150/255)]),
+                startPoint: .top,
+                endPoint: .bottom
+     ))
             .onAppear {
                 viewModel.fetchChildren()
             }

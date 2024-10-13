@@ -32,6 +32,12 @@ struct TimetableView: View {
                     .foregroundColor(.gray)
             }
         }
+        .background(   LinearGradient(
+            gradient: Gradient(colors: [Color(red: 0/255, green: 0/255, blue: 50/255),
+                                        Color(red: 0/255, green: 0/255, blue: 150/255)]),
+            startPoint: .top,
+            endPoint: .bottom
+        ))
         .onAppear {
             viewModel.fetchTimetable(classID: classID)
         }
@@ -52,10 +58,11 @@ struct DayCardView: View {
                 .font(.title2)
                 .fontWeight(.bold)
                 .padding()
-                .foregroundColor(.white)
-                .background(Color.blue)
+                .foregroundColor(.black)
+                .background(Color.white)
                 .cornerRadius(15)
-                .shadow(color: Color.blue.opacity(0.5), radius: 5, x: 0, y: 5)
+                .padding(.bottom,10)
+              
             
             // Periods arranged in a grid layout
             LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 10), count: 2), spacing: 10) {
@@ -65,6 +72,8 @@ struct DayCardView: View {
             }
             .padding(.horizontal)
         }
+      
+        .shadow(color: Color.white.opacity(0.8), radius: 5, x: 0, y: 5)
         .padding(.bottom)
     }
 }
@@ -75,37 +84,54 @@ struct PeriodCardView: View {
     var body: some View {
         VStack {
             HStack {
-                Image(systemName: "book.fill") // Icon for the subject
-                    .font(.title)
-                    .foregroundColor(.white)
+                ZStack {
+                    // Gradient applied to the image
+                    LinearGradient(
+                        gradient: Gradient(colors: [
+                            Color(red: 0/255, green: 0/255, blue: 50/255),
+                            Color(red: 0/255, green: 0/255, blue: 150/255)
+                        ]),
+                        startPoint: .top,
+                        endPoint: .bottom
+                    )
+                    .mask(
+                        Image(systemName: "book.fill")
+                            .font(.title)
+                    )
+                }
+                
                 Text("Period \(period.period)")
                     .font(.headline)
-                    .foregroundColor(.white)
+                    .foregroundColor(.black)
                     .fontWeight(.bold)
+                    .shadow(color: Color.white.opacity(0.9), radius: 5, x: 0, y: 5)
+                
             }
+            
             Text(period.subject)
                 .font(.subheadline)
-                .foregroundColor(.white)
+                .foregroundColor(.black)
         }
         .padding()
         .background(periodColor(for: period.subject))
         .cornerRadius(12)
         .shadow(radius: 5)
     }
+
     
     private func periodColor(for subject: String) -> Color {
         
         switch subject {
-        case "Deu": return Color.teal
-        case "Ma": return Color.green
-        case "Mittagessen": return Color.orange
-        case "Mu": return Color.purple
-        case "LBK/Eföb": return Color.pink
-        case "Sa": return Color.yellow
-        case "SozL Musik und Tanz": return Color.red
-        case "Grisu Deu": return Color.mint
-        case "Sp": return Color.indigo
-        default: return Color.gray
+        case "Deu": return Color.white
+        case "Ma": return Color.white
+        case "Mittagessen": return Color.white
+        case "Mu": return Color.white
+        case "LBK/Eföb": return Color.white
+        case "Sa": return Color.white
+        case "SozL Musik und Tanz": return Color.white
+        case "Grisu Deu": return Color.white
+        case "Sp": return Color.white
+        default: return Color.white
         }
     }
 }

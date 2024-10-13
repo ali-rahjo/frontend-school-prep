@@ -14,17 +14,14 @@ struct LeaveStatusView: View {
                 
                 
                 ZStack {
-                    Image("slide11")
+                    Image("slide12")
                         .resizable()
                         .scaledToFill()
                         .frame(width: UIScreen.main.bounds.width)
                         .clipped()
                         .ignoresSafeArea()
                     
-                    Color.black
-                        .opacity(0.4)
-                        .edgesIgnoringSafeArea(.all)
-                
+                  
                 
                 
                        VStack {

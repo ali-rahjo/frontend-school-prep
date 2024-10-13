@@ -26,9 +26,12 @@ struct Parent: View {
                 VStack {
                    
                     ZStack {
-                        LinearGradient(gradient: Gradient(colors: [Color.purple, Color.blue]),
-                                       startPoint: .topLeading,
-                                       endPoint: .bottomTrailing)
+                        LinearGradient(
+                                   gradient: Gradient(colors: [Color(red: 0/255, green: 0/255, blue: 50/255),
+                                                               Color(red: 0/255, green: 0/255, blue: 150/255)]),
+                                   startPoint: .top,
+                                   endPoint: .bottom
+                        )
                             .edgesIgnoringSafeArea(.top)
                             .frame(height: 200)
 
@@ -60,7 +63,8 @@ struct Parent: View {
                         
                         HStack {
                             Image(systemName: "tag")
-                                .foregroundColor(.purple)
+                                .foregroundColor(.blue)
+                                .opacity(0.8)
                             if let id = parentProfile["id"] as? Int {
                                    Text("\(id)")
                                } else {
@@ -74,7 +78,8 @@ struct Parent: View {
                         
                         HStack {
                             Image(systemName: "person")
-                                .foregroundColor(.purple)
+                                .foregroundColor(.blue)
+                                .opacity(0.8)
                             if let user = parentProfile["user"] as? [String: Any],
                                 let username = user["username"] as? String {
                                 Text(username)
@@ -86,7 +91,8 @@ struct Parent: View {
 
                         HStack {
                             Image(systemName: "envelope")
-                                .foregroundColor(.purple)
+                                .foregroundColor(.blue)
+                                .opacity(0.8)
                             if let user = parentProfile["user"] as? [String: Any],
                                let email = user["email"] as? String {
                                 Text(email)
@@ -99,7 +105,8 @@ struct Parent: View {
 
                         HStack {
                             Image(systemName: "person.fill")
-                                .foregroundColor(.purple)
+                                .foregroundColor(.blue)
+                                .opacity(0.8)
                             if let gender = parentProfile["gender"] as? String {
                                 Text(gender == "M" ? "Male" : (gender == "F" ? "Female" : "Unknown"))
                             } else {
@@ -111,7 +118,8 @@ struct Parent: View {
 
                         HStack {
                             Image(systemName: "house")
-                                .foregroundColor(.purple)
+                                .foregroundColor(.blue)
+                                .opacity(0.8)
                             if let address = parentProfile["address"] as? String {
                                 Text(address)
                             } else {
@@ -123,7 +131,8 @@ struct Parent: View {
 
                         HStack {
                             Image(systemName: "phone")
-                                .foregroundColor(.purple)
+                                .foregroundColor(.blue)
+                                .opacity(0.8)
                             if let phoneNumber = parentProfile["phone_number"] as? String {
                                 Text(phoneNumber)
                             } else {
@@ -135,7 +144,8 @@ struct Parent: View {
                         
                         HStack {
                                 Image(systemName: "calendar")
-                                    .foregroundColor(.purple)
+                                .foregroundColor(.blue)
+                                .opacity(0.8)
                                 if let user = parentProfile["user"] as? [String: Any],
                                    let dateJoined = user["date_joined"] as? String {
                                     let formattedDate = formatDate(dateString: dateJoined)
@@ -148,7 +158,8 @@ struct Parent: View {
                         
                         HStack {
                             Image(systemName: "lock")
-                                .foregroundColor(.purple)
+                                .foregroundColor(.blue)
+                                .opacity(0.8)
                             Text("Password")
                             Spacer()
                         }
@@ -162,7 +173,12 @@ struct Parent: View {
                                 .font(.headline)
                                 .frame(maxWidth: .infinity)
                                 .padding()
-                                .background(LinearGradient(gradient: Gradient(colors: [Color.purple, Color.blue]), startPoint: .leading, endPoint: .trailing))
+                                .background(LinearGradient(
+                                    gradient: Gradient(colors: [Color(red: 0/255, green: 0/255, blue: 50/255),
+                                                                Color(red: 0/255, green: 0/255, blue: 150/255)]),
+                                    startPoint: .top,
+                                    endPoint: .bottom
+                         ))
                                 .cornerRadius(10)
                                 .foregroundColor(.white)
                         }
@@ -208,7 +224,7 @@ struct Parent: View {
                 }) {
                     Image(systemName: "line.horizontal.3")
                         .font(.title)
-                        .foregroundColor(.black)
+                        .foregroundColor(.white)
                 }
             }
         }
