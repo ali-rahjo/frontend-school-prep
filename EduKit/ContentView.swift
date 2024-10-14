@@ -73,6 +73,9 @@ struct ContentView: View {
                         Text("Contact Us")
                             .foregroundColor(.white)
                             .padding()
+                            .font(.system(size: 16))
+                            .fontWeight(.bold)
+                           
                     }
                     
                    
@@ -84,6 +87,9 @@ struct ContentView: View {
                         Text("Home")
                             .foregroundColor(.white)
                             .padding()
+                            .font(.system(size: 16))
+                            .fontWeight(.bold)
+                           
                     }
                     
                     Spacer()
@@ -92,6 +98,9 @@ struct ContentView: View {
                         Text("About Us")
                             .foregroundColor(.white)
                             .padding()
+                            .font(.system(size: 16))
+                            .fontWeight(.bold)
+                           
                     }
                     
                    

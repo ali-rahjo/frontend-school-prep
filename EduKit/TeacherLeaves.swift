@@ -17,6 +17,12 @@ struct TeacherLeaves: View {
                
                 VStack {
                     
+                    HStack {
+                        Text("Leaves")
+                            .font(.system(size: 30))
+                            .foregroundColor(.white)
+                    }
+                    
                     if viewModel.isLoading {
                         ProgressView("Loading...")
                     } else if let errorMessage = viewModel.errorMessage {
@@ -26,6 +32,8 @@ struct TeacherLeaves: View {
                 
                         ScrollView {
                             LazyVStack(alignment: .leading, spacing: 10) {
+                                
+                                
                                 ForEach(viewModel.leaveRequests) { request in
                                     VStack(alignment: .leading) {
                                         HStack {
@@ -113,6 +121,53 @@ struct TeacherLeaves: View {
                                                 .foregroundColor(.white)
                                                 .frame(maxWidth: .infinity, alignment: .leading)
                                         }
+                                        
+                                        Spacer()
+                                        
+                                        HStack() {
+                                           
+                                            Button(action: {
+                                                    // Approve action
+                                                                                      
+                                            }) {
+                                            Text("Approve")
+                                                .padding()
+                                                .background(Color.green)
+                                                .foregroundColor(.white)
+                                                .cornerRadius(8)
+                                                .fontWeight(.bold)
+                                                .frame(height: 25)
+                                                .frame(width: 180, alignment: .leading)
+
+                                              
+                                            }
+                                           
+                                           
+                                            
+                                            Button(action: {
+                                                    // Approve action
+                                                                                      
+                                            }) {
+                                            Text("Reject")
+                                                .padding()
+                                                .background(Color.red)
+                                                .foregroundColor(.white)
+                                                .cornerRadius(8)
+                                                .fontWeight(.bold)
+                                                .frame(height: 25)
+                                                .frame(maxWidth: .infinity, alignment: .leading)
+
+                                              
+                                            }
+                                    
+                                      
+                                      
+                                   } .padding(.top, 30)
+                                            .padding(.bottom,10)
+                                    
+                                        
+                                        
+                                        
                                     }.frame(width: 320)
                                     .padding()
                                     .background(Color.black.opacity(0.5))
