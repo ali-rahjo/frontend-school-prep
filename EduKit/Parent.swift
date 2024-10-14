@@ -216,18 +216,25 @@ struct Parent: View {
         }
         
         .toolbar {
-            ToolbarItem(placement: .navigationBarLeading) {
-                Button(action: {
-                    withAnimation {
-                        isMenuOpen.toggle()
-                    }
-                }) {
-                    Image(systemName: "line.horizontal.3")
-                        .font(.title)
-                        .foregroundColor(.white)
-                }
-            }
-        }
+                   ToolbarItemGroup(placement: .navigationBarLeading) {
+                       
+                     
+                      
+                       VStack {
+                         
+                          
+                           Button(action: {
+                               withAnimation {
+                                   isMenuOpen.toggle()
+                               }
+                           }) {
+                               Image(systemName: "line.horizontal.3")
+                                   .font(.title)
+                                   .foregroundColor(.white)
+                           }
+                       }
+                   }
+               }
         .navigationBarBackButtonHidden(isMenuOpen)
         .onAppear {
                    
@@ -245,7 +252,7 @@ struct Parent: View {
                             showAlert = true
                         }
                     }
-        }.navigationBarBackButtonHidden(true)
+        }
         .alert(isPresented: $showAlert) {
                     Alert(title: Text("Error"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
                 }
@@ -256,7 +263,7 @@ struct Parent: View {
             inputFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
             if let date = inputFormatter.date(from: dateString) {
                 let outputFormatter = DateFormatter()
-                outputFormatter.dateFormat = "dd-yyyy-MM"
+                outputFormatter.dateFormat = "dd-MM-yyyy"
                 return outputFormatter.string(from: date)
             }
             return "Invalid date"

@@ -6,7 +6,7 @@ struct ContentView: View {
     
     var body: some View {
         
-        NavigationView {
+        NavigationStack {
             
             VStack(spacing: 0) {
                 
@@ -68,11 +68,14 @@ struct ContentView: View {
                 
                
                 HStack {
-                  //  NavigationLink(destination: AboutUsView()) {
-                        Text("About Us")
+                    
+                    NavigationLink(destination: ContactUsView()) {
+                        Text("Contact Us")
                             .foregroundColor(.white)
                             .padding()
-                  //  }
+                    }
+                    
+                   
                     
                     Spacer()
                     Spacer()
@@ -85,11 +88,13 @@ struct ContentView: View {
                     
                     Spacer()
                     
-                    NavigationLink(destination: ContactUsView()) {
-                        Text("Contact Us")
+                    NavigationLink(destination: AboutUsView()) {
+                        Text("About Us")
                             .foregroundColor(.white)
                             .padding()
                     }
+                    
+                   
                 }
                 .background(Color.black)
                 .edgesIgnoringSafeArea(.horizontal)

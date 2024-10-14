@@ -19,6 +19,7 @@ struct AboutUsView: View {
     ]
     
     var body: some View {
+        
         ScrollView {
             VStack(alignment: .leading, spacing: 20) {
                 
@@ -88,6 +89,6 @@ struct AboutUsView: View {
 
 struct AboutUsView_Previews: PreviewProvider {
     static var previews: some View {
-        ContactUsView()
+        AboutUsView()
     }
 }

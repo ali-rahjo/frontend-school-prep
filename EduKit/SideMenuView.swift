@@ -87,7 +87,7 @@ struct SideMenuView: View {
            }
 
            var request = URLRequest(url: url)
-           request.httpMethod = "POST"  // Assuming the logout method is POST
+           request.httpMethod = "POST"  
            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
 
            // If authentication token is needed, add it here, for example:
@@ -143,10 +143,6 @@ struct AnnouncementsView: View {
             .navigationTitle("Announcements")
     }
 }
-
-
-
-
 
 
 

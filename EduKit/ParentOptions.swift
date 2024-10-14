@@ -92,7 +92,7 @@ struct ParentOptions: View {
 
                 Spacer(minLength: 400)
             }
-            .padding(.top,250)
+            .padding(.top,150)
             .onAppear {
                 animateSignUp = true
                 animateLogin = true

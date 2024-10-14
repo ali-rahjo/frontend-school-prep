@@ -47,7 +47,7 @@ struct LoginView: View {
                         .resizable()
                         .scaledToFill()
                       
-                        .frame(width: 80, height: 75)
+                        .frame(width: 100, height: 100)
                         .clipShape(Circle())
                         .padding(.bottom,20)
                     
@@ -129,7 +129,7 @@ struct LoginView: View {
                     }.navigationBarHidden(true)
                 }.padding(.bottom,150)
             }
-        }.navigationBarHidden(true)
+        }
         
     }
     
