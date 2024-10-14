@@ -176,7 +176,7 @@ struct TeacherProfile: View {
                     }
 
               
-                SideMenuView()
+                TeacherSideMenu()
                     .frame(width: 270)
                     .background(Color.gray.opacity(0.9))
                    

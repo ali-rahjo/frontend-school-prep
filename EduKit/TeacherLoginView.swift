@@ -155,7 +155,7 @@ struct TeacherLoginView: View {
                 Alert(title: Text("Login Error"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
             }
         }
-        }.navigationBarHidden(true)
+        }
     }
     
     
