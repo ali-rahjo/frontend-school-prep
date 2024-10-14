@@ -17,7 +17,7 @@ struct ContentView: View {
                         .frame(width: UIScreen.main.bounds.width)
                         .clipped()
                     
-                    // Text and logo elements
+                  
                     Text("SchoolPrep")
                         .font(.custom("Noteworthy-Bold", size: 60))
                         .foregroundColor(Color.white)
@@ -36,7 +36,7 @@ struct ContentView: View {
                         .clipShape(Circle())
                         .padding(.top, 60)
                     
-                    // White stars animation
+                
                     Canvas { context, size in
                         for particle in particleSystem.particles {
                             var contextCopy = context
@@ -66,13 +66,13 @@ struct ContentView: View {
                 }
                 .background(Color(red: 164/255, green: 223/255, blue: 239/255))
                 
-                // Navigation Links
+               
                 HStack {
-                    NavigationLink(destination: AboutUsView()) {
+                  //  NavigationLink(destination: AboutUsView()) {
                         Text("About Us")
                             .foregroundColor(.white)
                             .padding()
-                    }
+                  //  }
                     
                     Spacer()
                     Spacer()

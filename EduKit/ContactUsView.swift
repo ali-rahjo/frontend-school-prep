@@ -6,7 +6,7 @@ struct ContactUsView: View {
     @State private var message: String = ""
 
     var body: some View {
-        NavigationView {
+      
            
             ScrollView {
                 VStack(alignment: .leading, spacing: 20) {
@@ -113,10 +113,10 @@ struct ContactUsView: View {
                 endPoint: .bottom
      ))
         }
-    }
+    
 }
 
-struct AboutUsView_Previews: PreviewProvider {
+struct ContactUsView_Previews: PreviewProvider {
     static var previews: some View {
         ContactUsView()
     }

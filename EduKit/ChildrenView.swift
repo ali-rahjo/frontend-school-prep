@@ -54,10 +54,11 @@ struct ChildrenView: View {
                             
                            
                             NavigationLink(destination: TimetableView(classID: child.classInfo.id, viewModel: TimetableViewModel())) {
-                                Text("View Timetable")
+                                Text("Timetable")
                                     .foregroundColor(.white)
-                                    .padding(.vertical, 4)  // Smaller vertical padding for a smaller height
-                                            .padding(.horizontal, 8)
+                                    .padding(.vertical, 4)
+                                    .padding(.horizontal, 8)
+                                    .frame(maxHeight: 35)
                                     .background(
                                         LinearGradient(
                                                    gradient: Gradient(colors: [Color(red: 0/255, green: 0/255, blue: 50/255),

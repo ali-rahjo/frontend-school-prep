@@ -27,7 +27,12 @@ struct StudentLogin: View {
                                    .font(.custom("Noteworthy-Bold", size: 40))
                                    .foregroundColor(Color.white)
                                    .padding(.bottom, 10)
-                
+                    
+                                Text("Genie")
+                                    .font(.custom("Bradley Hand", size: 26))
+                                    .foregroundColor(Color.white)
+                                    .padding(.leading, 100)
+                                    .padding(.top,-25)
                                
                              
                                Image("logo")
