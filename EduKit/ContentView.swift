@@ -136,23 +136,9 @@ class ParticleSystem: ObservableObject {
     }
 }
 
-struct AboutUsView: View {
-    var body: some View {
-        Text("About Us Page")
-            .font(.largeTitle)
-            .padding()
-            .navigationTitle("About Us")
-    }
-}
 
-struct ContactUsView: View {
-    var body: some View {
-        Text("Contact Us Page")
-            .font(.largeTitle)
-            .padding()
-            .navigationTitle("Contact Us")
-    }
-}
+
+
 
 #Preview {
     ContentView()

@@ -58,6 +58,8 @@
 		D2EE64CE2CBCFCB600405656 /* TeacherSignup.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EE64CD2CBCFCB600405656 /* TeacherSignup.swift */; };
 		D2EE64D02CBD022600405656 /* TeacherRegistrationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EE64CF2CBD022600405656 /* TeacherRegistrationService.swift */; };
 		D2EE64D22CBD0B0C00405656 /* Admin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EE64D12CBD0B0C00405656 /* Admin.swift */; };
+		D2EE64D42CBD171300405656 /* ContactUsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EE64D32CBD171300405656 /* ContactUsView.swift */; };
+		D2EE64D62CBD1A2300405656 /* AboutUsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EE64D52CBD1A2300405656 /* AboutUsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -133,6 +135,8 @@
 		D2EE64CD2CBCFCB600405656 /* TeacherSignup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherSignup.swift; sourceTree = "<group>"; };
 		D2EE64CF2CBD022600405656 /* TeacherRegistrationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherRegistrationService.swift; sourceTree = "<group>"; };
 		D2EE64D12CBD0B0C00405656 /* Admin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Admin.swift; sourceTree = "<group>"; };
+		D2EE64D32CBD171300405656 /* ContactUsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsView.swift; sourceTree = "<group>"; };
+		D2EE64D52CBD1A2300405656 /* AboutUsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +212,8 @@
 				D24D36392C9361F100A6F8CA /* Info.plist */,
 				D2D970572C91EE540040DE4A /* EduKitApp.swift */,
 				D2D970592C91EE540040DE4A /* ContentView.swift */,
+				D2EE64D32CBD171300405656 /* ContactUsView.swift */,
+				D2EE64D52CBD1A2300405656 /* AboutUsView.swift */,
 				D2A8C3B02C985AFA0076892A /* Signup.swift */,
 				D2D13FEE2CA5C0C8001BD1A1 /* StudentInfoView.swift */,
 				D21B60982CA738FF0010F587 /* LoginView.swift */,
@@ -429,6 +435,7 @@
 				D2AECD442CB993C5009C3F2A /* TimetableView.swift in Sources */,
 				D2EE64D02CBD022600405656 /* TeacherRegistrationService.swift in Sources */,
 				D20D413C2CBC42450057CFB6 /* ViewMessage.swift in Sources */,
+				D2EE64D62CBD1A2300405656 /* AboutUsView.swift in Sources */,
 				D2239C922CA9AC9900BACFDC /* ParentProfileServiceCall.swift in Sources */,
 				D2D9705A2C91EE540040DE4A /* ContentView.swift in Sources */,
 				D2A8C3B12C985AFA0076892A /* Signup.swift in Sources */,
@@ -451,6 +458,7 @@
 				D2D970582C91EE540040DE4A /* EduKitApp.swift in Sources */,
 				D2A88C1C2CAAD6BE00FDE8BD /* StudentLogin.swift in Sources */,
 				D2803F552CB6A4FD0022C6B8 /* ApplyLeaveServiceCall.swift in Sources */,
+				D2EE64D42CBD171300405656 /* ContactUsView.swift in Sources */,
 				D2A9C2BE2CB46DB700137781 /* TeacherOptions.swift in Sources */,
 				D2AECD422CB98EBE009C3F2A /* timetable.swift in Sources */,
 			);
