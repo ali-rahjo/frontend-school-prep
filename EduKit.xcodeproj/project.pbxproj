@@ -57,6 +57,7 @@
 		D2D970752C91EE580040DE4A /* EduKitUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D970742C91EE580040DE4A /* EduKitUITestsLaunchTests.swift */; };
 		D2EE64CE2CBCFCB600405656 /* TeacherSignup.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EE64CD2CBCFCB600405656 /* TeacherSignup.swift */; };
 		D2EE64D02CBD022600405656 /* TeacherRegistrationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EE64CF2CBD022600405656 /* TeacherRegistrationService.swift */; };
+		D2EE64D22CBD0B0C00405656 /* Admin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EE64D12CBD0B0C00405656 /* Admin.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,6 +132,7 @@
 		D2D970742C91EE580040DE4A /* EduKitUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EduKitUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D2EE64CD2CBCFCB600405656 /* TeacherSignup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherSignup.swift; sourceTree = "<group>"; };
 		D2EE64CF2CBD022600405656 /* TeacherRegistrationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherRegistrationService.swift; sourceTree = "<group>"; };
+		D2EE64D12CBD0B0C00405656 /* Admin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Admin.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,6 +239,7 @@
 				D2D13FF42CA6B832001BD1A1 /* ParentRegistrationService.swift */,
 				D2EE64CF2CBD022600405656 /* TeacherRegistrationService.swift */,
 				D2A8C3B22C985FA30076892A /* LoginSelection.swift */,
+				D2EE64D12CBD0B0C00405656 /* Admin.swift */,
 				D2A9C2BD2CB46DB700137781 /* TeacherOptions.swift */,
 				D2EE64CD2CBCFCB600405656 /* TeacherSignup.swift */,
 				D22EE4D32CBA990800D121D3 /* TeacherLoginView.swift */,
@@ -439,6 +442,7 @@
 				D2A9C2C02CB5B24D00137781 /* Logout.swift in Sources */,
 				D233C3A12CBACA86000B47C7 /* TeacherProfileServiceCall.swift in Sources */,
 				D21B609D2CA755690010F587 /* ForgotPasswordView.swift in Sources */,
+				D2EE64D22CBD0B0C00405656 /* Admin.swift in Sources */,
 				D2239C9A2CA9D29D00BACFDC /* ChildrenView.swift in Sources */,
 				D233C39F2CBAC71D000B47C7 /* TeacherProfile.swift in Sources */,
 				D22EE4D02CBA7FD600D121D3 /* LunchMenu.swift in Sources */,

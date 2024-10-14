@@ -8,6 +8,8 @@
         <!-- Add the App Transport Security section here -->
         <key>NSAppTransportSecurity</key>
         <dict>
+            <key>NSAllowsArbitraryLoads</key>
+            <true/>
             <key>NSExceptionDomains</key>
             <dict>
                 <key>192.168.0.219</key> <!-- Your local server IP -->

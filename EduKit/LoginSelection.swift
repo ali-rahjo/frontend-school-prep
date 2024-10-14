@@ -17,8 +17,6 @@ struct LoginSelection: View {
                 .ignoresSafeArea()
 
            
-
-           
             VStack {
                 Spacer(minLength: 100)
 
@@ -46,7 +44,6 @@ struct LoginSelection: View {
                                     .cornerRadius(5)
                              }
                             
-
                            
                             Image(systemName: "person.2.fill")
                                 .resizable()
@@ -113,19 +110,21 @@ struct LoginSelection: View {
                         // Handle admin login action here
                     }) {
                         ZStack(alignment: .bottomTrailing) {
+                            NavigationLink(destination:Admin()) {
                             Text("Admin")
                                 .font(.headline)
                                 .frame(width: 100, height: 100)
                                 .background(Color.black)
                                 .foregroundColor(.white)
                                 .cornerRadius(5)
-
+                            }
                            
                             Image(systemName: "person.badge.plus.fill")
                                 .resizable()
                                 .frame(width: 20, height: 20)
                                 .foregroundColor(.white)
                                 .offset(x: -5, y: -5)
+                      
                         }
                     }
                     .offset(y: animateAdmin ? 0 : UIScreen.main.bounds.height)
