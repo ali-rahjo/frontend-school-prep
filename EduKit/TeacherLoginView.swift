@@ -52,7 +52,7 @@ struct TeacherLoginView: View {
                
                 HStack {
                     Image(systemName: "person.fill")
-                        .foregroundColor(.gray)
+                        .foregroundColor(Color.white)
                     TextField("Enter your username", text: $username)
                         .autocapitalization(.none)
                         .disableAutocorrection(true)
@@ -68,7 +68,7 @@ struct TeacherLoginView: View {
                
                 HStack {
                     Image(systemName: "lock.fill")
-                        .foregroundColor(.gray)
+                        .foregroundColor(Color.white)
                     if showPassword {
                         TextField("Enter your password", text: $password)
                             .foregroundColor(.white)
@@ -80,7 +80,7 @@ struct TeacherLoginView: View {
                         showPassword.toggle()
                     }) {
                         Image(systemName: showPassword ? "eye.slash.fill" : "eye.fill")
-                            .foregroundColor(.gray)
+                            .foregroundColor(.white)
                     }
                 }
                 .padding()
