@@ -67,7 +67,7 @@ struct TeacherLeaves: View {
                                                 .frame(maxWidth: .infinity, alignment: .leading)
                                         }
                                         HStack {
-                                            Text("Class:")
+                                            Text("Class")
                                                 .font(.headline)
                                                 .foregroundColor(.white)
                                                 .frame(width: 180, alignment: .leading)
@@ -76,7 +76,7 @@ struct TeacherLeaves: View {
                                                 .frame(maxWidth: .infinity, alignment: .leading)
                                         }
                                         HStack {
-                                            Text("Leave Type:")
+                                            Text("Leave Type")
                                                 .font(.headline)
                                                 .foregroundColor(.white)
                                                 .frame(width: 180, alignment: .leading)
@@ -85,7 +85,7 @@ struct TeacherLeaves: View {
                                                 .frame(maxWidth: .infinity, alignment: .leading)
                                         }
                                         HStack {
-                                            Text("Status:")
+                                            Text("Status")
                                                 .font(.headline)
                                                 .foregroundColor(.white)
                                                 .frame(width: 180, alignment: .leading)
@@ -94,7 +94,7 @@ struct TeacherLeaves: View {
                                                 .frame(maxWidth: .infinity, alignment: .leading)
                                         }
                                         HStack {
-                                            Text("Description:")
+                                            Text("Description")
                                                 .font(.headline)
                                                 .foregroundColor(.white)
                                                 .frame(width: 180, alignment: .leading)
@@ -104,7 +104,7 @@ struct TeacherLeaves: View {
                                                 .frame(maxWidth: .infinity, alignment: .leading)
                                         }
                                         HStack {
-                                            Text("Start Date:")
+                                            Text("Start Date")
                                                 .font(.headline)
                                                 .foregroundColor(.white)
                                                 .frame(width: 180, alignment: .leading)
@@ -113,7 +113,7 @@ struct TeacherLeaves: View {
                                                 .frame(maxWidth: .infinity, alignment: .leading)
                                         }
                                         HStack {
-                                            Text("End Date:")
+                                            Text("End Date")
                                                 .font(.headline)
                                                 .foregroundColor(.white)
                                                 .frame(width: 180, alignment: .leading)

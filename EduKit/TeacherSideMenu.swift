@@ -18,6 +18,7 @@ struct TeacherSideMenu: View {
                 Label("Leaves", systemImage: "doc.text")
             }
             
+         
             NavigationLink(destination: TeacherAttendance()) {
                 Label("Attendance", systemImage: "person.crop.circle")
             }
