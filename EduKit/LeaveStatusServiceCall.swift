@@ -7,6 +7,7 @@ struct Leave: Identifiable, Codable {
     let parent_name: String
     let student_name: String
     let class_name: String
+    let date:String
     let leave_type: String
     let status: String
     let leave_description: String

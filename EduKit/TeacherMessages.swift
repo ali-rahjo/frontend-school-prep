@@ -4,6 +4,8 @@ import SwiftUI
 
 struct TeacherMessages: View {
     @StateObject private var viewModel = MessageRequestViewModel()
+    @State private var navigateToReply = false
+    @State private var selectedMessageId: Int? = nil
     
     var body: some View {
         NavigationView {
@@ -86,6 +88,17 @@ struct TeacherMessages: View {
                                                 .foregroundColor(.white)
                                                 .frame(maxWidth: .infinity, alignment: .leading)
                                         }
+                                        
+                                        
+                                        HStack {
+                                            Text("Date Sent")
+                                                .font(.headline)
+                                                .foregroundColor(.white)
+                                                .frame(width: 180, alignment: .leading)
+                                            Text(request.date)
+                                                .foregroundColor(.white)
+                                                .frame(maxWidth: .infinity, alignment: .leading)
+                                        }
                                       
                                         HStack {
                                             Text("Response")
@@ -103,21 +116,27 @@ struct TeacherMessages: View {
                                         
                                         HStack() {
                                            
-                                            Button(action: {
-                                                    // Approve action
-                                                                                      
-                                            }) {
-                                                Text(request.response.isEmpty ? "Reply" : "Replied")
-                                                .padding()
-                                                .background(request.response.isEmpty ? Color(red: 202/255, green: 32/255, blue: 104/255) : Color.gray.opacity(0.3))
-                                                .foregroundColor(.white)
-                                                .cornerRadius(8)
-                                                .fontWeight(.bold)
-                                                .frame(height: 25)
-                                                .frame(width: 200, alignment: .leading)
-
-                                              
-                                            }.disabled(!request.response.isEmpty)
+                                            if request.response.isEmpty {
+                                                NavigationLink(destination: ReplyMessage(messageId: request.id,messagecon:request.text_msg)) {
+                                                        Text("Reply")
+                                                            .padding()
+                                                            .background(Color(red: 202/255, green: 32/255, blue: 104/255))
+                                                            .foregroundColor(.white)
+                                                            .cornerRadius(8)
+                                                            .fontWeight(.bold)
+                                                            .frame(height: 25)
+                                                            .frame(width: 200, alignment: .leading)
+                                                    }
+                                                } else {
+                                                    Text("Replied")
+                                                        .padding()
+                                                        .background(Color.gray.opacity(0.3))
+                                                        .foregroundColor(.white)
+                                                        .cornerRadius(8)
+                                                        .fontWeight(.bold)
+                                                        .frame(height: 25)
+                                                        .frame(width: 200, alignment: .leading)
+                                                }
                                       
                                       
                                    } .padding(.top, 30)

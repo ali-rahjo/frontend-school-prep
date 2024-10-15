@@ -80,6 +80,16 @@ struct TeacherLeaves: View {
                                                 .frame(maxWidth: .infinity, alignment: .leading)
                                         }
                                         HStack {
+                                            Text("Date Sent")
+                                                .font(.headline)
+                                                .foregroundColor(.white)
+                                                .frame(width: 180, alignment: .leading)
+                                            Text(request.date)
+                                                .foregroundColor(.white)
+                                                .frame(maxWidth: .infinity, alignment: .leading)
+                                        }
+                                        
+                                        HStack {
                                             Text("Leave Type")
                                                 .font(.headline)
                                                 .foregroundColor(.white)

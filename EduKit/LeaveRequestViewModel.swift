@@ -7,6 +7,7 @@ struct LeaveRequest: Codable, Identifiable {
     let parent: Int
     let parent_name: String
     let student: Int
+    let date:String
     let student_name: String
     let class_name: String
     let leave_type: String

@@ -3,15 +3,16 @@
 import Foundation
 
 struct MessageRequest: Codable, Identifiable {
-    let id: Int
-    let parent_id: Int
-    let parent_name: String
-    let student_id: Int
-    let student_name: String
-    let class_name: String
-    let text_msg: String
-    let response: String
-    
+      let id: Int
+      let parent: Int
+      let parent_name: String
+      let student: Int
+      let student_name: String
+      let teacher_name: String
+      let class_name: String
+      let text_msg: String
+      let response: String
+      let date: String
     
 }
 
@@ -41,6 +42,10 @@ class MessageRequestViewModel: ObservableObject {
                     self.errorMessage = "No data received"
                     return
                 }
+                
+                if let responseString = String(data: data, encoding: .utf8) {
+                                 print("Response body: \(responseString)")
+                             }
                 
                 do {
                     let decodedLeaves = try JSONDecoder().decode([MessageRequest].self, from: data)

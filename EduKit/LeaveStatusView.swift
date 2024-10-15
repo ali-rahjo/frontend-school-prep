@@ -74,6 +74,15 @@ struct LeaveStatusView: View {
                                                                        .frame(maxWidth: .infinity, alignment: .leading)
                                                         
                                                    }
+                                                   HStack {
+                                                       Text("Date Sent")
+                                                           .font(.headline)
+                                                           
+                                                           .frame(width: 180, alignment: .leading)
+                                                                   Text(leave.date)
+                                                                       .frame(maxWidth: .infinity, alignment: .leading)
+                                                        
+                                                   }
                                                    
                                                    HStack {
                                                        Text("Leave Type")
