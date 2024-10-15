@@ -53,11 +53,13 @@ struct AboutUsView: View {
                             
                             Image(member.imageName)
                                 .resizable()
-                                .scaledToFit()
-                                .frame(width: 120, height: 120)
+                                .scaledToFill()
+                                .frame(width: 140, height: 140)
                                 .clipShape(Circle())
                                 .overlay(Circle().stroke(Color.white, lineWidth: 2))
-                                .clipped()
+                                .padding(.all, 10)
+                               
+                               
                             
                             
                           
