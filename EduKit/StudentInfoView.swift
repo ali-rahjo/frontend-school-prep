@@ -202,7 +202,7 @@ struct StudentInfoView: View {
             }
             .edgesIgnoringSafeArea(.all)
         }
-        .navigationBarHidden(true)
+        
     }
     
    

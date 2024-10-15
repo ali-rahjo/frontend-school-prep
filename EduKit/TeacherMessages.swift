@@ -107,9 +107,9 @@ struct TeacherMessages: View {
                                                     // Approve action
                                                                                       
                                             }) {
-                                            Text("Reply")
+                                                Text(request.response.isEmpty ? "Reply" : "Replied")
                                                 .padding()
-                                                .background(Color(red: 202/255, green: 32/255, blue: 104/255))
+                                                .background(request.response.isEmpty ? Color(red: 202/255, green: 32/255, blue: 104/255) : Color.gray.opacity(0.3))
                                                 .foregroundColor(.white)
                                                 .cornerRadius(8)
                                                 .fontWeight(.bold)
@@ -117,7 +117,7 @@ struct TeacherMessages: View {
                                                 .frame(width: 200, alignment: .leading)
 
                                               
-                                            }
+                                            }.disabled(!request.response.isEmpty)
                                       
                                       
                                    } .padding(.top, 30)

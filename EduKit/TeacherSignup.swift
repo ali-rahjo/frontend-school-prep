@@ -12,6 +12,7 @@ struct TeacherSignup: View {
     @State private var showAlert = false
     @State private var alertMessage = ""
     @State private var isLoading = false
+    @State private var navigateToTeacherLogin = false
     
 
     
@@ -159,9 +160,15 @@ struct TeacherSignup: View {
                                             message: Text("Registered successfully!"),
                                             dismissButton: .default(Text("OK")) {
                                                 resetFields()
+                                                navigateToTeacherLogin = true
                                             }
                                         )
                                     }
+            NavigationLink(
+                destination: TeacherLoginView(),
+                isActive: $navigateToTeacherLogin) {
+                EmptyView()
+                }.navigationBarHidden(true)
         }
         
         

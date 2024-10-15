@@ -1,7 +1,11 @@
 import SwiftUI
 
 struct TeacherLeaves: View {
+    
     @StateObject private var viewModel = LeaveRequestViewModel()
+    @State private var showAlert = false
+    @State private var alertMessage = ""
+  
     
     var body: some View {
         NavigationView {
@@ -127,12 +131,12 @@ struct TeacherLeaves: View {
                                         HStack() {
                                            
                                             Button(action: {
-                                                    // Approve action
+                                                approveLeave(leaveId: request.id)
                                                                                       
                                             }) {
-                                            Text("Approve")
+                                                Text(request.status == "Approved" ? "Approved" : "Approve")
                                                 .padding()
-                                                .background(Color.green)
+                                                .background(request.status == "Approved" ? Color.gray.opacity(0.3) : Color.green)
                                                 .foregroundColor(.white)
                                                 .cornerRadius(8)
                                                 .fontWeight(.bold)
@@ -140,7 +144,7 @@ struct TeacherLeaves: View {
                                                 .frame(width: 180, alignment: .leading)
 
                                               
-                                            }
+                                            }.disabled(request.status == "Approved")
                                            
                                            
                                             
@@ -181,12 +185,63 @@ struct TeacherLeaves: View {
                 }
                
                 .navigationBarTitleDisplayMode(.inline)
+                .alert(isPresented: $showAlert) {
+                                  Alert(title: Text("Approval Status"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
+                              }
             }
             .onAppear {
                 viewModel.fetchLeaveRequests()
             }
         }
     }
+    
+    
+    func approveLeave(leaveId: Int) {
+        guard let url = URL(string: "http://192.168.0.219:8000/api/v1/teacher/leave/update/\(leaveId)/") else {
+            print("Invalid URL")
+            return
+        }
+
+        var request = URLRequest(url: url)
+        request.httpMethod = "PATCH"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        let requestBody: [String: Any] = [
+            "status": "Approved"
+        ]
+        
+        do {
+            let jsonData = try JSONSerialization.data(withJSONObject: requestBody, options: [])
+            request.httpBody = jsonData
+        } catch {
+            print("Error encoding request body: \(error.localizedDescription)")
+            return
+        }
+
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
+            DispatchQueue.main.async {
+                if let error = error {
+                    self.alertMessage = "Error: \(error.localizedDescription)"
+                    self.showAlert = true
+                    return
+                }
+                
+                if let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 {
+                    self.alertMessage = "Leave approved successfully"
+                    viewModel.fetchLeaveRequests()
+                } else {
+                    self.alertMessage = "Failed to approve leave"
+                }
+                self.showAlert = true
+            }
+        }.resume()
+    }
+
+
+
+    
+    
+    
 }
 
 #Preview {
