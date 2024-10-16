@@ -120,21 +120,8 @@ struct SideMenuView: View {
 
 
 
-struct TimeTableView: View {
-    var body: some View {
-        Text("Time Table View")
-            .navigationTitle("Time Table")
-    }
-}
 
 
-
-struct AnnouncementsView: View {
-    var body: some View {
-        Text("Announcements View")
-            .navigationTitle("Announcements")
-    }
-}
 
 
 

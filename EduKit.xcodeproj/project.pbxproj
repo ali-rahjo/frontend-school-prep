@@ -28,6 +28,8 @@
 		D235AF532CBEBA1C00216A51 /* ReplyMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D235AF522CBEBA1C00216A51 /* ReplyMessage.swift */; };
 		D23C5E252CB6E9DB007F2017 /* LeaveStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23C5E242CB6E9DB007F2017 /* LeaveStatusView.swift */; };
 		D23C5E272CB6EAFD007F2017 /* LeaveStatusServiceCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23C5E262CB6EAFD007F2017 /* LeaveStatusServiceCall.swift */; };
+		D24564632CC0400E00817FE3 /* StudentInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24564622CC0400E00817FE3 /* StudentInfo.swift */; };
+		D24564652CC0406000817FE3 /* StudentProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24564642CC0406000817FE3 /* StudentProfileViewModel.swift */; };
 		D24D36382C935F8C00A6F8CA /* LauchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D24D36372C935F8C00A6F8CA /* LauchScreen.storyboard */; };
 		D2803F532CB68CCA0022C6B8 /* Goodbye.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2803F522CB68CCA0022C6B8 /* Goodbye.swift */; };
 		D2803F552CB6A4FD0022C6B8 /* ApplyLeaveServiceCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2803F542CB6A4FD0022C6B8 /* ApplyLeaveServiceCall.swift */; };
@@ -36,6 +38,8 @@
 		D291952E2CBFBA0700592867 /* TeacherLunchMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = D291952D2CBFBA0700592867 /* TeacherLunchMenu.swift */; };
 		D29195302CBFF60B00592867 /* AttendanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D291952F2CBFF60B00592867 /* AttendanceView.swift */; };
 		D29195322CBFFA2900592867 /* AttendanceViewList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29195312CBFFA2800592867 /* AttendanceViewList.swift */; };
+		D29195342CC0208000592867 /* AnnouncementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29195332CC0208000592867 /* AnnouncementsView.swift */; };
+		D29195362CC02C9500592867 /* StudentProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29195352CC02C9500592867 /* StudentProfile.swift */; };
 		D2A53BDB2CB9B5DD0019CE12 /* sound-ding.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D2A53BD82CB9B5DD0019CE12 /* sound-ding.mp3 */; };
 		D2A53BDC2CB9B5DD0019CE12 /* sound-tap.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D2A53BD92CB9B5DD0019CE12 /* sound-tap.mp3 */; };
 		D2A53BDD2CB9B5DD0019CE12 /* sound-rise.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D2A53BDA2CB9B5DD0019CE12 /* sound-rise.mp3 */; };
@@ -112,6 +116,8 @@
 		D235AF522CBEBA1C00216A51 /* ReplyMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplyMessage.swift; sourceTree = "<group>"; };
 		D23C5E242CB6E9DB007F2017 /* LeaveStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaveStatusView.swift; sourceTree = "<group>"; };
 		D23C5E262CB6EAFD007F2017 /* LeaveStatusServiceCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaveStatusServiceCall.swift; sourceTree = "<group>"; };
+		D24564622CC0400E00817FE3 /* StudentInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentInfo.swift; sourceTree = "<group>"; };
+		D24564642CC0406000817FE3 /* StudentProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentProfileViewModel.swift; sourceTree = "<group>"; };
 		D24D36372C935F8C00A6F8CA /* LauchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LauchScreen.storyboard; sourceTree = "<group>"; };
 		D24D36392C9361F100A6F8CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D2803F522CB68CCA0022C6B8 /* Goodbye.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goodbye.swift; sourceTree = "<group>"; };
@@ -121,6 +127,8 @@
 		D291952D2CBFBA0700592867 /* TeacherLunchMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherLunchMenu.swift; sourceTree = "<group>"; };
 		D291952F2CBFF60B00592867 /* AttendanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceView.swift; sourceTree = "<group>"; };
 		D29195312CBFFA2800592867 /* AttendanceViewList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceViewList.swift; sourceTree = "<group>"; };
+		D29195332CC0208000592867 /* AnnouncementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementsView.swift; sourceTree = "<group>"; };
+		D29195352CC02C9500592867 /* StudentProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentProfile.swift; sourceTree = "<group>"; };
 		D2A53BD82CB9B5DD0019CE12 /* sound-ding.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sound-ding.mp3"; sourceTree = "<group>"; };
 		D2A53BD92CB9B5DD0019CE12 /* sound-tap.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sound-tap.mp3"; sourceTree = "<group>"; };
 		D2A53BDA2CB9B5DD0019CE12 /* sound-rise.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sound-rise.mp3"; sourceTree = "<group>"; };
@@ -258,7 +266,10 @@
 				D21B609C2CA755690010F587 /* ForgotPasswordView.swift */,
 				D21B609A2CA754E30010F587 /* Parent.swift */,
 				D2239C8F2CA96E5400BACFDC /* SideMenuView.swift */,
+				D29195332CC0208000592867 /* AnnouncementsView.swift */,
 				D291952F2CBFF60B00592867 /* AttendanceView.swift */,
+				D24564622CC0400E00817FE3 /* StudentInfo.swift */,
+				D24564642CC0406000817FE3 /* StudentProfileViewModel.swift */,
 				D29195312CBFFA2800592867 /* AttendanceViewList.swift */,
 				D2EE64F72CBD778000405656 /* TeacherSideMenu.swift */,
 				D2EE64FF2CBD7E5300405656 /* TeacherTimeTable.swift */,
@@ -285,6 +296,7 @@
 				D233C39E2CBAC71D000B47C7 /* TeacherProfile.swift */,
 				D21B609E2CA757430010F587 /* ParentOptions.swift */,
 				D2A88C1B2CAAD6BE00FDE8BD /* StudentLogin.swift */,
+				D29195352CC02C9500592867 /* StudentProfile.swift */,
 				D2D9705B2C91EE570040DE4A /* Assets.xcassets */,
 				D2D9705D2C91EE570040DE4A /* Preview Content */,
 			);
@@ -451,8 +463,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2EE65002CBD7E5300405656 /* TeacherTimeTable.swift in Sources */,
+				D24564632CC0400E00817FE3 /* StudentInfo.swift in Sources */,
 				D2EE64CE2CBCFCB600405656 /* TeacherSignup.swift in Sources */,
 				D2A53BE22CB9B6050019CE12 /* SoundPlayer.swift in Sources */,
+				D29195342CC0208000592867 /* AnnouncementsView.swift in Sources */,
 				D2D13FEF2CA5C0C8001BD1A1 /* StudentInfoView.swift in Sources */,
 				D20D413A2CBC30D90057CFB6 /* WriteMessageServiceCall.swift in Sources */,
 				D21B609B2CA754E30010F587 /* Parent.swift in Sources */,
@@ -481,6 +495,7 @@
 				D2A8C3B12C985AFA0076892A /* Signup.swift in Sources */,
 				D2A8C3B32C985FA30076892A /* LoginSelection.swift in Sources */,
 				D2239C9C2CA9D4B500BACFDC /* child.swift in Sources */,
+				D29195362CC02C9500592867 /* StudentProfile.swift in Sources */,
 				D2AECD402CB98E93009C3F2A /* TimetableService.swift in Sources */,
 				D2A53BE02CB9B5FE0019CE12 /* Constant.swift in Sources */,
 				D2EE64FA2CBD7DCB00405656 /* TeacherLeaves.swift in Sources */,
@@ -495,6 +510,7 @@
 				D2239C9A2CA9D29D00BACFDC /* ChildrenView.swift in Sources */,
 				D233C39F2CBAC71D000B47C7 /* TeacherProfile.swift in Sources */,
 				D235AF532CBEBA1C00216A51 /* ReplyMessage.swift in Sources */,
+				D24564652CC0406000817FE3 /* StudentProfileViewModel.swift in Sources */,
 				D22EE4D02CBA7FD600D121D3 /* LunchMenu.swift in Sources */,
 				D22EE4D22CBA8B8E00D121D3 /* WriteMessage.swift in Sources */,
 				D2239C962CA9C54A00BACFDC /* ChildrenProfileServiceCall.swift in Sources */,

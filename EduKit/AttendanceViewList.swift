@@ -11,13 +11,14 @@ struct Attendancee: Codable, Identifiable {
 }
 
 struct AttendanceViewList: View {
+    
     var studentID: Int
     @State private var attendanceList: [Attendancee] = []
     @State private var errorMessage: String?
 
     var body: some View {
         ZStack {
-            // Background Image
+          
             Image("slide12")
                 .resizable()
                 .scaledToFill()
@@ -53,10 +54,6 @@ struct AttendanceViewList: View {
                                     .frame(maxWidth: .infinity, alignment: .leading)
                                 
                                 VStack(alignment: .leading, spacing: 10) {
-                                    
-                                    
-                                   
-                                    
                                     
                                     HStack {
                                         Text("Date")
