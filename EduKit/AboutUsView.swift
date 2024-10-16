@@ -59,9 +59,6 @@ struct AboutUsView: View {
                                 .overlay(Circle().stroke(Color.white, lineWidth: 2))
                                 .padding(.all, 10)
                                
-                               
-                            
-                            
                           
                             Text(member.name)
                                 .font(.headline)

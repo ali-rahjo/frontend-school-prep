@@ -31,6 +31,10 @@ struct TeacherSideMenu: View {
                 Label("Time Table", systemImage: "envelope.open.fill")
             }
             
+            NavigationLink(destination: TeacherLunchMenu()) {
+                Label("Lunch Menu", systemImage: "fork.knife.circle.fill")
+            }
+            
            
             NavigationLink(destination: Holiday()) {
                 Label("Holiday Calendar", systemImage: "calendar")

@@ -1,16 +1,13 @@
-
 import SwiftUI
 
-struct ChildrenView: View {
+struct AttendanceView: View {
     
     @StateObject private var viewModel = ChildrenViewModel()
+
     
     var body: some View {
         NavigationView {
             ZStack {
-                
-           
-                
                 if viewModel.isLoading {
                     VStack {
                         ProgressView("Loading...")
@@ -26,48 +23,40 @@ struct ChildrenView: View {
                             HStack {
                                 Text("\(child.firstName.capitalized) \(child.lastName.capitalized)")
                                     .font(.title)
-                                    .foregroundColor(.clear)
+                                    .foregroundColor(.clear) // Consider removing this
                                     .overlay(
                                         LinearGradient(
-                                                   gradient: Gradient(colors: [Color(red: 0/255, green: 0/255, blue: 50/255),
-                                                                               Color(red: 0/255, green: 0/255, blue: 150/255)]),
-                                                   startPoint: .top,
-                                                   endPoint: .bottom
+                                            gradient: Gradient(colors: [Color(red: 0/255, green: 0/255, blue: 50/255),
+                                                                        Color(red: 0/255, green: 0/255, blue: 150/255)]),
+                                            startPoint: .top,
+                                            endPoint: .bottom
                                         )
-                                            .mask(Text("\(child.firstName.capitalized) \(child.lastName.capitalized)")
-                                                    .font(.title))
+                                        .mask(Text("\(child.firstName.capitalized) \(child.lastName.capitalized)")
+                                                .font(.title))
                                     )
                             }
                             
-                           
-                            InfoRow(label: "Student ID", value: "\(child.id)")
-                            InfoRow(label: "Username", value: "\(child.username)")
-                            InfoRow(label: "Age", value: "\(child.age)")
-                            InfoRow(label: "Gender", value: "\(child.gender)")
-                            InfoRow(label: "Class ID", value: "\(child.classInfo.id)")
-                            InfoRow(label: "Class", value: "\(child.classInfo.className)")
-                            InfoRow(label: "Academic Year", value: "\(child.classInfo.academicYearStart) - \(child.classInfo.academicYearEnd)")
-                            InfoRow(label: "Grade", value: "\(child.classInfo.grade)")
+                            InfoRows(label: "Student ID", value: "\(child.id)")
+                            InfoRows(label: "Class", value: "\(child.classInfo.className)")
                             
                             if let teacher = child.teacher {
                                 InfoRow(label: "Teacher", value: teacher.fullName.capitalized)
                             }
                             
-                           
-                            NavigationLink(destination: TimetableView(classID: child.classInfo.id, viewModel: TimetableViewModel())) {
-                                Text("Timetable")
+                            NavigationLink(destination: AttendanceViewList(studentID: child.id)) {
+                                Text("Attendance")
                                     .foregroundColor(.white)
                                     .padding(.vertical, 4)
                                     .padding(.horizontal, 8)
                                     .frame(maxHeight: 35)
                                     .background(
                                         LinearGradient(
-                                                   gradient: Gradient(colors: [Color(red: 0/255, green: 0/255, blue: 50/255),
-                                                                               Color(red: 0/255, green: 0/255, blue: 150/255)]),
-                                                   startPoint: .top,
-                                                   endPoint: .bottom
+                                            gradient: Gradient(colors: [Color(red: 0/255, green: 0/255, blue: 50/255),
+                                                                        Color(red: 0/255, green: 0/255, blue: 150/255)]),
+                                            startPoint: .top,
+                                            endPoint: .bottom
                                         )
-                                           )
+                                    )
                                     .cornerRadius(8)
                             }
                             .padding(.top, 10)
@@ -79,12 +68,14 @@ struct ChildrenView: View {
                 }
             }
             .edgesIgnoringSafeArea(.bottom)
-            .background(     LinearGradient(
-                gradient: Gradient(colors: [Color(red: 0/255, green: 0/255, blue: 50/255),
-                                            Color(red: 0/255, green: 0/255, blue: 150/255)]),
-                startPoint: .top,
-                endPoint: .bottom
-     ))
+            .background(
+                LinearGradient(
+                    gradient: Gradient(colors: [Color(red: 0/255, green: 0/255, blue: 50/255),
+                                                Color(red: 0/255, green: 0/255, blue: 150/255)]),
+                    startPoint: .top,
+                    endPoint: .bottom
+                )
+            )
             .onAppear {
                 viewModel.fetchChildren()
             }
@@ -95,7 +86,7 @@ struct ChildrenView: View {
     }
 }
 
-struct InfoRow: View {
+struct InfoRows: View { // Renamed from InfoRoww to InfoRow
     var label: String
     var value: String
     
@@ -111,7 +102,5 @@ struct InfoRow: View {
     }
 }
 
-#Preview {
-    ChildrenView()
-}
+
 

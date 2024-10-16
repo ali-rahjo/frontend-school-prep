@@ -11,8 +11,7 @@ struct ContactUsView: View {
             ScrollView {
                 VStack(alignment: .leading, spacing: 20) {
                     
-                    
-                    // Input Fields
+                
                     VStack(alignment: .leading, spacing: 15) {
                         
                         Text("Contact Us")

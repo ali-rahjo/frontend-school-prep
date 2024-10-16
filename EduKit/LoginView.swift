@@ -40,8 +40,6 @@ struct LoginView: View {
                         .font(.custom("Bradley Hand", size: 26))
                         .foregroundColor(Color.white)
                         .padding(.leading, 100)
-     
-                    
                   
                     Image("logo2")
                         .resizable()

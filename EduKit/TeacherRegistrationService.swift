@@ -62,10 +62,11 @@ class TeacherRegistrationService {
                           
                            if let data = data, let responseString = String(data: data, encoding: .utf8) {
                                print("Success response: \(responseString)")
-                               completion(.success("An Invitation link has been sent to your registered email. Please accept the invitation."))
+                               completion(.success("Registration successful!"))
                            } else {
                                print("No response body received.")
-                               completion(.success("Registration successful!"))
+                               completion(.failure("Registration failed. No response body received." as! Error))
+
                            }
                        } else {
                           

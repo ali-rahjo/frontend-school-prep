@@ -1,5 +1,4 @@
 
-
 import SwiftUI
 
 struct Signup: View {
@@ -11,18 +10,14 @@ struct Signup: View {
     @State private var address: String = ""
     @State private var phonenumber: String = ""
     @State private var selectedGender: String = "M"
-    
     @State private var showStudentInfo = false
     @State private var studentInfo: StudentInfo?
     
     let genders = ["M", "F"]
     
-   
-    
     var body: some View {
         NavigationView {
             ZStack {
-                
                 
                 Image("slide12")
                     .resizable()
@@ -31,15 +26,12 @@ struct Signup: View {
                     .clipped()
                     .ignoresSafeArea()
                 
-            
-                
                 VStack(spacing: 20) {
                     Spacer()
                     Text("Create an Account")
                         .font(.title)
                         .fontWeight(.bold)
                         .foregroundColor(Color.white)
-    
                         .padding(.top, 80)
                    
                     TextField("Username", text: $username)
@@ -131,9 +123,7 @@ struct Signup: View {
                 }
                 .padding(.horizontal, 40)
                 .padding(.bottom, 120)
-             //   .background(Color.white.opacity(0.2))
                 .cornerRadius(15)
-              //  .shadow(radius: 10)
                 .edgesIgnoringSafeArea(.all)
             }
            

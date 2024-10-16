@@ -17,25 +17,19 @@ struct StudentInfoView: View {
     @State private var navigateToLogin = false
     @State private var isLoading = false
    
-    
     let genders = ["M", "F"]
     
     var body: some View {
         
         NavigationView {
             ZStack {
-                
-                
-                
-                
+            
                 Image("slide12")
                     .resizable()
                     .scaledToFill()
                     .frame(width: UIScreen.main.bounds.width)
                     .clipped()
                     .ignoresSafeArea()
-                
-            
                 
                 VStack(spacing: 20) {
                     Spacer()
@@ -175,7 +169,6 @@ struct StudentInfoView: View {
                                   }))
                         }
                         
-                        
                         NavigationLink(
                             destination: LoginView(),
                             isActive: $navigateToLogin) {
@@ -186,7 +179,6 @@ struct StudentInfoView: View {
                 }
                 .padding(.horizontal, 40)
                 .padding(.bottom, 120)
-               // .background(Color.white.opacity(0.2))
                 .cornerRadius(15)
                 .shadow(radius: 10)
                 
@@ -202,10 +194,8 @@ struct StudentInfoView: View {
             }
             .edgesIgnoringSafeArea(.all)
         }
-        
     }
     
-   
     func resetForm() {
         firstname = ""
         lastname = ""

@@ -41,7 +41,7 @@ struct TimetableView: View {
         .onAppear {
             viewModel.fetchTimetable(classID: classID)
         }
-        .navigationBarHidden(true)
+        
         .font(.largeTitle)
         .foregroundColor(Color.pink)
     }

@@ -1,14 +1,14 @@
 import SwiftUI
 
 struct Goodbye: View {
-    @State private var bubbleCount = 10 // Number of bubbles
-    @State private var bubbleSizes: [CGFloat] = [] // Array to hold bubble sizes
+    @State private var bubbleCount = 10
+    @State private var bubbleSizes: [CGFloat] = []
 
     var body: some View {
         ZStack {
-            // Display bubbles
+           
             ForEach(0..<bubbleCount, id: \.self) { index in
-                if index < bubbleSizes.count { // Check index bounds to avoid out of range
+                if index < bubbleSizes.count {
                     Circle()
                         .fill(Color.blue.opacity(0.5))
                         .frame(width: bubbleSizes[index], height: bubbleSizes[index])
@@ -17,7 +17,7 @@ struct Goodbye: View {
                             .repeatForever(autoreverses: true), value: bubbleSizes[index])
                 }
             }
-            Text("Goodbye!")
+            Text("See You Again!")
                 .font(.largeTitle)
                 .fontWeight(.bold)
                 .foregroundColor(.black)

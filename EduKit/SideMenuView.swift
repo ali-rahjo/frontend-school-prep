@@ -128,14 +128,6 @@ struct TimeTableView: View {
 }
 
 
-struct AttendanceView: View {
-    var body: some View {
-        Text("Attendance View")
-            .navigationTitle("Attendance")
-    }
-}
-
-
 
 struct AnnouncementsView: View {
     var body: some View {

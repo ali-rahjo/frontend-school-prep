@@ -233,6 +233,8 @@ struct TeacherLeaves: View {
                 if let error = error {
                     self.alertMessage = "Error: \(error.localizedDescription)"
                     self.showAlert = true
+                    playSound(sound: "sound-rise", type: "mp3")
+                    feedback.notificationOccurred(.success)
                     return
                 }
                 
