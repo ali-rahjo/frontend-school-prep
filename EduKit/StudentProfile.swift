@@ -4,6 +4,7 @@ struct StudentProfile: View {
     
     @StateObject private var viewModel = StudentProfileViewModel()
     @StateObject private var particleSystem = ParticleSystemm()
+    @State private var navigateToStudentClass = false
     
     var body: some View {
         ZStack {
@@ -39,11 +40,15 @@ struct StudentProfile: View {
             VStack {
                 headerView
                 
+                
+                
                 Spacer(minLength: 20)
                 
                 if let student = viewModel.student {
                     profileDetailsView(for: student)
+                   
                 }
+                
                 
                 Spacer()
                 
@@ -73,49 +78,145 @@ struct StudentProfile: View {
         HStack {
             Image("logo2")
                 .resizable()
-                .frame(width: 65, height: 75)
+                .frame(width: 55, height: 65)
                 .foregroundColor(.white)
                 .padding(.leading, 100)
-            
+                
             if let student = viewModel.student {
                 Text("\(student.first_name.capitalized) \(student.last_name.capitalized)")
                     .fontWeight(.bold)
-                    .foregroundColor(.white)
+                    .foregroundColor(Color.white)
                     .padding(.bottom, 5)
-                    .font(.custom("Noteworthy-Bold", size: 36))
+                    .font(.custom("Noteworthy-Bold", size: 38))
             }
             Spacer()
-        }
+        }.padding(.top,80)
     }
     
     private func profileDetailsView(for student: Students) -> some View {
         VStack {
-            Text("**Age**: \(student.age)")
-            Text("**Username**: \(student.username)")
-            Text("**Gender**: \(student.gender == "M" ? "Male" : "Female")")
             
-            Text("**Class Information**")
-                .font(.title2)
-                .fontWeight(.bold)
-                .padding(.top, 10)
-            Text("Class Name: \(student.class_info.class_name)")
-            Text("Grade: \(student.class_info.grade)")
-            Text("Academic Year: \(student.class_info.academic_year_start) - \(student.class_info.academic_year_end)")
+            HStack {
+                Text("Id")
+                    .font(.custom("Noteworthy-Bold", size: 26))
+                    .foregroundColor(.white)
+                    .frame(width: 180, alignment: .leading)
+                    .padding(.leading,20)
+                Text("\(student.id)")
+                    .foregroundColor(.white)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .font(.custom("Noteworthy-Bold", size: 20))
+            }.padding(.top,10)
             
-            Text("**Teacher Information**")
-                .font(.title2)
-                .fontWeight(.bold)
-                .padding(.top, 10)
-            Text("Teacher Name: \(student.teacher_info.user.first_name) \(student.teacher_info.user.last_name)")
-            Text("Teacher Username: \(student.teacher_info.user.username)")
-            Text("Teacher Gender: \(student.teacher_info.gender == "M" ? "Male" : "Female")")
-            Text("Date Joined: \(formattedDate(student.teacher_info.user.date_joined))")
+            HStack {
+                Text("Username")
+                    .font(.custom("Noteworthy-Bold", size: 26))
+                    .foregroundColor(.white)
+                    .frame(width: 180, alignment: .leading)
+                    .padding(.leading,20)
+                Text("\(student.username)")
+                    .foregroundColor(.white)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .font(.custom("Noteworthy-Bold", size: 20))
+            }
+            
+            HStack {
+                Text("Age")
+                    .font(.custom("Noteworthy-Bold", size: 26))
+                    .foregroundColor(.white)
+                    .frame(width: 180, alignment: .leading)
+                    .padding(.leading,20)
+                Text("\(student.age)")
+                    .foregroundColor(.white)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .font(.custom("Noteworthy-Bold", size: 20))
+            }
+            
+            HStack {
+                Text("Gender")
+                    .font(.custom("Noteworthy-Bold", size: 26))
+                    .foregroundColor(.white)
+                    .frame(width: 180, alignment: .leading)
+                    .padding(.leading,20)
+                Text("\(student.gender == "M" ? "Male" : "Female")")
+                    .foregroundColor(.white)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .font(.custom("Noteworthy-Bold", size: 20))
+            }
+            
+            HStack {
+                Text("Class Name")
+                    .font(.custom("Noteworthy-Bold", size: 26))
+                    .foregroundColor(.white)
+                    .frame(width: 180, alignment: .leading)
+                    .padding(.leading,20)
+                Text("\(student.class_info.class_name)")
+                    .foregroundColor(.white)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .font(.custom("Noteworthy-Bold", size: 20))
+            }
+            
+           
+            HStack {
+                Text("Grade")
+                    .font(.custom("Noteworthy-Bold", size: 26))
+                    .foregroundColor(.white)
+                    .frame(width: 180, alignment: .leading)
+                    .padding(.leading,20)
+                Text("\(student.class_info.grade)")
+                    .foregroundColor(.white)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .font(.custom("Noteworthy-Bold", size: 20))
+            }
+            
+            HStack {
+                Text("Academic Year")
+                    .font(.custom("Noteworthy-Bold", size: 26))
+                    .foregroundColor(.white)
+                    .frame(width: 180, alignment: .leading)
+                    .padding(.leading,20)
+                Text("\(student.class_info.academic_year_start) - \(student.class_info.academic_year_end)")
+                    .foregroundColor(.white)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .font(.custom("Noteworthy-Bold", size: 20))
+            }
+            
+            HStack {
+                Text("Teacher Name")
+                    .font(.custom("Noteworthy-Bold", size: 26))
+                    .foregroundColor(.white)
+                    .frame(width: 180, alignment: .leading)
+                    .padding(.leading,20)
+                Text("\(student.teacher_info.user.first_name) \(student.teacher_info.user.last_name)")
+                    .foregroundColor(.white)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .font(.custom("Noteworthy-Bold", size: 20))
+            }
+            
+            Button(action: {
+
+                navigateToStudentClass = true
+            }) {
+                Text("Go to class")
+                    .font(.custom("Noteworthy-Bold", size: 22))
+                    .foregroundColor(.white)
+                    .padding()
+                    .frame(maxWidth: 200, minHeight: 20)
+                    .background(Color.black)
+                    .cornerRadius(8)
+            }
+          
+         
+            NavigationLink(destination: ClassView(), isActive: $navigateToStudentClass) {
+                EmptyView()
+            }
+            
         }
         .frame(width: 350, height: 450)
         .background(Color.white.opacity(0.3))
         .cornerRadius(10)
         .padding(.horizontal, 40)
-        .padding(.bottom, 100)
+        .padding(.bottom, 200)
     }
     
     // Create star path
