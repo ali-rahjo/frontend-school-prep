@@ -23,6 +23,10 @@ struct TeacherSideMenu: View {
                 Label("Attendance", systemImage: "person.crop.circle")
             }
             
+            NavigationLink(destination: TeacherAttendanceList()) {
+                Label("Attendance List", systemImage: "person.fill.checkmark")
+            }
+            
             NavigationLink(destination: TeacherMessages()) {
                 Label("Messages", systemImage: "message")
             }

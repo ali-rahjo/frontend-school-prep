@@ -20,8 +20,6 @@ struct LeaveStatusView: View {
                         .frame(width: UIScreen.main.bounds.width)
                         .clipped()
                         .ignoresSafeArea()
-                    
-                  
                 
                 
                        VStack {

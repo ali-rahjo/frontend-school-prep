@@ -48,7 +48,7 @@ struct AttendanceView: View {
                                     .foregroundColor(.white)
                                     .padding(.vertical, 4)
                                     .padding(.horizontal, 8)
-                                    .frame(maxHeight: 35)
+                                    .frame(maxHeight: 38)
                                     .background(
                                         LinearGradient(
                                             gradient: Gradient(colors: [Color(red: 0/255, green: 0/255, blue: 50/255),

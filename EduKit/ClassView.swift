@@ -31,7 +31,16 @@ struct ClassView: View {
                 particleSystem.startShowering()
             }
             
+          
+            
             VStack {
+                Image("logo2")
+                    .resizable()
+                    .scaledToFill()
+                  
+                    .frame(width: 100, height: 100)
+                    .clipShape(Circle())
+                    .padding(.bottom,20)
 
                 studentDetailsView()
             }
@@ -41,7 +50,7 @@ struct ClassView: View {
     private func studentDetailsView() -> some View {
         
         VStack {
-            // Top buttons
+           
             HStack {
                 Button(action: {
                     // Action for Timetable button
