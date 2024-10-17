@@ -3,8 +3,8 @@ import Foundation
 
 
 struct MessageApplication: Codable {
-    let parent_id: Int
-    let student_id: Int
+    let parent: Int
+    let student: Int
     let text_msg: String
     let response: String
    

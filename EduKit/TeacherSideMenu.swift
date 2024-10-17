@@ -35,6 +35,10 @@ struct TeacherSideMenu: View {
                 Label("Lunch Menu", systemImage: "fork.knife.circle.fill")
             }
             
+            NavigationLink(destination: TeacherAnnouncement()) {
+                Label("Announcements", systemImage: "megaphone")
+            }
+            
            
             NavigationLink(destination: Holiday()) {
                 Label("Holiday Calendar", systemImage: "calendar")

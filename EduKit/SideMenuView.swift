@@ -13,7 +13,9 @@ struct SideMenuView: View {
       
         List {
             
-         
+            NavigationLink(destination: ChildrenView()) {
+                Label("Children Info", systemImage: "person.2")
+            }
            
             NavigationLink(destination: LunchMenuView()) {
                 Label("Luch Menu", systemImage: "fork.knife")
@@ -43,9 +45,6 @@ struct SideMenuView: View {
                 Label("Announcements", systemImage: "megaphone")
             }
             
-            NavigationLink(destination: ChildrenView()) {
-                Label("Children Info", systemImage: "person.2")
-            }
            
             NavigationLink(destination: Holiday()) {
                 Label("Holiday Calendar", systemImage: "calendar")

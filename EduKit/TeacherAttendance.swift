@@ -4,8 +4,8 @@ struct Studentlist: Identifiable {
     let id: Int
     let firstName: String
     let lastName: String
-    var isPresent: Bool?
-    var attendanceDate: String?
+    var isPresent: Bool? = nil // Default is nil
+    var attendanceDate: String? = nil
 }
 
 struct TeacherAttendance: View {
@@ -17,6 +17,7 @@ struct TeacherAttendance: View {
     var body: some View {
         NavigationView {
             ZStack {
+                // Background image
                 Image("slide11")
                     .resizable()
                     .scaledToFill()
@@ -36,7 +37,7 @@ struct TeacherAttendance: View {
                             .foregroundColor(.white)
                     }
                     
-                    List(students) { student in
+                    List($students) { $student in
                         VStack(alignment: .leading) {
                             HStack {
                                 Text("\(student.id)")
@@ -47,46 +48,25 @@ struct TeacherAttendance: View {
                                 
                                 Spacer()
                                 
-                                HStack {
-                                
-                                  
-                                
-                                    Button(action: {
-                                        if !isLoading {
-                                            print("Present button clicked for student ID \(student.id)")
-                                            markAttendance(for: student.id, isPresent: true)
-                                        }
-                                    }) {
-                                        Text("Present")
-                                            .padding(8)
-                                            .background(student.isPresent == true ? Color.green : Color.gray)
-                                            .foregroundColor(.white)
-                                            .cornerRadius(8)
-                                            .fontWeight(.bold)
-                                            .font(.system(size: 12))
+                                Picker("", selection: Binding(
+                                    get: {
+                                        student.isPresent == true ? "Present" : (student.isPresent == false ? "Absent" : "")
+                                    },
+                                    set: { newValue in
+                                        markAttendance(for: student.id, isPresent: newValue == "Present")
                                     }
-                                    .disabled(isLoading)
-                                    
-                                    Button(action: {
-                                        if !isLoading {
-                                            print("Absent button clicked for student ID \(student.id)")
-                                            markAttendance(for: student.id, isPresent: false)
-                                        }
-                                    }) {
-                                        Text("Absent")
-                                            .padding(8)
-                                            .background(student.isPresent == false ? Color.red : Color.gray)
-                                            .foregroundColor(.white)
-                                            .cornerRadius(8)
-                                            .fontWeight(.bold)
-                                            .font(.system(size: 12))
-                                    }
-                                    .disabled(isLoading)
-                                
+                                )) {
+                                    Text("Present")
+                                        .tag("Present")
+                                        .background(Color.green)
+                                    Text("Absent")
+                                        .tag("Absent")
+                                        .background(Color.red)
                                 }
+                                .pickerStyle(SegmentedPickerStyle())
+                                .disabled(student.isPresent != nil)
                             }
                             
-                           
                             if let attendanceDate = student.attendanceDate {
                                 Text("Date: \(attendanceDate)")
                                     .font(.caption)
@@ -150,70 +130,68 @@ struct TeacherAttendance: View {
     }
     
     func markAttendance(for studentID: Int, isPresent: Bool) {
-        guard let url = URL(string: "http://192.168.0.219:8000/api/v1/teacher/attendance/mark/\(studentID)/") else {
-            print("Invalid URL")
-            return
-        }
-        
-        var request = URLRequest(url: url)
-        request.httpMethod = "PATCH"
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        
-        let body: [String: Any] = ["is_present": isPresent]
-        request.httpBody = try? JSONSerialization.data(withJSONObject: body)
-        
-        isLoading = true
-        print("Request Body: \(body)")
-        
-        URLSession.shared.dataTask(with: request) { data, response, error in
-            DispatchQueue.main.async {
-                isLoading = false // Ensure loading is turned off in UI on main thread
+            guard let url = URL(string: "http://192.168.0.219:8000/api/v1/teacher/attendance/mark/\(studentID)/") else {
+                print("Invalid URL")
+                return
             }
             
-            if let error = error {
-                print("Error: \(error.localizedDescription)")
+            var request = URLRequest(url: url)
+            request.httpMethod = "PATCH"
+            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+            
+            let body: [String: Any] = ["is_present": isPresent]
+            request.httpBody = try? JSONSerialization.data(withJSONObject: body)
+            
+            isLoading = true
+            print("Request Body: \(body)")
+            
+            URLSession.shared.dataTask(with: request) { data, response, error in
                 DispatchQueue.main.async {
-                    isLoading = false
-                }
-                return
-            }
-            
-            guard let data = data else {
-                print("No data received")
-                return
-            }
-            
-            do {
-                if let jsonString = String(data: data, encoding: .utf8) {
-                    print("Response: \(jsonString)") // Raw response for debugging
+                    isLoading = false // Ensure loading is turned off in UI on main thread
                 }
                 
-                if let jsonResponse = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any],
-                   let studentID = jsonResponse["student_id"] as? Int,
-                   let isPresent = jsonResponse["is_present"] as? Bool,
-                   let attendanceDate = jsonResponse["date"] as? String {
-                    
-                    print("Updated attendance for student ID \(studentID): Present = \(isPresent)")
-                    
-                    // Updating the student's attendance info
+                if let error = error {
+                    print("Error: \(error.localizedDescription)")
                     DispatchQueue.main.async {
-                        if let index = students.firstIndex(where: { $0.id == studentID }) {
-                            students[index].isPresent = isPresent
-                            students[index].attendanceDate = attendanceDate
-                            
-                            // Force UI to refresh
-                            // No need to force UI to refresh like this, simply modifying the struct should work
+                        isLoading = false
+                    }
+                    return
+                }
+                
+                guard let data = data else {
+                    print("No data received")
+                    return
+                }
+                
+                do {
+                    if let jsonString = String(data: data, encoding: .utf8) {
+                        print("Response: \(jsonString)") // Raw response for debugging
+                    }
+                    
+                    if let jsonResponse = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any],
+                       let studentID = jsonResponse["student_id"] as? Int,
+                       let isPresent = jsonResponse["is_present"] as? Bool,
+                       let attendanceDate = jsonResponse["date"] as? String {
+                        
+                        print("Updated attendance for student ID \(studentID): Present = \(isPresent)")
+                        
+                        // Updating the student's attendance info
+                        DispatchQueue.main.async {
+                            if let index = students.firstIndex(where: { $0.id == studentID }) {
+                                students[index].isPresent = isPresent
+                                students[index].attendanceDate = attendanceDate
+                                
+                                // Force UI to refresh
+                                // No need to force UI to refresh like this, simply modifying the struct should work
+                            }
                         }
                     }
+                } catch {
+                    print("Error processing the response: \(error.localizedDescription)")
                 }
-            } catch {
-                print("Error processing the response: \(error.localizedDescription)")
-            }
-        }.resume()
-    }
-}
+            }.resume()
+        }
+    
 
-#Preview {
-    TeacherAttendance()
 }
 

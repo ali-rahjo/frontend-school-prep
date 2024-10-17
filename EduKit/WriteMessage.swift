@@ -82,8 +82,8 @@ struct WriteMessage: View {
                                                             return
                                                         }
                                     
-                                    let application = MessageApplication(parent_id: parentId,
-                                                                       student_id: studentId,
+                                    let application = MessageApplication(parent: parentId,
+                                                                       student: studentId,
                                                                        text_msg:message,
                                                                        response: ""
                                                                       )

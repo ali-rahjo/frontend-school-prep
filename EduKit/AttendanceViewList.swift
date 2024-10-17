@@ -36,17 +36,20 @@ struct AttendanceViewList: View {
                         .foregroundColor(.white)
                         .padding()
                 } else {
+                    
+                    HStack {
+                        Text("Attendance")
+                            .font(.title)
+                            .foregroundColor(.white)
+                            
+                       
+                    }.padding(.top,70)
+                        .padding(.leading,10)
+                    
                     List(attendanceList) { attendance in
                         VStack(alignment: .leading, spacing: 10) {
                             
-                            HStack {
-                                Text("Attendance")
-                                    .font(.title)
-                                    .foregroundColor(.white)
-                                    
-                               
-                            }.padding(.top,50)
-                                .padding(.leading,100)
+                           
                           
                             ZStack {
                                 RoundedRectangle(cornerRadius: 10)
@@ -107,9 +110,10 @@ struct AttendanceViewList: View {
                                 }
                                 .padding()
                             }
-                            .padding(.vertical, 40)
+                            .padding(.vertical, 5)
                         }
                         .listRowBackground(Color.clear)
+                        .padding(.bottom,5)
                     }
                     .listStyle(PlainListStyle())
                 }
