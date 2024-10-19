@@ -170,7 +170,8 @@ struct TeacherProfile: View {
                         }) {
                             Text("Edit Profile")
                                 .font(.headline)
-                                .frame(maxWidth: .infinity)
+                                .frame(maxWidth: 200)
+                               
                                 .padding()
                                 .background(LinearGradient(
                                     gradient: Gradient(colors: [
@@ -184,8 +185,10 @@ struct TeacherProfile: View {
 )
                                 .cornerRadius(10)
                                 .foregroundColor(.white)
+                                .padding(.leading,50)
                         }
                         .padding(.top)
+                       
                     }
                     .padding(.top, -30)
                 }

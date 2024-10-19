@@ -81,7 +81,7 @@ struct StudentProfile: View {
                 .resizable()
                 .frame(width: 55, height: 65)
                 .foregroundColor(.white)
-                .padding(.leading, 100)
+                .padding(.leading, 80)
                 
             if let student = viewModel.student {
                 Text("\(student.first_name.capitalized) \(student.last_name.capitalized)")
@@ -179,6 +179,7 @@ struct StudentProfile: View {
                 Text("\(student.class_info.academic_year_start) - \(student.class_info.academic_year_end)")
                     .foregroundColor(.white)
                     .multilineTextAlignment(.center)
+                    .lineLimit(nil)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .font(.custom("Noteworthy-Bold", size: 20))
             }
@@ -192,6 +193,7 @@ struct StudentProfile: View {
                 Text("\(student.teacher_info.user.first_name) \(student.teacher_info.user.last_name)")
                     .foregroundColor(.white)
                     .multilineTextAlignment(.center)
+                    .lineLimit(nil)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .font(.custom("Noteworthy-Bold", size: 20))
             }
@@ -207,7 +209,7 @@ struct StudentProfile: View {
                     .frame(maxWidth: 200, minHeight: 20)
                     .background(Color.black)
                     .cornerRadius(8)
-            }
+            }.padding(.bottom,15)
           
          
             NavigationLink(destination: ClassView(classID:student.class_info.id ), isActive: $navigateToStudentClass) {
@@ -215,7 +217,7 @@ struct StudentProfile: View {
             }
             
         }
-        .frame(width: 300, height: 450)
+        .frame(width: 330, height: 450)
         .background(Color.white.opacity(0.3))
         .cornerRadius(10)
         .padding(.horizontal, 40)

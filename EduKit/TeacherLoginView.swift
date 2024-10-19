@@ -123,7 +123,7 @@ struct TeacherLoginView: View {
                             .font(.headline)
                             .fontWeight(.bold)
                     }
-                    .frame(maxWidth: .infinity)
+                    .frame(maxWidth: 200)
                     .padding()
                     .background(Color(red: 202/255, green: 32/255, blue: 104/255))
                     .foregroundColor(Color.white)

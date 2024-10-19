@@ -189,7 +189,7 @@ struct SubjectDayView: View {
     
     var body: some View {
         VStack {
-            // Day header with playful background
+           
             Text(day)
                 .font(.custom("Noteworthy-Bold", size: 20))
                 .fontWeight(.bold)
@@ -199,7 +199,7 @@ struct SubjectDayView: View {
                 .cornerRadius(15)
                 .padding(.bottom, 10)
             
-            // Periods arranged in a grid layout
+           
             LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 10), count: 2), spacing: 10) {
                 ForEach(periods) { period in
                     PeriodcardView(period: period)
@@ -215,7 +215,7 @@ struct SubjectDayView: View {
 }
 
 struct PeriodcardView: View {
-    var period: TimetableEntry // Updated to match the model
+    var period: TimetableEntry
     
     var body: some View {
         VStack {
@@ -273,7 +273,7 @@ struct PeriodcardView: View {
 }
 
 
-// Preview for SwiftUI
+
 struct ChildrenTimeTable_Previews: PreviewProvider {
     static var previews: some View {
         ChildrenTimeTable(classID: 1)
