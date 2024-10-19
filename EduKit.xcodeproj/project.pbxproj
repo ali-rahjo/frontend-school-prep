@@ -36,11 +36,11 @@
 		D2803F552CB6A4FD0022C6B8 /* ApplyLeaveServiceCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2803F542CB6A4FD0022C6B8 /* ApplyLeaveServiceCall.swift */; };
 		D2803F572CB6A6EE0022C6B8 /* ApplyLeaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2803F562CB6A6EE0022C6B8 /* ApplyLeaveView.swift */; };
 		D2910B022CBDC0FB00E097B0 /* ViewMessagesServiceCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2910B012CBDC0FA00E097B0 /* ViewMessagesServiceCall.swift */; };
-		D291952E2CBFBA0700592867 /* TeacherLunchMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = D291952D2CBFBA0700592867 /* TeacherLunchMenu.swift */; };
 		D29195302CBFF60B00592867 /* AttendanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D291952F2CBFF60B00592867 /* AttendanceView.swift */; };
 		D29195322CBFFA2900592867 /* AttendanceViewList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29195312CBFFA2800592867 /* AttendanceViewList.swift */; };
 		D29195342CC0208000592867 /* AnnouncementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29195332CC0208000592867 /* AnnouncementsView.swift */; };
 		D29195362CC02C9500592867 /* StudentProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29195352CC02C9500592867 /* StudentProfile.swift */; };
+		D29226072CC452A8005E80D4 /* CreateLunchMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29226062CC452A8005E80D4 /* CreateLunchMenu.swift */; };
 		D293DB222CC06B8900DC9DB0 /* ClassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D293DB212CC06B8900DC9DB0 /* ClassView.swift */; };
 		D2A53BDB2CB9B5DD0019CE12 /* sound-ding.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D2A53BD82CB9B5DD0019CE12 /* sound-ding.mp3 */; };
 		D2A53BDC2CB9B5DD0019CE12 /* sound-tap.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D2A53BD92CB9B5DD0019CE12 /* sound-tap.mp3 */; };
@@ -130,11 +130,11 @@
 		D2803F542CB6A4FD0022C6B8 /* ApplyLeaveServiceCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplyLeaveServiceCall.swift; sourceTree = "<group>"; };
 		D2803F562CB6A6EE0022C6B8 /* ApplyLeaveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplyLeaveView.swift; sourceTree = "<group>"; };
 		D2910B012CBDC0FA00E097B0 /* ViewMessagesServiceCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewMessagesServiceCall.swift; sourceTree = "<group>"; };
-		D291952D2CBFBA0700592867 /* TeacherLunchMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherLunchMenu.swift; sourceTree = "<group>"; };
 		D291952F2CBFF60B00592867 /* AttendanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceView.swift; sourceTree = "<group>"; };
 		D29195312CBFFA2800592867 /* AttendanceViewList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceViewList.swift; sourceTree = "<group>"; };
 		D29195332CC0208000592867 /* AnnouncementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementsView.swift; sourceTree = "<group>"; };
 		D29195352CC02C9500592867 /* StudentProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentProfile.swift; sourceTree = "<group>"; };
+		D29226062CC452A8005E80D4 /* CreateLunchMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateLunchMenu.swift; sourceTree = "<group>"; };
 		D293DB212CC06B8900DC9DB0 /* ClassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassView.swift; sourceTree = "<group>"; };
 		D2A53BD82CB9B5DD0019CE12 /* sound-ding.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sound-ding.mp3"; sourceTree = "<group>"; };
 		D2A53BD92CB9B5DD0019CE12 /* sound-tap.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sound-tap.mp3"; sourceTree = "<group>"; };
@@ -261,6 +261,7 @@
 				D21B60982CA738FF0010F587 /* LoginView.swift */,
 				D2239C912CA9AC9900BACFDC /* ParentProfileServiceCall.swift */,
 				D25C330A2CC3E80A00177E01 /* CreateTimeTable.swift */,
+				D29226062CC452A8005E80D4 /* CreateLunchMenu.swift */,
 				D2239C952CA9C54A00BACFDC /* ChildrenProfileServiceCall.swift */,
 				D233C3A02CBACA86000B47C7 /* TeacherProfileServiceCall.swift */,
 				D2803F542CB6A4FD0022C6B8 /* ApplyLeaveServiceCall.swift */,
@@ -288,7 +289,6 @@
 				D2B5E78D2CC16F3B00A52D08 /* TeacherAttendanceList.swift */,
 				D2B5E78B2CC0FB2300A52D08 /* TeacherAnnouncement.swift */,
 				D2EE64FF2CBD7E5300405656 /* TeacherTimeTable.swift */,
-				D291952D2CBFBA0700592867 /* TeacherLunchMenu.swift */,
 				D2EE64FD2CBD7E2500405656 /* TeacherMessages.swift */,
 				D235AF522CBEBA1C00216A51 /* ReplyMessage.swift */,
 				D2EE64FB2CBD7DFD00405656 /* TeacherAttendance.swift */,
@@ -511,6 +511,7 @@
 				D2D9705A2C91EE540040DE4A /* ContentView.swift in Sources */,
 				D2A8C3B12C985AFA0076892A /* Signup.swift in Sources */,
 				D2A8C3B32C985FA30076892A /* LoginSelection.swift in Sources */,
+				D29226072CC452A8005E80D4 /* CreateLunchMenu.swift in Sources */,
 				D2239C9C2CA9D4B500BACFDC /* child.swift in Sources */,
 				D29195362CC02C9500592867 /* StudentProfile.swift in Sources */,
 				D2B5E78C2CC0FB2400A52D08 /* TeacherAnnouncement.swift in Sources */,
@@ -533,7 +534,6 @@
 				D22EE4D02CBA7FD600D121D3 /* LunchMenu.swift in Sources */,
 				D22EE4D22CBA8B8E00D121D3 /* WriteMessage.swift in Sources */,
 				D2239C962CA9C54A00BACFDC /* ChildrenProfileServiceCall.swift in Sources */,
-				D291952E2CBFBA0700592867 /* TeacherLunchMenu.swift in Sources */,
 				D2D970582C91EE540040DE4A /* EduKitApp.swift in Sources */,
 				D2A88C1C2CAAD6BE00FDE8BD /* StudentLogin.swift in Sources */,
 				D25C330B2CC3E80A00177E01 /* CreateTimeTable.swift in Sources */,

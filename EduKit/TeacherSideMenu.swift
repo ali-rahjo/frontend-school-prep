@@ -34,11 +34,15 @@ struct TeacherSideMenu: View {
                 Label("Messages", systemImage: "message")
             }
             NavigationLink(destination: CreateTimeTable(classId: classId,teacherId:teacherId)) {
-                Label("Create Time Table", systemImage: "square.and.pencil")
+                Label("Add Time Table", systemImage: "square.and.pencil")
             }
             
             NavigationLink(destination: TeacherTimeTable(classId: classId)) {
                 Label("Time Table", systemImage: "envelope.open.fill")
+            }
+            
+            NavigationLink(destination: CreateLunchMenu()) {
+                Label("Add Lunch Menu", systemImage: "tray.fill")
             }
             
             NavigationLink(destination: LunchMenuView()) {

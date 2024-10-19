@@ -22,7 +22,7 @@ struct CreateTimeTable: View {
     init(classId: Int, teacherId: Int) {
         self.classId = classId
         self.teacherId = teacherId
-        self._timetable = State(initialValue: CreateTimeTable.createDays()) // Call static method using class name
+        self._timetable = State(initialValue: CreateTimeTable.createDays())
     }
 
     var body: some View {
