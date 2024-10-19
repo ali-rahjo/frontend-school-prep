@@ -168,7 +168,7 @@ struct TeacherSignup: View {
                 destination: TeacherLoginView(),
                 isActive: $navigateToTeacherLogin) {
                 EmptyView()
-                }.navigationBarHidden(true)
+                }
         }
         
         

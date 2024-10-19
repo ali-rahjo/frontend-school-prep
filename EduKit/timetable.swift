@@ -7,9 +7,11 @@ struct Period: Identifiable, Codable {
     let id = UUID()
     let period: Int
     let subject: String
+    
+    
 }
 
-struct TimetableContent: Codable {
+struct TimetableContent: Codable  {
        let Monday: [Period]
        let Tuesday: [Period]
        let Wednesday: [Period]
@@ -27,6 +29,8 @@ struct TimetableContent: Codable {
             default: return nil
             }
         }
+    
+    
 }
 
 
@@ -43,5 +47,7 @@ struct TimetableResponse: Identifiable, Codable {
         case classID = "class_id"
     }
 }
+
+
 
 

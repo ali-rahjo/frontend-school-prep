@@ -1,7 +1,9 @@
 import SwiftUI
 
 struct ClassView: View {
+    
     @StateObject private var particleSystem = ParticleSystemmm()
+    var classID: Int
 
     var body: some View {
         ZStack {
@@ -55,24 +57,30 @@ struct ClassView: View {
                 Button(action: {
                     // Action for Timetable button
                 }) {
-                    Text("Timetable")
+                    NavigationLink(destination: ChildrenTimeTable(classID:classID)) {
+                    Text("Time Table")
                         .padding()
                         .frame(height: 70) // Increased button height
-                        .background(Color.white)
-                        .foregroundColor(.black)
+                        .background(Color.black)
+                        .foregroundColor(.white)
                         .cornerRadius(10)
-                }
+                        .font(.custom("Noteworthy-Bold", size: 20))
+                    }
+                }.shadow(color: Color.white.opacity(0.8), radius: 5, x: 0, y: 5)
 
                 Button(action: {
                     // Action for Lunch Menu button
                 }) {
-                    Text("Lunch Menu")
-                        .padding()
-                        .frame(height: 70) // Increased button height
-                        .background(Color.white)
-                        .foregroundColor(.black)
-                        .cornerRadius(10)
-                }
+                    NavigationLink(destination: LunchMenuView()) {
+                        Text("Lunch Menu")
+                            .padding()
+                            .frame(height: 70)
+                            .background(Color.black)
+                            .foregroundColor(.white)
+                            .cornerRadius(10)
+                            .font(.custom("Noteworthy-Bold", size: 20))
+                    }
+                }.shadow(color: Color.white.opacity(0.8), radius: 5, x: 0, y: 5)
             }
             .padding(.top,10)
 
@@ -83,30 +91,36 @@ struct ClassView: View {
                 Button(action: {
                     // Action for Announcement button
                 }) {
+                    NavigationLink(destination: AnnouncementsView()) {
                     Text("Updates")
                         .padding()
                         .frame(width: 120, height: 70) // Increased button height
-                        .background(Color.white)
-                        .foregroundColor(.black)
+                        .background(Color.black)
+                        .foregroundColor(.white)
                         .cornerRadius(10)
                         .opacity(1)
-                }
+                        .font(.custom("Noteworthy-Bold", size: 20))
+                    }
+                }.shadow(color: Color.white.opacity(0.8), radius: 5, x: 0, y: 5)
 
                 Button(action: {
                     // Action for Holiday button
                 }) {
-                    Text("Holiday")
-                        .padding()
-                        .frame(height: 70) // Increased button height
-                        .background(Color.white)
-                        .foregroundColor(.black)
-                        .cornerRadius(10)
-                        .opacity(1)
-                }
+                    NavigationLink(destination: Holiday()) {
+                        Text("Holiday")
+                            .padding()
+                            .frame(height: 70) // Increased button height
+                            .background(Color.black)
+                            .foregroundColor(.white)
+                            .cornerRadius(10)
+                            .opacity(1)
+                            .font(.custom("Noteworthy-Bold", size: 20))
+                    }
+                }.shadow(color: Color.white.opacity(0.8), radius: 5, x: 0, y: 5)
             }
             .padding(.top,20)
         }
-        .frame(width: 350, height: 350)
+        .frame(width: 300, height: 300)
         .background(Color.white.opacity(0.3))
         .padding(.bottom, 200)
 
@@ -161,9 +175,5 @@ class ParticleSystemmm: ObservableObject {
             }
         }
     }
-}
-
-#Preview {
-    ClassView()
 }
 

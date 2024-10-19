@@ -60,6 +60,7 @@
 		D2B5E78E2CC16F3B00A52D08 /* TeacherAttendanceList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B5E78D2CC16F3B00A52D08 /* TeacherAttendanceList.swift */; };
 		D2D13FEF2CA5C0C8001BD1A1 /* StudentInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D13FEE2CA5C0C8001BD1A1 /* StudentInfoView.swift */; };
 		D2D13FF52CA6B832001BD1A1 /* ParentRegistrationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D13FF42CA6B832001BD1A1 /* ParentRegistrationService.swift */; };
+		D2D3F19A2CC2EAB1007C9B1F /* ChildrenTimeTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D3F1992CC2EAB1007C9B1F /* ChildrenTimeTable.swift */; };
 		D2D970582C91EE540040DE4A /* EduKitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D970572C91EE540040DE4A /* EduKitApp.swift */; };
 		D2D9705A2C91EE540040DE4A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D970592C91EE540040DE4A /* ContentView.swift */; };
 		D2D9705C2C91EE570040DE4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2D9705B2C91EE570040DE4A /* Assets.xcassets */; };
@@ -152,6 +153,7 @@
 		D2B5E78D2CC16F3B00A52D08 /* TeacherAttendanceList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherAttendanceList.swift; sourceTree = "<group>"; };
 		D2D13FEE2CA5C0C8001BD1A1 /* StudentInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentInfoView.swift; sourceTree = "<group>"; };
 		D2D13FF42CA6B832001BD1A1 /* ParentRegistrationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentRegistrationService.swift; sourceTree = "<group>"; };
+		D2D3F1992CC2EAB1007C9B1F /* ChildrenTimeTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildrenTimeTable.swift; sourceTree = "<group>"; };
 		D2D970542C91EE540040DE4A /* EduKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EduKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2D970572C91EE540040DE4A /* EduKitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EduKitApp.swift; sourceTree = "<group>"; };
 		D2D970592C91EE540040DE4A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -248,6 +250,7 @@
 				D24D36392C9361F100A6F8CA /* Info.plist */,
 				D2D970572C91EE540040DE4A /* EduKitApp.swift */,
 				D293DB212CC06B8900DC9DB0 /* ClassView.swift */,
+				D2D3F1992CC2EAB1007C9B1F /* ChildrenTimeTable.swift */,
 				D2D970592C91EE540040DE4A /* ContentView.swift */,
 				D2EE64D32CBD171300405656 /* ContactUsView.swift */,
 				D2EE64D52CBD1A2300405656 /* AboutUsView.swift */,
@@ -508,6 +511,7 @@
 				D2239C9C2CA9D4B500BACFDC /* child.swift in Sources */,
 				D29195362CC02C9500592867 /* StudentProfile.swift in Sources */,
 				D2B5E78C2CC0FB2400A52D08 /* TeacherAnnouncement.swift in Sources */,
+				D2D3F19A2CC2EAB1007C9B1F /* ChildrenTimeTable.swift in Sources */,
 				D2AECD402CB98E93009C3F2A /* TimetableService.swift in Sources */,
 				D2A53BE02CB9B5FE0019CE12 /* Constant.swift in Sources */,
 				D2EE64FA2CBD7DCB00405656 /* TeacherLeaves.swift in Sources */,

@@ -114,4 +114,3 @@ struct InfoRow: View {
 #Preview {
     ChildrenView()
 }
-

@@ -21,17 +21,21 @@ class TimetableViewModel: ObservableObject {
                 self.isLoading = false
                 switch result {
                 case .success(let timetable):
+                    print("Fetched timetable: \(timetable)")
                     if let firstTimetable = timetable.first {
                             self.timetable = firstTimetable
                     } else {
+                       
                             self.errorMessage = "No timetable available."
                     }
                 case .failure(let error):
+                    print("Error fetching timetable: \(error)") 
                     self.errorMessage = error.localizedDescription
                 }
             }
         }
     }
+    
 }
 
 

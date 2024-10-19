@@ -3,6 +3,7 @@ import Foundation
 class TimetableService {
     static let shared = TimetableService()
     
+    
     private init() {}
     
     func fetchTimetable(classID: Int, completion: @escaping (Result<[TimetableResponse], Error>) -> Void) {
@@ -52,6 +53,12 @@ class TimetableService {
             }
         }.resume()
     }
+    
+   
+
 }
 
 
+
+    
+    

@@ -135,4 +135,3 @@ struct PeriodCardView: View {
         }
     }
 }
-

@@ -6,6 +6,7 @@ struct StudentProfile: View {
     @StateObject private var particleSystem = ParticleSystemm()
     @State private var navigateToStudentClass = false
     
+    
     var body: some View {
         ZStack {
             // Background Image
@@ -85,9 +86,9 @@ struct StudentProfile: View {
             if let student = viewModel.student {
                 Text("\(student.first_name.capitalized) \(student.last_name.capitalized)")
                     .fontWeight(.bold)
-                    .foregroundColor(Color.white)
+                    .foregroundColor(.white)
                     .padding(.bottom, 5)
-                    .font(.custom("Noteworthy-Bold", size: 38))
+                    .font(.custom("Noteworthy-Bold", size: 40))
             }
             Spacer()
         }.padding(.top,80)
@@ -177,6 +178,7 @@ struct StudentProfile: View {
                     .padding(.leading,20)
                 Text("\(student.class_info.academic_year_start) - \(student.class_info.academic_year_end)")
                     .foregroundColor(.white)
+                    .multilineTextAlignment(.center)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .font(.custom("Noteworthy-Bold", size: 20))
             }
@@ -189,6 +191,7 @@ struct StudentProfile: View {
                     .padding(.leading,20)
                 Text("\(student.teacher_info.user.first_name) \(student.teacher_info.user.last_name)")
                     .foregroundColor(.white)
+                    .multilineTextAlignment(.center)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .font(.custom("Noteworthy-Bold", size: 20))
             }
@@ -207,12 +210,12 @@ struct StudentProfile: View {
             }
           
          
-            NavigationLink(destination: ClassView(), isActive: $navigateToStudentClass) {
+            NavigationLink(destination: ClassView(classID:student.class_info.id ), isActive: $navigateToStudentClass) {
                 EmptyView()
             }
             
         }
-        .frame(width: 350, height: 450)
+        .frame(width: 300, height: 450)
         .background(Color.white.opacity(0.3))
         .cornerRadius(10)
         .padding(.horizontal, 40)
