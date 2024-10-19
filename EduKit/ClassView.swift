@@ -4,6 +4,8 @@ struct ClassView: View {
     
     @StateObject private var particleSystem = ParticleSystemmm()
     var classID: Int
+    @State private var showConfirmationDialog = false
+    @State private var isNavigatingToLogoutView = false
 
     var body: some View {
         ZStack {
@@ -94,7 +96,7 @@ struct ClassView: View {
                     NavigationLink(destination: AnnouncementsView()) {
                     Text("Updates")
                         .padding()
-                        .frame(width: 120, height: 70) // Increased button height
+                        .frame(width: 120, height: 70)
                         .background(Color.black)
                         .foregroundColor(.white)
                         .cornerRadius(10)
@@ -109,7 +111,7 @@ struct ClassView: View {
                     NavigationLink(destination: Holiday()) {
                         Text("Holiday")
                             .padding()
-                            .frame(height: 70) // Increased button height
+                            .frame(height: 70)
                             .background(Color.black)
                             .foregroundColor(.white)
                             .cornerRadius(10)
@@ -119,6 +121,36 @@ struct ClassView: View {
                 }.shadow(color: Color.white.opacity(0.8), radius: 5, x: 0, y: 5)
             }
             .padding(.top,20)
+            
+            HStack {
+                Button(action: {
+                    showConfirmationDialog = true
+                }) {
+                  
+                    Text("LogOut")
+                        .padding()
+                        .frame(width: 120, height: 70)
+                        .background(Color.black)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                        .opacity(1)
+                        .font(.custom("Noteworthy-Bold", size: 20))
+                    
+                }.shadow(color: Color.white.opacity(0.8), radius: 5, x: 0, y: 5)
+            
+            } .confirmationDialog("Are you sure you want to log out?", isPresented: $showConfirmationDialog, titleVisibility: .visible) {
+                Button("Log out", role: .destructive) {
+                    isNavigatingToLogoutView = true
+                }
+                    Button("Cancel", role: .cancel) { }
+            } .background(
+                NavigationLink(destination: Logout(), isActive: $isNavigatingToLogoutView) {
+                    EmptyView()
+                }
+                .hidden()
+            )
+            .padding(.top,20)
+            
         }
         .frame(width: 300, height: 300)
         .background(Color.white.opacity(0.3))
