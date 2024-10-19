@@ -31,6 +31,7 @@
 		D24564632CC0400E00817FE3 /* StudentInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24564622CC0400E00817FE3 /* StudentInfo.swift */; };
 		D24564652CC0406000817FE3 /* StudentProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24564642CC0406000817FE3 /* StudentProfileViewModel.swift */; };
 		D24D36382C935F8C00A6F8CA /* LauchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D24D36372C935F8C00A6F8CA /* LauchScreen.storyboard */; };
+		D25C330B2CC3E80A00177E01 /* CreateTimeTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25C330A2CC3E80A00177E01 /* CreateTimeTable.swift */; };
 		D2803F532CB68CCA0022C6B8 /* Goodbye.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2803F522CB68CCA0022C6B8 /* Goodbye.swift */; };
 		D2803F552CB6A4FD0022C6B8 /* ApplyLeaveServiceCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2803F542CB6A4FD0022C6B8 /* ApplyLeaveServiceCall.swift */; };
 		D2803F572CB6A6EE0022C6B8 /* ApplyLeaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2803F562CB6A6EE0022C6B8 /* ApplyLeaveView.swift */; };
@@ -124,6 +125,7 @@
 		D24564642CC0406000817FE3 /* StudentProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentProfileViewModel.swift; sourceTree = "<group>"; };
 		D24D36372C935F8C00A6F8CA /* LauchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LauchScreen.storyboard; sourceTree = "<group>"; };
 		D24D36392C9361F100A6F8CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		D25C330A2CC3E80A00177E01 /* CreateTimeTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTimeTable.swift; sourceTree = "<group>"; };
 		D2803F522CB68CCA0022C6B8 /* Goodbye.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goodbye.swift; sourceTree = "<group>"; };
 		D2803F542CB6A4FD0022C6B8 /* ApplyLeaveServiceCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplyLeaveServiceCall.swift; sourceTree = "<group>"; };
 		D2803F562CB6A6EE0022C6B8 /* ApplyLeaveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplyLeaveView.swift; sourceTree = "<group>"; };
@@ -258,6 +260,7 @@
 				D2D13FEE2CA5C0C8001BD1A1 /* StudentInfoView.swift */,
 				D21B60982CA738FF0010F587 /* LoginView.swift */,
 				D2239C912CA9AC9900BACFDC /* ParentProfileServiceCall.swift */,
+				D25C330A2CC3E80A00177E01 /* CreateTimeTable.swift */,
 				D2239C952CA9C54A00BACFDC /* ChildrenProfileServiceCall.swift */,
 				D233C3A02CBACA86000B47C7 /* TeacherProfileServiceCall.swift */,
 				D2803F542CB6A4FD0022C6B8 /* ApplyLeaveServiceCall.swift */,
@@ -533,6 +536,7 @@
 				D291952E2CBFBA0700592867 /* TeacherLunchMenu.swift in Sources */,
 				D2D970582C91EE540040DE4A /* EduKitApp.swift in Sources */,
 				D2A88C1C2CAAD6BE00FDE8BD /* StudentLogin.swift in Sources */,
+				D25C330B2CC3E80A00177E01 /* CreateTimeTable.swift in Sources */,
 				D2803F552CB6A4FD0022C6B8 /* ApplyLeaveServiceCall.swift in Sources */,
 				D2EE64D42CBD171300405656 /* ContactUsView.swift in Sources */,
 				D2A9C2BE2CB46DB700137781 /* TeacherOptions.swift in Sources */,

@@ -207,7 +207,7 @@ struct TeacherProfile: View {
                     }
 
               
-                TeacherSideMenu(classId: teacherProfile["class_id"] as? Int ?? 0)
+                TeacherSideMenu(classId: teacherProfile["class_id"] as? Int ?? 0,teacherId:teacherProfile["id"] as? Int ?? 0)
                     .frame(width: 270)
                     .background(Color.gray.opacity(0.9))
                    

@@ -9,6 +9,8 @@ struct TeacherSideMenu: View {
     @Environment(\.presentationMode) var presentationMode
     @State private var isNavigatingToLogoutView = false
     var classId: Int
+    var teacherId: Int
+    
     
     var body: some View {
       
@@ -30,6 +32,9 @@ struct TeacherSideMenu: View {
             
             NavigationLink(destination: TeacherMessages()) {
                 Label("Messages", systemImage: "message")
+            }
+            NavigationLink(destination: CreateTimeTable(classId: classId,teacherId:teacherId)) {
+                Label("Create Time Table", systemImage: "square.and.pencil")
             }
             
             NavigationLink(destination: TeacherTimeTable(classId: classId)) {
