@@ -107,7 +107,7 @@ struct TeacherMessages: View {
                                                 .frame(width: 180, alignment: .leading)
     
                                             Text(request.response.isEmpty ? "Not yet replied" : request.response)
-                                                    .foregroundColor(request.response.isEmpty ? Color.gray : Color.white)
+                                                    .foregroundColor(request.response.isEmpty ? Color.gray : Color.pink)
                                                     .lineLimit(nil)
                                                     .frame(maxWidth: .infinity, alignment: .leading)
                                         }

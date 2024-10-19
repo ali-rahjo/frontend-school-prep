@@ -38,7 +38,7 @@ struct TeacherProfile: View {
                         )
 
                             .edgesIgnoringSafeArea(.top)
-                            .frame(height: 300)
+                            .frame(height: 250)
 
                         VStack(spacing: 16) {
                             Image(systemName: "person.circle.fill")
@@ -125,6 +125,37 @@ struct TeacherProfile: View {
                             }
                         
                         HStack {
+                                Image(systemName: "number")
+                                    .foregroundColor(.pink)
+                                    .opacity(0.8)
+                                if let classId = teacherProfile["class_id"] as? Int {
+                                    Text("Class ID \(classId)")
+                                } else {
+                                    Text("Class ID not available")
+                                }
+                                Spacer()
+                            }
+                        
+                        HStack {
+                               Image(systemName: "graduationcap")
+                                   .foregroundColor(.pink)
+                                   .opacity(0.8)
+                               Text("\(teacherProfile["class_name"] as? String ?? "Unknown")")
+                               Spacer()
+                           }
+                        
+                       
+                        
+                        HStack {
+                                Image(systemName: "calendar")
+                                    .foregroundColor(.pink)
+                                    .opacity(0.8)
+                                Text("\(teacherProfile["academic_year_start"] as? Int ?? 0)-\(teacherProfile["academic_year_end"] as? Int ?? 0)")
+                                Spacer()
+                            }
+
+                        
+                        HStack {
                             Image(systemName: "lock")
                                 .foregroundColor(.pink)
                                 .opacity(0.8)
@@ -156,7 +187,7 @@ struct TeacherProfile: View {
                         }
                         .padding(.top)
                     }
-                    .padding(.top, -10)
+                    .padding(.top, -30)
                 }
                 
                
@@ -176,7 +207,7 @@ struct TeacherProfile: View {
                     }
 
               
-                TeacherSideMenu()
+                TeacherSideMenu(classId: teacherProfile["class_id"] as? Int ?? 0)
                     .frame(width: 270)
                     .background(Color.gray.opacity(0.9))
                    

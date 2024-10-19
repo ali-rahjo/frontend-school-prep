@@ -8,6 +8,7 @@ struct TeacherSideMenu: View {
     @State private var isLoggingOut = false
     @Environment(\.presentationMode) var presentationMode
     @State private var isNavigatingToLogoutView = false
+    var classId: Int
     
     var body: some View {
       
@@ -31,11 +32,11 @@ struct TeacherSideMenu: View {
                 Label("Messages", systemImage: "message")
             }
             
-            NavigationLink(destination: TeacherTimeTable()) {
+            NavigationLink(destination: TeacherTimeTable(classId: classId)) {
                 Label("Time Table", systemImage: "envelope.open.fill")
             }
             
-            NavigationLink(destination: TeacherLunchMenu()) {
+            NavigationLink(destination: LunchMenuView()) {
                 Label("Lunch Menu", systemImage: "fork.knife.circle.fill")
             }
             

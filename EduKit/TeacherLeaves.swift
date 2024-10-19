@@ -106,6 +106,7 @@ struct TeacherLeaves: View {
                                             Text(request.status.capitalized)
                                                 .foregroundColor(request.status == "Approved" ? .green : .red)
                                                 .frame(maxWidth: .infinity, alignment: .leading)
+                                                .fontWeight(.bold)
                                         }
                                         HStack {
                                             Text("Description")
