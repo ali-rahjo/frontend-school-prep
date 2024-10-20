@@ -93,7 +93,7 @@ struct ClassView: View {
                 Button(action: {
                     // Action for Announcement button
                 }) {
-                    NavigationLink(destination: AnnouncementsView()) {
+                    NavigationLink(destination: StudentAnnouncement()) {
                     Text("Updates")
                         .padding()
                         .frame(width: 120, height: 70)

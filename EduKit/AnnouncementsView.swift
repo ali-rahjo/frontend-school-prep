@@ -47,11 +47,11 @@ struct AnnouncementsView: View {
                         VStack(alignment: .leading, spacing: 10) {
                             Text(announcement.date)
                                 .font(.headline)
-                                .foregroundColor(.white)
+                                .foregroundColor(Color.white)
                             
                             Text(announcement.announcement)
                                 .foregroundColor(.white)
-                                .font(.body)
+                                .font(.custom("Noteworthy-Bold", size: 18))
                         }
                         .padding()
                         .background(
@@ -62,7 +62,8 @@ struct AnnouncementsView: View {
                     }
                     .listStyle(PlainListStyle())
                 }
-            }.padding(.top,50)
+            }.padding(.top,40)
+                .padding(.bottom,40)
             .onAppear {
                 fetchAnnouncements()
             }

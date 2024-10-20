@@ -47,11 +47,11 @@ ZStack {
                 VStack(alignment: .leading, spacing: 10) {
                     Text(announcement.date)
                         .font(.headline)
-                        .foregroundColor(.white)
+                        .foregroundColor(Color(red: 202/255, green: 32/255, blue: 104/255))
                     
                     Text(announcement.announcement)
                         .foregroundColor(.white)
-                        .font(.body)
+                        .font(.custom("Noteworthy-Bold", size: 18))
                 }
                 .padding()
                 .background(

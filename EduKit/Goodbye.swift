@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct Goodbye: View {
-    @State private var bubbleCount = 50
+    @State private var bubbleCount = 100
     @State private var bubbleSizes: [CGFloat] = []
     @State private var bubbleOffsets: [CGFloat] = []
 
@@ -44,12 +44,12 @@ struct Goodbye: View {
 
     private func generateInitialOffsets() {
       
-        bubbleOffsets = Array(repeating: 600, count: bubbleCount)
+        bubbleOffsets = Array(repeating: 400, count: bubbleCount)
     }
 
     private func animateBubble(index: Int) {
         
-        let duration = Double.random(in: 20...30)
+        let duration = Double.random(in: 60...80)
         withAnimation(.linear(duration: duration)) {
             bubbleOffsets[index] = -500
         }

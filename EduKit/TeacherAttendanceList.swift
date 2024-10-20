@@ -28,7 +28,7 @@ struct TeacherAttendanceList: View {
     var body: some View {
         NavigationView {
             ZStack {
-                // Background Image
+                
                 Image("slide11")
                     .resizable()
                     .scaledToFill()
