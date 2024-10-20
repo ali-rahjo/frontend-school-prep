@@ -9,8 +9,6 @@ struct Logout: View {
     @Environment(\.dismiss) var dismiss
     @Environment(\.presentationMode) var presentationMode
 
-       
-
     var body: some View {
         ZStack {
             
@@ -32,18 +30,14 @@ struct Logout: View {
             }
             if showGoodbyeView {
                             Goodbye()
-                                .transition(.opacity)  // Add a transition effect
+                                .transition(.opacity)
                         }
         }
         .alert(isPresented: $showAlert) {
-            Alert(title: Text("Logout Status"), message: Text(alertMessage), dismissButton: .default(Text("OK"), action: {
+            Alert(title: Text("Logout"), message: Text(alertMessage), dismissButton: .default(Text("OK"), action: {
                 if alertMessage == "Successfully logged out." {
                   
-                                          
-                    showGoodbyeView = true 
-                  
-                       
-                        
+                    showGoodbyeView = true
                                      
                 }
             }))

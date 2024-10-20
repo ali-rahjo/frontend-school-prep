@@ -62,7 +62,8 @@ ZStack {
             }
             .listStyle(PlainListStyle())
         }
-    }.padding(.top,50)
+    }.padding(.top,20)
+        .padding(.bottom,40)
     .onAppear {
         fetchAnnouncements()
     }
