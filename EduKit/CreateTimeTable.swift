@@ -33,6 +33,8 @@ struct CreateTimeTable: View {
                 .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
                 .clipped()
                 .ignoresSafeArea()
+               
+               
 
             ScrollView {
                 VStack {

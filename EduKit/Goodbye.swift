@@ -1,59 +1,70 @@
 import SwiftUI
 
 struct Goodbye: View {
-    @State private var bubbleCount = 10
+    @State private var bubbleCount = 50
     @State private var bubbleSizes: [CGFloat] = []
+    @State private var bubbleOffsets: [CGFloat] = []
 
     var body: some View {
         ZStack {
-           
             ForEach(0..<bubbleCount, id: \.self) { index in
                 if index < bubbleSizes.count {
                     Circle()
-                        .fill(Color.blue.opacity(0.5))
+                        .fill( Color(red: 113/255, green: 192/255, blue: 251/255))
+                        .opacity(0.4)
                         .frame(width: bubbleSizes[index], height: bubbleSizes[index])
-                        .offset(x: CGFloat.random(in: -150...150), y: CGFloat.random(in: -150...150))
-                        .animation(.easeInOut(duration: 2)
-                            .repeatForever(autoreverses: true), value: bubbleSizes[index])
+                        .offset(x: CGFloat.random(in: -150...150), y: bubbleOffsets[index])
+                        .animation(.linear(duration: Double.random(in: 10...20))
+                            .repeatForever(autoreverses: false), value: bubbleOffsets[index])
+                        .onAppear {
+                            animateBubble(index: index)
+                           
+                        }
                 }
             }
+
             Text("See You Again!")
-                .font(.largeTitle)
+                .font(.custom("Noteworthy-Bold", size: 26))
                 .fontWeight(.bold)
-                .foregroundColor(.black)
+                .foregroundColor(Color.white.opacity(0.8))
                 .padding()
-                .background(Color.white.opacity(0.8))
                 .cornerRadius(10)
                 .shadow(radius: 10)
         }
         .onAppear {
-            // Generate bubble sizes when the view appears
             generateBubbleSizes()
-            animateBubbles()
+            generateInitialOffsets()
         }
     }
-    
+
     private func generateBubbleSizes() {
-        // Generate random sizes for bubbles
-        bubbleSizes = (0..<bubbleCount).map { _ in CGFloat.random(in: 30...80) }
+       
+        bubbleSizes = (0..<bubbleCount).map { _ in CGFloat.random(in: 10...30) }
     }
-    
-    private func animateBubbles() {
-        for index in 0..<bubbleCount {
-            withAnimation {
-                bubbleSizes[index] = CGFloat.random(in: 40...80) // Randomize bubble size
-            }
+
+    private func generateInitialOffsets() {
+      
+        bubbleOffsets = Array(repeating: 600, count: bubbleCount)
+    }
+
+    private func animateBubble(index: Int) {
+        
+        let duration = Double.random(in: 20...30)
+        withAnimation(.linear(duration: duration)) {
+            bubbleOffsets[index] = -500
+        }
+
+       
+        DispatchQueue.main.asyncAfter(deadline: .now() + duration) {
+            bubbleOffsets[index] = 400
+            animateBubble(index: index)
         }
     }
 }
 
-
-
-struct Logout_Previews: PreviewProvider {
+struct Goodbye_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView {
-            Logout()
-        }
+        Goodbye()
     }
 }
 

@@ -11,7 +11,7 @@ struct ViewMessage: View {
                 Image("slide12")
                     .resizable()
                     .scaledToFill()
-                    .frame(width: UIScreen.main.bounds.width)
+                    .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
                     .clipped()
                     .ignoresSafeArea()
                     .overlay(

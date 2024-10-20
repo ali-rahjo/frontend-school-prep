@@ -12,6 +12,17 @@ struct Logout: View {
        
 
     var body: some View {
+        ZStack {
+            
+            Color.black
+            Image("slide18")
+                .resizable()
+                .scaledToFit()
+                .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height/2)
+                .clipped()
+                .ignoresSafeArea()
+                .position(x: UIScreen.main.bounds.width / 2, y: UIScreen.main.bounds.height - (UIScreen.main.bounds.height / 3.5))
+               
         VStack {
             if isLoggingOut {
                 ProgressView("Logging out...")
@@ -38,9 +49,10 @@ struct Logout: View {
             }))
         }
         .onAppear {
-            logout()  // Automatically call logout when the view appears
+            logout()
         }
         .navigationBarHidden(true)
+        }.edgesIgnoringSafeArea(.all)
     }
     
     func logout() {
