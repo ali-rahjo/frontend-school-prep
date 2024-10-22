@@ -62,7 +62,7 @@ struct AttendanceView: View {
                             .padding(.top, 10)
                         }
                         .padding(.vertical, 20)
-                    }
+                    }.padding(.bottom,30)
                     .cornerRadius(8)
                     .shadow(radius: 5)
                 }

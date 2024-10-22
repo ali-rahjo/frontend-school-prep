@@ -6,6 +6,10 @@ struct Parent: View {
     @State private var parentProfile: [String: Any] = [:]
     @State private var showAlert = false
     @State private var alertMessage = ""
+    @State private var showImagePicker = false
+    @State private var selectedImage: UIImage? = nil
+    @State private var uploadStatus: String = ""
+    
 
     var body: some View {
         ZStack {
@@ -33,16 +37,59 @@ struct Parent: View {
                                    endPoint: .bottom
                         )
                             .edgesIgnoringSafeArea(.top)
-                            .frame(height: 200)
+                            .frame(height: 250)
 
                         VStack(spacing: 16) {
-                            Image(systemName: "person.circle.fill")
-                                .resizable()
-                                .frame(width: 100, height: 100)
-                                .foregroundColor(.white)
                             
-                            
+                            if let imageUrlString = parentProfile["profile_image_url"] as? String,
+                                                          let imageUrl = URL(string: imageUrlString) {
+                                                           AsyncImage(url: imageUrl) { phase in
+                                                               if let image = phase.image {
+                                                                   image
+                                                                       .resizable()
+                                                                       .frame(width: 120, height: 120)
+                                                                       .clipShape(Circle())
+                                                               } else if phase.error != nil {
+                                                                   Image(systemName: "person.circle.fill")
+                                                                       .resizable()
+                                                                       .frame(width: 100, height: 100)
+                                                                       .foregroundColor(.white)
+                                                                   
 
+                                                                  
+                                                               } else {
+                                                                   ProgressView()
+                                                                       .frame(width: 100, height: 100)
+                                                               }
+                                                           }
+                                                       } else {
+                                                           Image(systemName: "person.circle.fill")
+                                                               .resizable()
+                                                               .frame(width: 100, height: 100)
+                                                               .foregroundColor(.white)
+                                                           
+                                                          
+                                                       }
+                            Button(action: {
+                                showImagePicker.toggle()
+                            }) {
+                                Image(systemName: "camera.fill")
+                                    .foregroundColor(.white)
+                                    .frame(width: 20, height: 20)
+                                    .padding(.leading,60)
+                                    .padding(.top,-10)
+                                    
+                            }
+                            .sheet(isPresented: $showImagePicker) {
+                                ImagePicker(selectedImage: $selectedImage)
+                            }
+                            .onChange(of: selectedImage) { newImage in
+                                if let newImage = newImage {
+                                    uploadImage(selectedImage: newImage)
+                                }
+                               
+                            }
+                           
                             
                             if let user = parentProfile["user"] as? [String: Any],
                                     let firstName = user["first_name"] as? String,
@@ -50,6 +97,7 @@ struct Parent: View {
                                     Text("\(firstName.capitalized) \(lastName.capitalized)")
                                     .font(.title)
                                     .foregroundColor(.white)
+                                    .padding(.bottom,30)
                             } else {
                                     Text("Anna Avetisyan")
                                     .font(.title)
@@ -73,8 +121,6 @@ struct Parent: View {
                             Spacer()
                         }
 
-                        
-                        
                         
                         HStack {
                             Image(systemName: "person")
@@ -184,7 +230,7 @@ struct Parent: View {
                         }
                         .padding(.top)
                     }
-                    .padding(.top, -10)
+                    .padding(.top, -20)
                 }
                 
                
@@ -267,5 +313,66 @@ struct Parent: View {
                 return outputFormatter.string(from: date)
             }
             return "Invalid date"
+        }
+    
+    func uploadImage(selectedImage: UIImage) {
+            guard let imageData = selectedImage.jpegData(compressionQuality: 0.8) else {
+                self.uploadStatus = "Failed to convert image to data."
+                return
+            }
+
+           
+            let url = URL(string: "http://192.168.0.219:8000/api/v1/parent/profile/image/")!
+            var request = URLRequest(url: url)
+            request.httpMethod = "PATCH"
+
+           
+            let boundary = UUID().uuidString
+            request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
+
+            
+            var body = Data()
+            let filename = "profile_image.jpg"
+            let mimetype = "image/jpeg"
+
+            body.append("--\(boundary)\r\n".data(using: .utf8)!)
+            body.append("Content-Disposition: form-data; name=\"profile_image\"; filename=\"\(filename)\"\r\n".data(using: .utf8)!)
+            body.append("Content-Type: \(mimetype)\r\n\r\n".data(using: .utf8)!)
+            body.append(imageData)
+            body.append("\r\n".data(using: .utf8)!)
+            body.append("--\(boundary)--\r\n".data(using: .utf8)!)
+
+           
+            request.httpBody = body
+
+          
+            URLSession.shared.dataTask(with: request) { data, response, error in
+                if let error = error {
+                    DispatchQueue.main.async {
+                        self.uploadStatus = "Upload failed: \(error.localizedDescription)"
+                    }
+                    return
+                }
+
+                if let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 {
+                    DispatchQueue.main.async {
+                        self.uploadStatus = "Image uploaded successfully!"
+                        ParentProfileService.shared.getParentProfile { result in
+                                            switch result {
+                                            case .success(let profile):
+                                                DispatchQueue.main.async {
+                                                    self.parentProfile = profile
+                                                }
+                                            case .failure(let error):
+                                                print("Error fetching profile: \(error.localizedDescription)")
+                                            }
+                                        }
+                    }
+                } else {
+                    DispatchQueue.main.async {
+                        self.uploadStatus = "Failed to upload image."
+                    }
+                }
+            }.resume()
         }
 }

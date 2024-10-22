@@ -55,7 +55,7 @@ struct CreateTimeTable: View {
                             ForEach(dayInput.periods) { period in
                                 HStack {
                                     Text("Period \(period.period)").foregroundColor(.black)
-                                    TextField("Enter subject", text: Binding(
+                                    TextField("", text: Binding(
                                         get: { period.subject },
                                         set: { newSubject in
                                             if let index = timetable.firstIndex(where: { $0.id == dayInput.id }),

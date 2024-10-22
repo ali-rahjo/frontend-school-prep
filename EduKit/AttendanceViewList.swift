@@ -115,6 +115,7 @@ struct AttendanceViewList: View {
                         .listRowBackground(Color.clear)
                         .padding(.bottom,5)
                     }
+                    .padding(.bottom,30)
                     .listStyle(PlainListStyle())
                 }
             }

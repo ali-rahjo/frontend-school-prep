@@ -60,6 +60,7 @@ struct AnnouncementsView: View {
                         )
                         .listRowBackground(Color.clear)
                     }
+                    .padding(.bottom,30)
                     .listStyle(PlainListStyle())
                 }
             }.padding(.top,40)
