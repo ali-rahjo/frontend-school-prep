@@ -71,7 +71,7 @@ struct TeacherProfile: View {
                                                        } else {
                                                            Image(systemName: "person.circle.fill")
                                                                .resizable()
-                                                               .frame(width: 100, height: 100)
+                                                               .frame(width: 120, height: 120)
                                                                .foregroundColor(.white)
                                                            
                                                           

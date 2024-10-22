@@ -37,7 +37,7 @@ struct Parent: View {
                                    endPoint: .bottom
                         )
                             .edgesIgnoringSafeArea(.top)
-                            .frame(height: 250)
+                            .frame(height: 240)
 
                         VStack(spacing: 16) {
                             
@@ -77,7 +77,7 @@ struct Parent: View {
                                     .foregroundColor(.white)
                                     .frame(width: 20, height: 20)
                                     .padding(.leading,60)
-                                    .padding(.top,-10)
+                                    .padding(.top,-15)
                                     
                             }
                             .sheet(isPresented: $showImagePicker) {
@@ -230,7 +230,7 @@ struct Parent: View {
                         }
                         .padding(.top)
                     }
-                    .padding(.top, -20)
+                    .padding(.bottom, -40)
                 }
                 
                
