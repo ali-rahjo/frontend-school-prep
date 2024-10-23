@@ -26,6 +26,7 @@ struct Logout: View {
                 ProgressView("Logging out...")
                     .progressViewStyle(CircularProgressViewStyle())
                     .padding()
+                    .foregroundColor(.white)
             } else {
             }
             if showGoodbyeView {

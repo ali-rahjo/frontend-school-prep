@@ -27,7 +27,7 @@ struct AboutUsView: View {
                 Text("About Us")
                     .font(.title)
                     .fontWeight(.bold)
-                    .padding(.top, 20)
+                    .padding(.top, -20)
                     .padding(.horizontal)
                     .foregroundColor(.white)
                     .padding(.leading,120)
@@ -35,13 +35,14 @@ struct AboutUsView: View {
                 Text("We are a team of dedicated professionals working together to deliver exceptional results. Our goal is to provide innovative solutions to our clients.")
                     .foregroundColor(.white)
                     .padding(.horizontal)
-                    .font(.custom("Noteworthy", size: 26))
+                    .font(.custom("Noteworthy", size: 20))
+                    .padding(.bottom,-25)
                 
                
                 Text("Our Team")
-                    .font(.title2)
+                    .font(.custom("Optima", size: 22))
                     .fontWeight(.bold)
-                    .padding(.top, 30)
+                    .padding(.top, -5)
                     .padding(.horizontal)
                     .foregroundColor(.white)
                     .padding(.leading,120)
@@ -54,28 +55,31 @@ struct AboutUsView: View {
                             Image(member.imageName)
                                 .resizable()
                                 .scaledToFill()
-                                .frame(width: 140, height: 140)
+                                .frame(width: 120, height: 120)
                                 .clipShape(Circle())
                                 .overlay(Circle().stroke(Color.white, lineWidth: 2))
                                 .padding(.all, 10)
+                                .padding(.top,-20)
                                
                           
                             Text(member.name)
                                 .font(.headline)
-                                .padding(.top, 5)
+                                .padding(.top, -5)
                                 .foregroundColor(.white)
                             
                             Text(member.role)
                                 .font(.subheadline)
                                 .foregroundColor(.white)
                         }
+                        .padding(.bottom,-30)
                         .padding()
                     }
                 }
                 .padding(.horizontal)
                 
+                
                 Spacer()
-            }
+            }.padding(.top,5)
         }.background( LinearGradient(
             gradient: Gradient(colors: [Color(red: 0/255, green: 0/255, blue: 50/255),
                                         Color(red: 0/255, green: 0/255, blue: 150/255)]),

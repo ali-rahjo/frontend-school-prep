@@ -31,6 +31,10 @@ struct StudentInfoView: View {
                     .clipped()
                     .ignoresSafeArea()
                 
+                Color.black
+                    .opacity(0.4)
+                    .edgesIgnoringSafeArea(.all)
+                
                 VStack(spacing: 20) {
                     Spacer()
                     Text("Student Info")

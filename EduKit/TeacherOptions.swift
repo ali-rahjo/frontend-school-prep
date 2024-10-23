@@ -43,10 +43,6 @@ struct TeacherOptions: View {
                     .frame(width: 80, height: 75)
                     .clipShape(Circle())
                     .padding(.bottom,20)
-               
-
-                
-                
                 
                 Button(action: {
                     // Handle signup action here

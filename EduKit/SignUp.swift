@@ -26,9 +26,13 @@ struct Signup: View {
                     .clipped()
                     .ignoresSafeArea()
                 
+                Color.black
+                    .opacity(0.4)
+                    .edgesIgnoringSafeArea(.all)
+                
                 VStack(spacing: 20) {
                     Spacer()
-                    Text("Create an Account")
+                    Text("Create Account")
                         .font(.title)
                         .fontWeight(.bold)
                         .foregroundColor(Color.white)

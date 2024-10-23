@@ -10,11 +10,11 @@ struct Goodbye: View {
             ForEach(0..<bubbleCount, id: \.self) { index in
                 if index < bubbleSizes.count {
                     Circle()
-                        .fill( Color(red: 113/255, green: 192/255, blue: 251/255))
-                        .opacity(0.4)
+                        .fill( Color.white)
+                        .opacity(0.3)
                         .frame(width: bubbleSizes[index], height: bubbleSizes[index])
                         .offset(x: CGFloat.random(in: -150...150), y: bubbleOffsets[index])
-                        .animation(.linear(duration: Double.random(in: 10...20))
+                        .animation(.linear(duration: Double.random(in: 5...30))
                             .repeatForever(autoreverses: false), value: bubbleOffsets[index])
                         .onAppear {
                             animateBubble(index: index)
@@ -39,7 +39,7 @@ struct Goodbye: View {
 
     private func generateBubbleSizes() {
        
-        bubbleSizes = (0..<bubbleCount).map { _ in CGFloat.random(in: 10...30) }
+        bubbleSizes = (0..<bubbleCount).map { _ in CGFloat.random(in: 5...30) }
     }
 
     private func generateInitialOffsets() {
@@ -49,14 +49,14 @@ struct Goodbye: View {
 
     private func animateBubble(index: Int) {
         
-        let duration = Double.random(in: 60...80)
+        let duration = Double.random(in: 30...70)
         withAnimation(.linear(duration: duration)) {
             bubbleOffsets[index] = -500
         }
 
        
         DispatchQueue.main.asyncAfter(deadline: .now() + duration) {
-            bubbleOffsets[index] = 400
+            bubbleOffsets[index] = 250
             animateBubble(index: index)
         }
     }
