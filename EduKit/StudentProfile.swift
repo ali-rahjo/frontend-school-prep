@@ -176,7 +176,7 @@ struct StudentProfile: View {
                     .foregroundColor(.white)
                     .frame(width: 180, alignment: .leading)
                     .padding(.leading,20)
-                Text("\(student.class_info.academic_year_start) - \(student.class_info.academic_year_end)")
+                Text("\(student.class_info.academic_year_start)")
                     .foregroundColor(.white)
                     .multilineTextAlignment(.center)
                     .lineLimit(nil)

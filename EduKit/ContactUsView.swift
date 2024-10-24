@@ -22,15 +22,16 @@ struct ContactUsView: View {
                 VStack(alignment: .leading, spacing: 15) {
                     
                     Text("Contact Us")
-                        .font(.title)
+                        .font(.custom("Noteworthy", size: 25))
                         .fontWeight(.bold)
                         .padding(.top, 1)
                         .foregroundColor(.white)
-                        .padding(.leading, 100)
+                        .padding(.leading, 120)
                     
                     Text("Name")
-                        .font(.headline)
+                        .font(.custom("Noteworthy", size: 20))
                         .foregroundColor(Color.white)
+                        .padding(.leading,10)
                     
                     TextField("Name", text: $name)
                         .padding()
@@ -40,8 +41,9 @@ struct ContactUsView: View {
                         
                     
                     Text("Email")
-                        .font(.headline)
+                        .font(.custom("Noteworthy", size: 20))
                         .foregroundColor(Color.white)
+                        .padding(.leading,10)
                     
                     TextField("Email", text: $email)
                         .keyboardType(.emailAddress)
@@ -52,11 +54,12 @@ struct ContactUsView: View {
                         
                     
                     Text("Message")
-                        .font(.headline)
+                        .font(.custom("Noteworthy", size: 20))
                         .foregroundColor(Color.white)
+                        .padding(.leading,10)
                     
                     TextEditor(text: $message)
-                        .frame(width: 280, height: 150) // Set width and height here
+                        .frame(width: 280, height: 100)
                         .padding()
                         .background(Color(UIColor.secondarySystemBackground))
                         .cornerRadius(8)
@@ -81,11 +84,11 @@ struct ContactUsView: View {
                 .padding(.horizontal)
                 .padding(.top, 20)
                 
-                Spacer()
+                
                 
                 VStack(alignment: .leading, spacing: 10) {
                     Text("Other ways to reach us")
-                        .font(.headline)
+                        .font(.custom("Noteworthy", size: 20))
                         .foregroundColor(Color.white)
                     
                     HStack {
@@ -93,24 +96,28 @@ struct ContactUsView: View {
                             .foregroundColor(.white)
                         Text("+1 (123) 456-7890")
                             .foregroundColor(Color.white)
+                            
                     }
                     
                     HStack {
                         Image(systemName: "envelope.fill")
                             .foregroundColor(.white)
-                        Text("ginu@gmail.com")
+                        Text("schoolprep@gmail.com")
                             .foregroundColor(Color.white)
+                           
                     }
                     
                     HStack {
                         Image(systemName: "map.fill")
                             .foregroundColor(.white)
-                        Text("123 Main Street, Hamburg, Germany")
+                        Text("Schmalenbecker Street 23, Hamburg, Germany")
                             .foregroundColor(Color.white)
+                            .font(.custom("Noteworthy", size: 18))
+                            
                     }
                 }
                 .padding(.horizontal)
-                .padding(.bottom, 20)
+                .padding(.bottom, -5)
             }
             .padding(.top,40)
         }

@@ -40,7 +40,7 @@ struct AnnouncementsView: View {
                             .foregroundColor(.white)
                             
                        
-                    }.padding(.top,50)
+                    }.padding(.top,20)
                         .padding(.leading,40)
                     
                     List(announcements) { announcement in

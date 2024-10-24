@@ -21,7 +21,7 @@ struct LoginSelection: View {
                     Spacer(minLength: 100)
 
                     Text("Select Role")
-                        .font(.largeTitle)
+                        .font(.custom("Noteworthy", size: 35))
                         .foregroundColor(.white)
                         .bold()
                         .padding(.bottom, 20)

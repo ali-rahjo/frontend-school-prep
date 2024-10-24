@@ -11,10 +11,10 @@ struct Goodbye: View {
                 if index < bubbleSizes.count {
                     Circle()
                         .fill( Color.white)
-                        .opacity(0.3)
+                        .opacity(0.4)
                         .frame(width: bubbleSizes[index], height: bubbleSizes[index])
                         .offset(x: CGFloat.random(in: -150...150), y: bubbleOffsets[index])
-                        .animation(.linear(duration: Double.random(in: 5...30))
+                        .animation(.linear(duration: Double.random(in: 2...5))
                             .repeatForever(autoreverses: false), value: bubbleOffsets[index])
                         .onAppear {
                             animateBubble(index: index)
@@ -49,7 +49,7 @@ struct Goodbye: View {
 
     private func animateBubble(index: Int) {
         
-        let duration = Double.random(in: 30...70)
+        let duration = Double.random(in: 20...60)
         withAnimation(.linear(duration: duration)) {
             bubbleOffsets[index] = -500
         }

@@ -25,7 +25,7 @@ struct AboutUsView: View {
                 
                
                 Text("About Us")
-                    .font(.title)
+                    .font(.custom("Noteworthy", size: 25))
                     .fontWeight(.bold)
                     .padding(.top, -20)
                     .padding(.horizontal)

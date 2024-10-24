@@ -47,7 +47,7 @@ struct LeaveStatusView: View {
                                                        Text("Parent")
                                                            .font(.headline)
                                                           
-                                                           .frame(width: 180, alignment: .leading)
+                                                           .frame(width: 160, alignment: .leading)
                                                                    Text(leave.parent_name.capitalized)
                                                                        .frame(maxWidth: .infinity, alignment: .leading)
                                                       
@@ -57,7 +57,7 @@ struct LeaveStatusView: View {
                                                        Text("Student")
                                                            .font(.headline)
                                                           
-                                                           .frame(width: 180, alignment: .leading)
+                                                           .frame(width: 160, alignment: .leading)
                                                                    Text(leave.student_name.capitalized)
                                                                        .frame(maxWidth: .infinity, alignment: .leading)
                                                            
@@ -67,7 +67,7 @@ struct LeaveStatusView: View {
                                                        Text("Class")
                                                            .font(.headline)
                                                            
-                                                           .frame(width: 180, alignment: .leading)
+                                                           .frame(width: 160, alignment: .leading)
                                                                    Text(leave.class_name.capitalized)
                                                                        .frame(maxWidth: .infinity, alignment: .leading)
                                                         
@@ -76,7 +76,7 @@ struct LeaveStatusView: View {
                                                        Text("Date Sent")
                                                            .font(.headline)
                                                            
-                                                           .frame(width: 180, alignment: .leading)
+                                                           .frame(width: 160, alignment: .leading)
                                                                    Text(leave.date)
                                                                        .frame(maxWidth: .infinity, alignment: .leading)
                                                         
@@ -86,7 +86,7 @@ struct LeaveStatusView: View {
                                                        Text("Leave Type")
                                                            
                                                            .font(.headline)
-                                                           .frame(width: 180, alignment: .leading)
+                                                           .frame(width: 160, alignment: .leading)
                                                                    Text(leave.leave_type.capitalized)
                                                                        .frame(maxWidth: .infinity, alignment: .leading)
                                                            
@@ -96,10 +96,11 @@ struct LeaveStatusView: View {
                                                        Text("Status")
                                                            .foregroundColor(Color(red: 202/255, green: 32/255, blue: 104/255))
                                                            .font(.headline)
-                                                           .frame(width: 180, alignment: .leading)
+                                                           .frame(width: 160, alignment: .leading)
                                                        Text(leave.status.capitalized)
                                                            .foregroundColor(leave.status == "Approved" ? .green : .red)
                                                            .frame(maxWidth: .infinity, alignment: .leading)
+                                                           .fontWeight(.bold)
                                                            
                                                    }
                                                    
@@ -109,7 +110,7 @@ struct LeaveStatusView: View {
                                                        Text("Start Date")
                                                            
                                                            .font(.headline)
-                                                           .frame(width: 180, alignment: .leading)
+                                                           .frame(width: 160, alignment: .leading)
                                                                    Text(leave.start_date.capitalized)
                                                                        .frame(maxWidth: .infinity, alignment: .leading)
                                                            
@@ -119,7 +120,7 @@ struct LeaveStatusView: View {
                                                        Text("End Date")
                                                            
                                                            .font(.headline)
-                                                           .frame(width: 180, alignment: .leading)
+                                                           .frame(width: 160, alignment: .leading)
                                                                    Text(leave.end_date.capitalized)
                                                                        .frame(maxWidth: .infinity, alignment: .leading)
                                                            
@@ -129,14 +130,14 @@ struct LeaveStatusView: View {
                                                        Text("Teacher")
                                                           
                                                            .font(.headline)
-                                                           .frame(width: 180, alignment: .leading)
+                                                           .frame(width: 160, alignment: .leading)
                                                                    Text(leave.teacher_name.capitalized)
                                                                        .frame(maxWidth: .infinity, alignment: .leading)
                                                            
                                                    }
                                                
                                                    VStack(alignment: .leading) {
-                                                          Text("Reason:")
+                                                          Text("Reason")
                                                           
                                                            .font(.headline)
                                                           Text(leave.leave_description)
@@ -149,6 +150,7 @@ struct LeaveStatusView: View {
                                            .padding()
                                            .background(Color(UIColor.secondarySystemBackground))
                                            .cornerRadius(8)
+                                           .frame(maxWidth:320)
                                        }
                                    }
                                    .padding()

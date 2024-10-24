@@ -13,6 +13,13 @@ struct Parent: View {
 
     var body: some View {
         ZStack {
+            
+            LinearGradient(
+                       gradient: Gradient(colors: [Color(red: 0/255, green: 0/255, blue: 50/255),
+                                                   Color(red: 0/255, green: 0/255, blue: 150/255)]),
+                       startPoint: .top,
+                       endPoint: .bottom
+            )
            
             if isLoading {
                            
@@ -37,7 +44,7 @@ struct Parent: View {
                                    endPoint: .bottom
                         )
                             .edgesIgnoringSafeArea(.top)
-                            .frame(height: 240)
+                            .frame(height: 250)
 
                         VStack(spacing: 16) {
                             
@@ -49,6 +56,7 @@ struct Parent: View {
                                                                        .resizable()
                                                                        .frame(width: 120, height: 120)
                                                                        .clipShape(Circle())
+                                                                       .padding(.top,20)
                                                                } else if phase.error != nil {
                                                                    Image(systemName: "person.circle.fill")
                                                                        .resizable()
@@ -95,9 +103,9 @@ struct Parent: View {
                                     let firstName = user["first_name"] as? String,
                                     let lastName = user["last_name"] as? String {
                                     Text("\(firstName.capitalized) \(lastName.capitalized)")
-                                    .font(.title)
+                                    .font(.custom("Noteworthy", size: 28))
                                     .foregroundColor(.white)
-                                    .padding(.bottom,30)
+                                    .padding(.bottom,20)
                             } else {
                                     Text("Anna Avetisyan")
                                     .font(.title)
@@ -227,10 +235,11 @@ struct Parent: View {
                          ))
                                 .cornerRadius(10)
                                 .foregroundColor(.white)
+                                .padding(.bottom,40)
                         }
                         .padding(.top)
                     }
-                    .padding(.bottom, -40)
+                    .padding(.bottom, -100)
                 }
                 
                
@@ -259,7 +268,7 @@ struct Parent: View {
                     
 
             }
-        }
+        }.padding(.top,-15)
         
         .toolbar {
                    ToolbarItemGroup(placement: .navigationBarLeading) {

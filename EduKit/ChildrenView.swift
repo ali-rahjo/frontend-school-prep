@@ -9,8 +9,6 @@ struct ChildrenView: View {
         NavigationView {
             ZStack {
                 
-           
-                
                 if viewModel.isLoading {
                     VStack {
                         ProgressView("Loading...")
@@ -35,7 +33,9 @@ struct ChildrenView: View {
                                                    endPoint: .bottom
                                         )
                                             .mask(Text("\(child.firstName.capitalized) \(child.lastName.capitalized)")
-                                                    .font(.title))
+                                                .font(.title)
+                                               
+                                            )
                                     )
                             }
                             
@@ -55,7 +55,7 @@ struct ChildrenView: View {
                             
                            
                             NavigationLink(destination: TimetableView(classID: child.classInfo.id, viewModel: TimetableViewModel())) {
-                                Text("Timetable")
+                                Text("Time Table")
                                     .foregroundColor(.white)
                                     .padding(.vertical, 4)
                                     .padding(.horizontal, 8)
@@ -72,10 +72,12 @@ struct ChildrenView: View {
                             }
                             .padding(.top, 10)
                         }
-                        .padding(.vertical, 20)
+                        .padding(.vertical, 10)
+                        
                     }
                     .cornerRadius(8)
                     .shadow(radius: 5)
+                    .padding(.top,20)
                 }
             }
             .edgesIgnoringSafeArea(.bottom)
@@ -107,7 +109,7 @@ struct InfoRow: View {
             Text(value)
                 .frame(maxWidth: .infinity, alignment: .leading)
         }
-        .padding(.top, 5)
+        .padding(.top, -5)
     }
 }
 

@@ -35,9 +35,9 @@ struct ViewMessage: View {
                             LazyVStack(alignment: .leading, spacing: 20) {
                                 
                                 Text("Messages")
-                                    .font(.largeTitle)
+                                    .font(.title)
                                     .fontWeight(.bold)
-                                    .padding(.bottom, 10)
+                                    .padding(.top, 36)
                                     .foregroundColor(Color.white)
                                     .frame(maxWidth: .infinity, alignment: .center)
                                 
@@ -55,7 +55,7 @@ struct ViewMessage: View {
                                             StylishRowItem(label: "Message", value: message.text_msg.capitalized, icon: "message.fill")
                                             StylishRowItem(label: "Reply", value: message.response.capitalized, icon: "bubble.left.and.bubble.right.fill")
                                         }
-                                        .padding(15)
+                                        .padding(10)
                                         .background(
                                             LinearGradient(
                                                 gradient: Gradient(colors: [Color.blue.opacity(0.6), Color.purple.opacity(0.6)]),
@@ -67,9 +67,12 @@ struct ViewMessage: View {
                                         .shadow(color: Color.black.opacity(0.2), radius: 8, x: 0, y: 5)
                                     }
                                     .padding(.horizontal)
+                                    .frame(maxWidth:370)
+                                    .padding(.leading,10)
                                 }
                             }
-                            .padding(.top)
+                           
+                            .padding(.bottom,20)
                         }
                     }
                 }
